@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FEF1002 Introduction to Basic Computer Technologies",
+    "section": "",
+    "text": "The lecture materials will be provided at this website\n\n\n\n\nOctober 1st, 2024, Thursday 4-7pm, ONLINE\nContents: Introduction about the lecture\n\n\n\nOctober 8th, 2024, Thursday 4-7pm, ONLINE\nContents: Latex link for lecture materials\n\n\n\nOctober 15th, 2024, Thursday 4-7pm, ONLINE\nContents: Latex at Overleaf link for lecture materials"
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "FEF1002 Introduction to Basic Computer Technologies",
+    "section": "",
+    "text": "The lecture materials will be provided at this website"
+  },
+  {
+    "objectID": "index.html#lecture1",
+    "href": "index.html#lecture1",
+    "title": "FEF1002 Introduction to Basic Computer Technologies",
+    "section": "",
+    "text": "October 1st, 2024, Thursday 4-7pm, ONLINE\nContents: Introduction about the lecture"
+  },
+  {
+    "objectID": "index.html#lecture2",
+    "href": "index.html#lecture2",
+    "title": "FEF1002 Introduction to Basic Computer Technologies",
+    "section": "",
+    "text": "October 8th, 2024, Thursday 4-7pm, ONLINE\nContents: Latex link for lecture materials"
+  },
+  {
+    "objectID": "index.html#lecture3",
+    "href": "index.html#lecture3",
+    "title": "FEF1002 Introduction to Basic Computer Technologies",
+    "section": "",
+    "text": "October 15th, 2024, Thursday 4-7pm, ONLINE\nContents: Latex at Overleaf link for lecture materials"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "FEF1002 Lecture Materials",
+    "section": "",
+    "text": "Lecture materials for FEF1002 for 2024 FALL semester at YTU Faculty of Science and Letters\n\n\nTo be determined.."
+  },
+  {
+    "objectID": "about.html#frequently-asked-questions",
+    "href": "about.html#frequently-asked-questions",
+    "title": "FEF1002 Lecture Materials",
+    "section": "",
+    "text": "To be determined.."
+  },
+  {
+    "objectID": "latex-lecture1-en.html",
+    "href": "latex-lecture1-en.html",
+    "title": "What is LaTeX?",
+    "section": "",
+    "text": "LaTeX (more formally shown as $ $) is a document preparation system and markup language that is widely used for typesetting scientific, technical, and mathematical documents. It is based on the TeX typesetting system developed by Donald Knuth and is particularly suited for creating complex, structured documents such as theses, dissertations, research papers, and books. LaTeX allows users to focus on the content of their document, rather than its layout, by providing a set of markup commands that can be used to define the structure and formatting of the text. This results in professional-quality output with precise control over typography, spacing, and layout, making it a popular choice among academics, researchers, and publishers."
+  },
+  {
+    "objectID": "latex-lecture1-en.html#word-vs-latex",
+    "href": "latex-lecture1-en.html#word-vs-latex",
+    "title": "What is LaTeX?",
+    "section": "Word vs Latex",
+    "text": "Word vs Latex\nMicrosoft Word is a WYSIWYG editor (what you see is what you get). If you want to make text bold and red, you select the text and then click on “Bold” icon and then select red color from “Font Color” menu. Finally, you see the results on your screen. Or, if you want to add an image to your text you can drag and drop the image to your document. And then you can move around the image on the page.\n\n\nThis is very practical and efficient for small documents but becomes an disadvantage for documents like thesis, books, research papers, etc.\nLaTeX has very different approach. You describe how the content should look or placed and then LaTeX will compile the document accordingly. You write your Latex code first:\n\nThen you compile it, after which you get a PDF output:"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#word-vs-latex-memes",
+    "href": "latex-lecture1-en.html#word-vs-latex-memes",
+    "title": "What is LaTeX?",
+    "section": "Word-vs-Latex memes",
+    "text": "Word-vs-Latex memes\nLatex might be complex for small and simple documents but for longer and more professional documents, Latex is much simpler.\n\nimage source\nIn Word, when you add a picture, layout of your whole document might mess up.\n\nimage source"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#the-preamble-of-a-document",
+    "href": "latex-lecture1-en.html#the-preamble-of-a-document",
+    "title": "What is LaTeX?",
+    "section": "The preamble of a document",
+    "text": "The preamble of a document\nThe preamble part of a latex Document contains the following information: * Document type (article, report, book, etc.) * Packages to use/include * Information to be used in the document (title, author name, date, etc.) * Macros\nHere’s sample document which contains simple preamble part.\n\\documentclass[12pt, letterpaper]{article}\n\\title{My first LaTeX document}\n\\author{Hubert Farnsworth\\thanks{Funded by the Overleaf team.}}\n\\date{August 2022}\n\\begin{document}\n\\maketitle\nWe have now added a title, author and date to our first \\LaTeX{} document!\n\\end{document}\nThis document is rendered as follows (Open this document in Overleaf):"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#adding-comments",
+    "href": "latex-lecture1-en.html#adding-comments",
+    "title": "What is LaTeX?",
+    "section": "Adding comments",
+    "text": "Adding comments\nLaTeX is a form of “program code”, so you can include comments within your document. A LaTeX comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging.\nTo make a comment in LaTeX, simply write a % symbol at the beginning of the line, as shown in the following code which uses the example above:\n\\documentclass[12pt, letterpaper]{article}\n\\title{My first LaTeX document}\n\\author{Hubert Farnsworth\\thanks{Funded by the Overleaf team.}}\n\\date{August 2022}\n\\begin{document}\n\\maketitle\nWe have now added a title, author and date to our first \\LaTeX{} document!\n\n% This line here is a comment. It will not be typeset in the document.\n\\end{document}"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#bold-italics-and-underlining",
+    "href": "latex-lecture1-en.html#bold-italics-and-underlining",
+    "title": "What is LaTeX?",
+    "section": "Bold, italics and underlining",
+    "text": "Bold, italics and underlining\nNext, we will now look at some text formatting commands:\n\nBold: bold text in LaTeX is typeset using the command.\nItalics: italicised text is produced using the command.\n\nUnderline\n\n: to underline text use the command.\n\nThe next example demonstrates these commands:\nSome of the \\textbf{greatest}\ndiscoveries in \\underline{science} \nwere made by \\textbf{\\textit{accident}}.\nThis Latex will be rendered as:\nSome of the \\(\\textbf{greatest}\\) discoveries in \\(\\underline{science}\\) were made by \\(\\textbf{\\textit{accident}}\\)\n\nAnother very useful command is \\emph{argument}, whose effect on its argument depends on the context. Inside normal text, the emphasized text is italicized, but this behaviour is reversed if used inside an italicized text"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#adding-images",
+    "href": "latex-lecture1-en.html#adding-images",
+    "title": "What is LaTeX?",
+    "section": "Adding images",
+    "text": "Adding images\nIn Overleaf editor, there are multiple ways to include an image:\n\nUse the Insert Figure button, located on the editor toolbar, to insert an image into Visual Editor or Code Editor\nCopy and paste an image into Visual Editor or Code Editor.\nUse Code Editor to write LaTeX code that inserts a graphic.\n\nOptions 1 and 2 automatically generate the LaTeX code required to insert images, in Option 3, the image needs to be uploaded to Overleaf project.\nBelow is an example:\n\\documentclass{article}\n\\usepackage{graphicx} %LaTeX package to import graphics\n\\graphicspath{{images/}} %configuring the graphicx package\n \n\\begin{document}\nThe universe is immense and it seems to be homogeneous, \non a large scale, everywhere we look.\n\n% The \\includegraphcs command is \n% provided (implemented) by the \n% graphicx package\n\\includegraphics{universe}  \n \nThere's a picture of a galaxy above.\n\\end{document}\nWhich renders as follows (Open this example in Overleaf)\n\n\nFigure captions, labels and references\nImages can be captioned, labelled and referenced by means of the figure environment, as shown below:\n\\documentclass{article}\n\\usepackage{graphicx}\n\\graphicspath{{images/}}\n \n\\begin{document}\n\n\\begin{figure}[h]\n    \\centering\n    \\includegraphics[width=0.75\\textwidth]{mesh}\n    \\caption{A nice plot.}\n    \\label{fig:mesh1}\n\\end{figure}\n \nAs you can see in figure \\ref{fig:mesh1}, the function grows near the origin. This example is on page \\pageref{fig:mesh1}.\n\n\\end{document}\nWhich renders as:\n\nHere are the explanations of each command:\n\n: This form of \\includegraphics instructs LaTeX to set the figure’s width to 75% of the text width—whose value is stored in the command.\n**\n**: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.\n: To reference this image within your document you give it a label using the command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.\n\\ref{fig:mesh1}: This code will be substituted by the number corresponding to the referenced figure."
+  },
+  {
+    "objectID": "latex-lecture1-en.html#lists-in-latex",
+    "href": "latex-lecture1-en.html#lists-in-latex",
+    "title": "What is LaTeX?",
+    "section": "Lists in Latex",
+    "text": "Lists in Latex\nYou can use \\begin{environment-name} and \\end{environment-name} environments to list unordered/bullet lists (itemize) or ordered lists (enumerate)\n\nUnordered lists\n\\documentclass{article}\n\\begin{document}\n\\begin{itemize}\n  \\item The individual entries are indicated with a black dot, a so-called bullet.\n  \\item The text in the entries may be of any length.\n\\end{itemize}\n\\end{document}\n\n\nOrdered lists\n\\begin{enumerate}\n  \\item This is the first entry in our list.\n  \\item The list numbers increase with each entry we add.\n\\end{enumerate}\nThe lists above will render as:\n\n\n\nunordered-list\n\n\n\n\n\nordered-list"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#adding-math",
+    "href": "latex-lecture1-en.html#adding-math",
+    "title": "What is LaTeX?",
+    "section": "Adding math",
+    "text": "Adding math\nOne of the main advantages of LaTeX is the ease with which mathematical expressions can be written. LaTeX provides two writing modes for typesetting mathematics:\n\ninline math mode used for writing formulas that are part of a paragraph\ndisplay math mode used to write expressions that are not part of a text or paragraph and are typeset on separate lines\n\n\nInline math mode\n\\documentclass[12pt, letterpaper]{article}\n\\begin{document}\nIn physics, the mass-energy equivalence is stated \nby the equation $E=mc^2$, discovered in 1905 by Albert Einstein.\n\\end{document}\nWill render as:\nIn physics, the mass-energy equivalence is stated by the equation \\(E=mc^2\\), discovered in 1905 by Albert Einstein.\n\n\nDisplay math mode\n\\begin{equation}\nE=mc^2\n\\end{equation}\nWill render as formulas in separate lines:\n\\[\\begin{equation}\nE=mc^2\n\\end{equation}\\]\nPlease refer to more complete examples for more detail."
+  },
+  {
+    "objectID": "latex-lecture1-en.html#basic-document-structure",
+    "href": "latex-lecture1-en.html#basic-document-structure",
+    "title": "What is LaTeX?",
+    "section": "Basic document structure",
+    "text": "Basic document structure\nEspecially scientific documents have sections like Abstract and then rest of the document might be divided up into sections/chapters. It’s trivial to define those structures in Latex\n\nAbstracts\nThe Latex code below:\n\\documentclass{article}\n\\begin{document}\n\\begin{abstract}\nThis is a simple paragraph at the beginning of the \ndocument. A brief introduction about the main subject.\n\\end{abstract}\n\\end{document}\nWill render as:\n\n\n\nabstract\n\n\n\n\nParagraphs and new lines\n\nIn Latex “an empty line” means new paragraph, whereas in Word just pressing Enter will start a new paragraph\n\nIf you need to break a line you can use \\\\ or \\newline command. Please check Paragraphs and new lines section at Overleaf for more details.\n\n\nChapters and sections\nYou can use the following commands to define structure. The Latex will figure out numbering, font-size and margin for each structure\n\n\\part{part}\n\\chapter{chapter}\n\\section{section}\n\\subsection{subsection}\n\\subsubsection{subsubsection}"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#creating-tables",
+    "href": "latex-lecture1-en.html#creating-tables",
+    "title": "What is LaTeX?",
+    "section": "Creating tables",
+    "text": "Creating tables\nIn Latex, creating tables might be more tedious compared to Word. First we need to define and describe tabular environment and also we need to define the columns with &.\nThe following latex code\n\\begin{center}\n\\begin{tabular}{c c c}\n cell1 & cell2 & cell3 \\\\ \n cell4 & cell5 & cell6 \\\\  \n cell7 & cell8 & cell9    \n\\end{tabular}\n\\end{center}\nWill render as:\n\n\nYou don’t need to prepare the tables manually, please use online TablesGenerator where you can copy and paste Excel tables and generate Latex code\n\nPlease refer to adding borders and captions, labels and references sections at Overleaf"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#adding-table-of-contents",
+    "href": "latex-lecture1-en.html#adding-table-of-contents",
+    "title": "What is LaTeX?",
+    "section": "Adding table of contents",
+    "text": "Adding table of contents\nIf you add \\tableofcontents command in your document, you’ll automatically add table of contents with section titles and page numbers.\nHere’s an example:"
+  },
+  {
+    "objectID": "latex-lecture1-en.html#overview",
+    "href": "latex-lecture1-en.html#overview",
+    "title": "What is LaTeX?",
+    "section": "Overview",
+    "text": "Overview\nHere’s a sample Latex code which showcases several features (Open in Overleaf)\n\\documentclass{article}\n\\usepackage{amsmath} % For math symbols\n\\usepackage{mhchem} % For chemistry symbols\n\\usepackage{graphicx} % For including images\n\\usepackage{epigraph} \n\\usepackage{subcaption}\n\\usepackage{hyperref}\n\\hypersetup{colorlinks=true,\n    linkcolor=blue,\n    urlcolor=blue}\n    \n\\title{Introduction to LaTeX}\n\\author{Your Name}\n\\date{\\today}\n\n\\begin{document}\n\\maketitle\n\n\\section{Introduction}\nLaTeX is a powerful typesetting system used for various kinds of documents.\n\n\\section{Mathematics}\nHere is an inline equation: $ E = mc^2 $.\n\nHere is a displayed equation:\n\\begin{equation}\n \\int_{0}^{\\infty} x^2 \\, dx\\label{eq:integral}\n\\end{equation}\n\n\\section{Chemistry}\nHere is a chemical formula: \\ce{H2O}.\n\nHere is a chemical reaction: \\ce{CO2 + C -&gt; 2 CO}\n  \n\n\\section{Literature}\n\nHere's some fancy way to make quotes.\n\n\\epigraph{All human things are subject to decay, and when fate summons, Monarchs must obey}{\\textit{Mac Flecknoe \\\\ John Dryden}}\n\n\\section{Adding tables}\n\nPlease use \\url{https://tablesgenerator.com/latex_tables} to generate tables\n\n\\begin{table}[ht]\n\\centering\n\n  \\begin{tabular}{c|c|c}\n  A & B & C \\\\\n  \\hline\n  1 & 2 & 3 \\\\\n\n  4 & 5 & 6 \\\\\n  \\hline\n  \\end{tabular}\n  \\caption{A simple table.}\n  \\label{tab:simple}\n  \\end{table}\n  \n\\section{Adding images}\n\n\\begin{figure}[ht]\n\n\\begin{subfigure}{0.5\\textwidth}\n\\includegraphics[width=0.9\\linewidth, height=6cm]{universe} \n\\caption{Caption1}\n\\label{fig:subim1}\n\\end{subfigure}\n\\begin{subfigure}{0.5\\textwidth}\n\\includegraphics[width=0.9\\linewidth, height=6cm]{mesh}\n\\caption{Caption 2}\n\\label{fig:subim2}\n\\end{subfigure}\n\n\\caption{Caption for this figure with two images}\n\\label{fig:image2}\n\\end{figure}\n\nFinally, according to \\cite{sample}, LaTeX is widely used in academia and Formula \\eqref{eq:integral} is simple integral and Table \\ref{tab:simple} is a very simple table. Figure \\ref{fig:subim1} contains a universe.\n\n\\bibliographystyle{plain}\n\\bibliography{sample}\n\n\\end{document}\n\nThis code is rendered as PDF as follows:"
+  },
+  {
+    "objectID": "latex-lecture2-en.html",
+    "href": "latex-lecture2-en.html",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "",
+    "text": "Overleaf is a collaborative LaTeX editor. In this lecture, we’ll be using YTU Thesis LaTeX template with Overleaf."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#compiling-latex-content",
+    "href": "latex-lecture2-en.html#compiling-latex-content",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "Compiling LaTeX content",
+    "text": "Compiling LaTeX content\nLaTeX content needs compiling so if you’d like to compile files in your own computer you need to install LaTeX software on your own computer. * For Windows, you need to install MiKTeX * For Mac, you need to install MacTeX * For Linux, you need to install pdflatex\nAfter installation, you need to install required LaTeX packages. Long story short, installing and using LaTeX locally in your own computer is a hassle."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#overleaf",
+    "href": "latex-lecture2-en.html#overleaf",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "Overleaf",
+    "text": "Overleaf\nOverleaf provides an online environment where LaTeX and all necessary packages installed so you don’t need to install anything.\nIn order to register for an account, please head over to Registration page at Overleaf\nPlease go over the Creating a document in Overleaf documentation first and then Uploading a project documentation."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#ytu-thesis-template",
+    "href": "latex-lecture2-en.html#ytu-thesis-template",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "YTU thesis template",
+    "text": "YTU thesis template\nPlease visit Thesis Writing Rules page and then download the zip file at “Latex-Tez Şablonu”.\nYou should have *YTU_Thesis_Latex_Template__08_05_2024.zip* file under Downloads folder."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#the-power-of-latex",
+    "href": "latex-lecture2-en.html#the-power-of-latex",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "The power of LaTeX",
+    "text": "The power of LaTeX\nLet’s demonstrate the power of LaTeX, in main.tex file, please update the following line:\n\\usepackage[tr, phd]{ytuthesis}\ninto\n\\usepackage[eng, phd]{ytuthesis}\nAs soon as you save the document (Ctrl + s) the whole thesis document will be compiled and the language of whole thesis will be English. Please observe the changes in right pane (PDF rendering)"
+  },
+  {
+    "objectID": "latex-lecture2-en.html#document-structure",
+    "href": "latex-lecture2-en.html#document-structure",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "Document structure",
+    "text": "Document structure\nIf you observe the preamble of the main.tex file, it’s quite short: (the comments are removed for brevity)\n\\documentclass[a4paper,12pt,oneside,openany]{book}\n\n\\usepackage[tr, phd]{ytuthesis}\n\n\\addbibresource{references.bib} \nHere, ytuthesis.sty file is used for styling. That file contains rules about the YTU Thesis style (margins, font types, font sizes, line spacing, space after figures. etc.). Please do not change that file unless you know what you’re doing\nAnd, references.bib file contains references. It’s actually a txt file, go ahead and open it in Overleaf and observe it’s contents and style.\nAnd here’s the \\begin{document} - \\end{document} part:\n\\begin{document}\n\n\\input {frontPages.tex}\n\n\\input {thesisChapters/1-chapter.tex}\n\\input {thesisChapters/2-chapter.tex}\n\\input {thesisChapters/3-chapter.tex}\n\\input {thesisChapters/4-chapter.tex}\n\n\\newpage\n\\addcontentsline{toc}{chapter}{\\bibName}\n\\singlespacing\n\\printbibliography[title={\\bibName}]\n\n\\newpage\\appendix\n\n\\input {thesisChapters/A-appendix.tex}\n\n\\ifnum\\tmc=0\n\\newpage\n\\addcontentsline{toc}{chapter}{\\cvpub}\n\\input {publications.tex}\n\\fi\n\n\\end{document}\nRemember, we said LaTeX is like a programming language. Here, you can notice the command \\input which can be used to include external files which helps working with large documents such as thesis. Also, \\ifnum command checks contents of a variable (in this case tmc) and includes publications.tex file conditionally."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#variables",
+    "href": "latex-lecture2-en.html#variables",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "Variables",
+    "text": "Variables\nFor small documents, a single main.tex file can be feasible to work on. But for larger content, chapters as separate files, styles in a single file and variables in a separate file should allow easier management of writing process.\nIn YTU thesis case, frontPages.tex file contains certain variables and we should not modify that file. However, information.tex file contains variables about the thesis and you’re supposed to update thesis title, advisor, etc. variables in this file.\nIf you want to update the title of thesis, please open the information.tex file and then update the fields 1 and 2 and then save the file (Ctrl + s)"
+  },
+  {
+    "objectID": "latex-lecture2-en.html#your-turn",
+    "href": "latex-lecture2-en.html#your-turn",
+    "title": "Writing YTU Thesis with Overleaf",
+    "section": "Your turn",
+    "text": "Your turn\nPlease fill in the various fields in information.tex file as much as you can and observe the changes in PDF render whenever your save the document."
+  }
+]

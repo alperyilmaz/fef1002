@@ -1,0 +1,23 @@
+# FEF1002 Introduction to Basic Computer Technologies
+
+## Resources
+
+- The lecture materials will be provided at this website
+
+## Lecture1
+
+*October 1st, 2024, Thursday 4-7pm, ONLINE*
+
+**Contents**: Introduction about the lecture
+
+## Lecture2
+
+*October 8th, 2024, Thursday 4-7pm, ONLINE*
+
+**Contents**: Latex [link for lecture materials](latex-lecture1-en.ipynb)
+
+## Lecture3
+
+*October 15th, 2024, Thursday 4-7pm, ONLINE*
+
+**Contents**: Latex at Overleaf [link for lecture materials](latex-lecture2-en.ipynb)
