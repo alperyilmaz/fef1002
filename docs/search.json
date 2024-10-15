@@ -249,14 +249,14 @@
     "href": "latex-lecture2-en.html#preparing-a-cv",
     "title": "Compiling LaTeX content",
     "section": "Preparing a CV",
-    "text": "Preparing a CV\nAfter clicking on the Resume/CV templates link, you can select a sample CV template, fill it with your own information, compile it and create a PDF CV. Click here for the AltaCV template."
+    "text": "Preparing a CV\nAfter clicking the Resume/CV templates link, you can select a sample CV template, fill it with your own information, compile it, and create a PDF CV. Click here for the AltaCV template."
   },
   {
     "objectID": "latex-lecture2-en.html#preparing-a-poster",
     "href": "latex-lecture2-en.html#preparing-a-poster",
     "title": "Compiling LaTeX content",
-    "section": "Preparing a poster",
-    "text": "Preparing a poster\nYou can prepare PDF documents in poster size, in vertical or horizontal format, using Poster templates."
+    "section": "Preparing a Poster",
+    "text": "Preparing a Poster\nWith Poster templates, you can prepare PDF documents in poster size, in vertical or horizontal format. # Preparing a presentation (with Beamer)\nBeamer is a powerful and flexible LaTeX library for creating great-looking presentations. The basic steps to make a Beamer slideshow are: creating a title page, adding a logo, emphasizing important points, creating a table of contents, and adding effects to the slideshow.\nBelow is a minimal example of a beamer presentation:\n\\documentclass{beamer}\n%Information to be included in the title page:\n\\title{Sample title}\n\\author{Anonymous}\n\\institute{Overleaf}\n\\date{2021}\n\\begin{document}\n\\frame{\\titlepage}\n\\begin{frame}\n\\frametitle{Sample frame title}\nThis is some text in the first frame. This is some text in the first frame. This is some text in the first frame.\n\\end{frame}\n\\end{document}\nCompiling this latex code will create the following presentation file containing two slides:"
   },
   {
     "objectID": "latex-lecture2-en.html#beamer-presentation-title-slide",
@@ -277,7 +277,7 @@
     "href": "latex-lecture2-en.html#beamer-themes",
     "title": "Compiling LaTeX content",
     "section": "Beamer: themes",
-    "text": "Beamer: themes\nYou can see a list of beamer themes on the Overleaf beamer page.\nSelect one of the presentation templates prepared with Beamer from the Overleaf Templates page, modify it, compile it, and prepare a PDF presentation file.\nPlease go over the Creating a document in Overleaf documentation first and then Uploading a project documentation."
+    "text": "Beamer: themes\nYou can see a list of beamer themes on the Overleaf beamer page.\nSelect one of the presentation templates prepared with Beamer from the Overleaf Templates page, modify it, compile it, and prepare a PDF presentation file."
   },
   {
     "objectID": "latex-lecture2-en.html#ytu-thesis-template",
