@@ -140,59 +140,185 @@
     "text": "Overview\nHere’s a sample Latex code which showcases several features (Open in Overleaf)\n\\documentclass{article}\n\\usepackage{amsmath} % For math symbols\n\\usepackage{mhchem} % For chemistry symbols\n\\usepackage{graphicx} % For including images\n\\usepackage{epigraph} \n\\usepackage{subcaption}\n\\usepackage{hyperref}\n\\hypersetup{colorlinks=true,\n    linkcolor=blue,\n    urlcolor=blue}\n    \n\\title{Introduction to LaTeX}\n\\author{Your Name}\n\\date{\\today}\n\n\\begin{document}\n\\maketitle\n\n\\section{Introduction}\nLaTeX is a powerful typesetting system used for various kinds of documents.\n\n\\section{Mathematics}\nHere is an inline equation: $ E = mc^2 $.\n\nHere is a displayed equation:\n\\begin{equation}\n \\int_{0}^{\\infty} x^2 \\, dx\\label{eq:integral}\n\\end{equation}\n\n\\section{Chemistry}\nHere is a chemical formula: \\ce{H2O}.\n\nHere is a chemical reaction: \\ce{CO2 + C -&gt; 2 CO}\n  \n\n\\section{Literature}\n\nHere's some fancy way to make quotes.\n\n\\epigraph{All human things are subject to decay, and when fate summons, Monarchs must obey}{\\textit{Mac Flecknoe \\\\ John Dryden}}\n\n\\section{Adding tables}\n\nPlease use \\url{https://tablesgenerator.com/latex_tables} to generate tables\n\n\\begin{table}[ht]\n\\centering\n\n  \\begin{tabular}{c|c|c}\n  A & B & C \\\\\n  \\hline\n  1 & 2 & 3 \\\\\n\n  4 & 5 & 6 \\\\\n  \\hline\n  \\end{tabular}\n  \\caption{A simple table.}\n  \\label{tab:simple}\n  \\end{table}\n  \n\\section{Adding images}\n\n\\begin{figure}[ht]\n\n\\begin{subfigure}{0.5\\textwidth}\n\\includegraphics[width=0.9\\linewidth, height=6cm]{universe} \n\\caption{Caption1}\n\\label{fig:subim1}\n\\end{subfigure}\n\\begin{subfigure}{0.5\\textwidth}\n\\includegraphics[width=0.9\\linewidth, height=6cm]{mesh}\n\\caption{Caption 2}\n\\label{fig:subim2}\n\\end{subfigure}\n\n\\caption{Caption for this figure with two images}\n\\label{fig:image2}\n\\end{figure}\n\nFinally, according to \\cite{sample}, LaTeX is widely used in academia and Formula \\eqref{eq:integral} is simple integral and Table \\ref{tab:simple} is a very simple table. Figure \\ref{fig:subim1} contains a universe.\n\n\\bibliographystyle{plain}\n\\bibliography{sample}\n\n\\end{document}\n\nThis code is rendered as PDF as follows:"
   },
   {
-    "objectID": "latex-lecture2-en.html",
-    "href": "latex-lecture2-en.html",
-    "title": "Writing YTU Thesis with Overleaf",
+    "objectID": "latex-lecture2-tr.html",
+    "href": "latex-lecture2-tr.html",
+    "title": "LaTeX içeriğini derlemek",
     "section": "",
-    "text": "Overleaf is a collaborative LaTeX editor. In this lecture, we’ll be using YTU Thesis LaTeX template with Overleaf."
+    "text": "LaTeX içeriği derlenmesi gerektiği için, dosyaları kendi bilgisayarınızda derlemek istiyorsanız, bilgisayarınıza LaTeX yazılımı kurmanız gerekmektedir.\n\nWindows için MiKTeX kurmanız gerekmektedir.\nMac için MacTeX kurmanız gerekmektedir.\nLinux için pdflatex kurmanız gerekmektedir.\n\nKurulumdan sonra, gerekli LaTeX paketlerini yüklemeniz gerekmektedir. Kısacası, LaTeX’i kendi bilgisayarınızda yerel olarak kurmak ve kullanmak zahmetli olabilir."
   },
   {
-    "objectID": "latex-lecture2-en.html#compiling-latex-content",
-    "href": "latex-lecture2-en.html#compiling-latex-content",
-    "title": "Writing YTU Thesis with Overleaf",
-    "section": "Compiling LaTeX content",
-    "text": "Compiling LaTeX content\nLaTeX content needs compiling so if you’d like to compile files in your own computer you need to install LaTeX software on your own computer. * For Windows, you need to install MiKTeX * For Mac, you need to install MacTeX * For Linux, you need to install pdflatex\nAfter installation, you need to install required LaTeX packages. Long story short, installing and using LaTeX locally in your own computer is a hassle."
+    "objectID": "latex-lecture2-tr.html#latex-kurulumu",
+    "href": "latex-lecture2-tr.html#latex-kurulumu",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "",
+    "text": "LaTeX içeriği derlenmesi gerektiği için, dosyaları kendi bilgisayarınızda derlemek istiyorsanız, bilgisayarınıza LaTeX yazılımı kurmanız gerekmektedir.\n\nWindows için MiKTeX kurmanız gerekmektedir.\nMac için MacTeX kurmanız gerekmektedir.\nLinux için pdflatex kurmanız gerekmektedir.\n\nKurulumdan sonra, gerekli LaTeX paketlerini yüklemeniz gerekmektedir. Kısacası, LaTeX’i kendi bilgisayarınızda yerel olarak kurmak ve kullanmak zahmetli olabilir."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#overleaf",
+    "href": "latex-lecture2-tr.html#overleaf",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "Overleaf",
+    "text": "Overleaf\nOverleaf, LaTeX ve tüm gerekli paketlerin yüklü olduğu bir çevrimiçi ortam sağlar, bu yüzden hiçbir şey yüklemenize gerek yoktur.\nBir hesap oluşturmak için, lütfen Overleaf Kayıt sayfasına gidin."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#overleaf-ortamında-farklı-döküman-türleri-oluşturmak",
+    "href": "latex-lecture2-tr.html#overleaf-ortamında-farklı-döküman-türleri-oluşturmak",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "Overleaf ortamında farklı döküman türleri oluşturmak",
+    "text": "Overleaf ortamında farklı döküman türleri oluşturmak\nOverleaf platformu, makale, tez, sunum, poster, CV/Resume gibi çok farklı türde döküman oluşturmak için kullanılabilir. Bunun için çok çeşitli hazır şablonlar Overleaf sitesinde bulunabilir. “Templates” linki ziyaret edilerek, farklı türde şablonlar arayıp, deneyebilirsiniz.\n\nSırasıyla aşağıdaki döküman türlerine göre örnekler yapalım.\n\nCV\nPoster\nSunum (Beamer)\nMakale\nTez (YTÜ Şablonu ile)"
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#cv-hazırlama",
+    "href": "latex-lecture2-tr.html#cv-hazırlama",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "CV hazırlama",
+    "text": "CV hazırlama\nResume/CV şablonları linkini tıkladıktan sonra örnek bir CV şablonu seçip, kendi bilgileriniz ile doldurup derleme yaparak PDF halinde CV oluşturabilirsiniz. AltaCV şablonu için tıklayınız."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#poster-hazırlama",
+    "href": "latex-lecture2-tr.html#poster-hazırlama",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "Poster hazırlama",
+    "text": "Poster hazırlama\nPoster şablonları ile dikey veya yatay formatta, poster boyutunda PDF dökümanları hazırlayabilirsiniz."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#beamer-ile-sunum-hazırlama",
+    "href": "latex-lecture2-tr.html#beamer-ile-sunum-hazırlama",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "(Beamer ile) sunum hazırlama",
+    "text": "(Beamer ile) sunum hazırlama\nBeamer, harika görünen sunumlar oluşturmak için güçlü ve esnek bir LaTeX kütüphanesidir. Bir Beamer slayt gösterisi yapmanın temel adımları: başlık sayfası oluşturma, logo ekleme, önemli noktaları vurgulama, içindekiler tablosu oluşturma ve slayt gösterisine efektler ekleme şeklindedir.\nAşağıda minimal bir beamer sunum örneği verilmiştir:\n\\documentclass{beamer}\n%Information to be included in the title page:\n\\title{Sample title}\n\\author{Anonymous}\n\\institute{Overleaf}\n\\date{2021}\n\n\\begin{document}\n\n\\frame{\\titlepage}\n\n\\begin{frame}\n\\frametitle{Sample frame title}\nThis is some text in the first frame. This is some text in the first frame. This is some text in the first frame.\n\\end{frame}\n\n\\end{document}\nBu latex kodunun derlenmesi ile iki slayt içeren aşağıdaki sunum dosyası oluşacaktır:\n\n\nBeamer: sunum başlık slaytı\nBaşlık (title) slaytına, başlık, alt başlık, yazar adı, kurum adı, konferans adı ve logo gibi bilgiler ekleneibilir\n\\title[About Beamer] %optional\n{About the Beamer class in presentation making}\n\n\\subtitle{A short story}\n\n\\author[Arthur, Doe] % (optional, for multiple authors)\n{A.~B.~Arthur\\inst{1} \\and J.~Doe\\inst{2}}\n\n\\institute[VFU] % (optional)\n{\n  \\inst{1}%\n  Faculty of Physics\\\\\n  Very Famous University\n  \\and\n  \\inst{2}%\n  Faculty of Chemistry\\\\\n  Very Famous University\n}\n\n\\date[VLC 2021] % (optional)\n{Very Large Conference, April 2021}\n\n\\logo{\\includegraphics[height=1cm]{overleaf-logo}}\nÇıktı bu şekilde elde edilecektir:\n\n\n\nBeamer: önemli kelime ve cümlelerin işaretlenmesi\n\\begin{frame}\n\\frametitle{Sample frame title}\n\nIn this slide, some important text will be\n\\alert{highlighted} because it's important.\nPlease, don't abuse it.\n\n\\begin{block}{Remark}\nSample text\n\\end{block}\n\n\\begin{alertblock}{Important theorem}\nSample text in red box\n\\end{alertblock}\n\n\\begin{examples}\nSample text in green box. The title of the block is ``Examples\".\n\\end{examples}\n\\end{frame}\nÇıktısı aşağıdaki gibi görünecektir:\n\n\n\nBeamer: temalar\nOverleaf beamer sayfasında beamer temalarını liste halinde görebilirsiniz.\nBeamer ile hazırlanmış sunum şablonlarından birini Overleaf Templates sayfasından seçip, değiştirip, derleyip PDF halinde sunum dosyası hazırlayınız."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#ytu-tez-şablonu",
+    "href": "latex-lecture2-tr.html#ytu-tez-şablonu",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "YTU Tez Şablonu",
+    "text": "YTU Tez Şablonu\nLütfen Tez Yazım Kuralları sayfasını ziyaret edin ve ardından “Latex-Tez Şablonu” başlığındaki zip dosyasını indirin.\nİndirme sonunda klasörünüzde *YTU_Thesis_Latex_Template__08_05_2024.zip* dosyasına sahip olmalısınız."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#latexin-gücü",
+    "href": "latex-lecture2-tr.html#latexin-gücü",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "LaTeX’in gücü",
+    "text": "LaTeX’in gücü\nLaTeX’in gücünü görelim, main.tex dosyasında aşağıdaki satırı:\n\\usepackage[tr, phd]{ytuthesis}\nşu şekilde güncelleyin:\n\\usepackage[eng, phd]{ytuthesis}\nBelgeyi kaydeder kaydetmez (Ctrl + s), tüm tez belgesi derlenecek ve tezin dili İngilizce olacaktır. Değişiklikleri sağ bölmede (derlenmiş PDF dosyası) gözlemleyin."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#döküman-yapısı",
+    "href": "latex-lecture2-tr.html#döküman-yapısı",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "Döküman yapısı",
+    "text": "Döküman yapısı\nmain.tex dosyasının başında, preamble kısmının oldukça kısa olduğunu göreceksiniz: (yorum satırları kaldırılmıştır)\n\\documentclass[a4paper,12pt,oneside,openany]{book}\n\n\\usepackage[tr, phd]{ytuthesis}\n\n\\addbibresource{references.bib} \nBurada, YTU Tez stil dosyası olan ytuthesis.sty dosyası kullanılıyor. Bu dosya, YTU Tez stil kurallarını (kenar boşlukları, yazı tipi türleri, yazı tipi boyutları, satır aralığı, şekillerden sonra boşluklar vb.) içerir. Bu dosyayı ne yaptığınızı bilmiyorsanız değiştirmeyiniz.\nVe references.bib dosyası referansları içerir. Bu aslında bir düz yazı dosyasıdır, Overleaf’te açın ve içeriğini ve stilini gözlemleyin.\nVe işte \\begin{document} - \\end{document kısmı:\n\\begin{document}\n\n\\input {frontPages.tex}\n\n\\input {thesisChapters/1-chapter.tex}\n\\input {thesisChapters/2-chapter.tex}\n\\input {thesisChapters/3-chapter.tex}\n\\input {thesisChapters/4-chapter.tex}\n\n\\newpage\n\\addcontentsline{toc}{chapter}{\\bibName}\n\\singlespacing\n\\printbibliography[title={\\bibName}]\n\n\\newpage\\appendix\n\n\\input {thesisChapters/A-appendix.tex}\n\n\\ifnum\\tmc=0\n\\newpage\n\\addcontentsline{toc}{chapter}{\\cvpub}\n\\input {publications.tex}\n\\fi\n\n\\end{document}\nHatırlanacağı üzere, LaTeX’in bir programlama dili gibi olduğunu söylemiştik. Burada, büyük belgelerle çalışırken işe yarayan dış dosyaları dahil etmek için kullanılabilecek \\input komutunu fark edebilirsiniz. Ayrıca, \\ifnum komutu bir değişkenin içeriğini kontrol eder (bu durumda tmc) ve publications.tex dosyasını koşullu olarak teze ekler."
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#değişkenler",
+    "href": "latex-lecture2-tr.html#değişkenler",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "Değişkenler",
+    "text": "Değişkenler\nKüçük belgeler için, tek bir main.tex dosyası üzerinde çalışmak uygun olabilir. Ancak, daha büyük içerikler için, bölümleri ayrı dosyalar halinde tutmak, stilleri tek bir dosyada toplamak ve değişkenleri ayrı bir dosyada tutmak, yazma sürecini daha kolay yönetmenizi sağlar.\nYTU tezi durumunda, frontPages.tex dosyası belirli değişkenleri içerir ve bu dosyayı değiştirmememiz gerekir. Ancak, information.tex dosyası tezle ilgili değişkenleri içerir ve bu dosyada tez başlığı, danışman vb. değişkenleri güncellemeniz gerekmektedir.\nTez başlığını güncellemek isterseniz, lütfen information.tex dosyasını açın ve 1 ve 2 numaralı alanlarını güncelleyin ve ardından dosyayı kaydedin (Ctrl + s).\n\n\n\ntez-basligi"
+  },
+  {
+    "objectID": "latex-lecture2-tr.html#sıra-sizde",
+    "href": "latex-lecture2-tr.html#sıra-sizde",
+    "title": "LaTeX içeriğini derlemek",
+    "section": "Sıra sizde",
+    "text": "Sıra sizde\ninformation.tex dosyasındaki bilgileri olabildiğince doldurunuz ve dosyayı kaydettikçe, derleme sonucunda oluşan PDF dosyasını sağ panelde gözlemleyiniz.\nArdından, tezin 3. bölümüne (thesisChapters/3-chapter.tex) figür eklemeyi, tablo eklemeyi ve atıf eklemeyi deneyiniz."
+  },
+  {
+    "objectID": "latex-lecture2-en.html",
+    "href": "latex-lecture2-en.html",
+    "title": "Compiling LaTeX content",
+    "section": "",
+    "text": "LaTeX content needs compiling so if you’d like to compile files in your own computer you need to install LaTeX software on your own computer.\nAfter installation, you need to install required LaTeX packages. Long story short, installing and using LaTeX locally in your own computer is a hassle."
   },
   {
     "objectID": "latex-lecture2-en.html#overleaf",
     "href": "latex-lecture2-en.html#overleaf",
-    "title": "Writing YTU Thesis with Overleaf",
+    "title": "Compiling LaTeX content",
     "section": "Overleaf",
-    "text": "Overleaf\nOverleaf provides an online environment where LaTeX and all necessary packages installed so you don’t need to install anything.\nIn order to register for an account, please head over to Registration page at Overleaf\nPlease go over the Creating a document in Overleaf documentation first and then Uploading a project documentation."
+    "text": "Overleaf\nOverleaf provides an online environment where LaTeX and all necessary packages installed so you don’t need to install anything.\nIn order to register for an account, please head over to Registration page at Overleaf"
+  },
+  {
+    "objectID": "latex-lecture2-en.html#creating-different-document-types-in-the-overleaf-environment",
+    "href": "latex-lecture2-en.html#creating-different-document-types-in-the-overleaf-environment",
+    "title": "Compiling LaTeX content",
+    "section": "Creating different document types in the Overleaf environment",
+    "text": "Creating different document types in the Overleaf environment\nThe Overleaf platform can be used to create various types of documents such as articles, theses, presentations, posters, CV/Resume. For this purpose, a wide variety of ready-made templates can be found on the Overleaf site. You can visit the “Templates” link to search and try different types of templates.\nLet’s create examples for the following document types respectively.\n\nCV\nPoster\nPresentation (Beamer)\nArticle\nThesis (with YTÜ Template)"
+  },
+  {
+    "objectID": "latex-lecture2-en.html#preparing-a-cv",
+    "href": "latex-lecture2-en.html#preparing-a-cv",
+    "title": "Compiling LaTeX content",
+    "section": "Preparing a CV",
+    "text": "Preparing a CV\nAfter clicking on the Resume/CV templates link, you can select a sample CV template, fill it with your own information, compile it and create a PDF CV. Click here for the AltaCV template."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#preparing-a-poster",
+    "href": "latex-lecture2-en.html#preparing-a-poster",
+    "title": "Compiling LaTeX content",
+    "section": "Preparing a poster",
+    "text": "Preparing a poster\nYou can prepare PDF documents in poster size, in vertical or horizontal format, using Poster templates."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#beamer-presentation-title-slide",
+    "href": "latex-lecture2-en.html#beamer-presentation-title-slide",
+    "title": "Compiling LaTeX content",
+    "section": "Beamer: presentation title slide",
+    "text": "Beamer: presentation title slide\nInformation such as title, subtitle, author name, institution name, conference name, and logo can be added to the title slide\n\\title[About Beamer] %optional\n{About the Beamer class in presentation making}\n\\subtitle{A short story}\n\\author[Arthur, Doe] % (optional, for multiple authors)\n{A.~B.~Arthur\\inst{1} \\and J.~Doe\\inst{2}}\n\\institute[VFU] % (optional)\n{\n  \\inst{1}%\n  Faculty of Physics\\\\\n  Very Famous University\n  \\and\n  \\inst{2}%\n  Faculty of Chemistry\\\\\n  Very Famous University\n}\n\\date[VLC 2021] % (optional)\n{Very Large Conference, April 2021}\n\\logo{\\includegraphics[height=1cm]{overleaf-logo}}\nThe output will be obtained as follows:"
+  },
+  {
+    "objectID": "latex-lecture2-en.html#beamer-marking-important-words-and-sentences",
+    "href": "latex-lecture2-en.html#beamer-marking-important-words-and-sentences",
+    "title": "Compiling LaTeX content",
+    "section": "Beamer: marking important words and sentences",
+    "text": "Beamer: marking important words and sentences\nYou can mark parts of text\n\\begin{frame}\n\\frametitle{Sample frame title}\nIn this slide, some important text will be\n\\alert{highlighted} because it's important.\nPlease, don't abuse it.\n\\begin{block}{Remark}\nSample text\n\\end{block}\n\\begin{alertblock}{Important theorem}\nSample text in red box\n\\end{alertblock}\n\\begin{examples}\nSample text in green box. The title of the block is ``Examples\".\n\\end{examples}\n\\end{frame}\nThe output will look like this:"
+  },
+  {
+    "objectID": "latex-lecture2-en.html#beamer-themes",
+    "href": "latex-lecture2-en.html#beamer-themes",
+    "title": "Compiling LaTeX content",
+    "section": "Beamer: themes",
+    "text": "Beamer: themes\nYou can see a list of beamer themes on the Overleaf beamer page.\nSelect one of the presentation templates prepared with Beamer from the Overleaf Templates page, modify it, compile it, and prepare a PDF presentation file.\nPlease go over the Creating a document in Overleaf documentation first and then Uploading a project documentation."
   },
   {
     "objectID": "latex-lecture2-en.html#ytu-thesis-template",
     "href": "latex-lecture2-en.html#ytu-thesis-template",
-    "title": "Writing YTU Thesis with Overleaf",
-    "section": "YTU thesis template",
-    "text": "YTU thesis template\nPlease visit Thesis Writing Rules page and then download the zip file at “Latex-Tez Şablonu”.\nYou should have *YTU_Thesis_Latex_Template__08_05_2024.zip* file under Downloads folder."
+    "title": "Compiling LaTeX content",
+    "section": "YTU Thesis Template",
+    "text": "YTU Thesis Template\nPlease visit the Thesis Writing Rules page and then download the zip file under the “Latex-Thesis Template” heading.\nAfter downloading, you should have a file named *YTU_Thesis_Latex_Template__08_05_2024.zip* in your folder."
+  },
+  {
+    "objectID": "latex-lecture2-en.html#uploading-ytu-thesis-template-to-overleaf",
+    "href": "latex-lecture2-en.html#uploading-ytu-thesis-template-to-overleaf",
+    "title": "Compiling LaTeX content",
+    "section": "Uploading YTU Thesis Template to Overleaf",
+    "text": "Uploading YTU Thesis Template to Overleaf\n\nBefore uploading the YTU thesis template to Overleaf, you should register and log in to Overleaf. After logging in to Overleaf, click on “New Project” and then select “Project from Archive”.\n\n\n\n\nnew-upload\n\n\nThen you can drag and drop the zip file you just downloaded from the YTU website, or click on “Select a .zip file” and choose the zip file from your local folders.  When all these steps are completed, you should see the YTU Thesis template in Overleaf like this:"
   },
   {
     "objectID": "latex-lecture2-en.html#the-power-of-latex",
     "href": "latex-lecture2-en.html#the-power-of-latex",
-    "title": "Writing YTU Thesis with Overleaf",
-    "section": "The power of LaTeX",
-    "text": "The power of LaTeX\nLet’s demonstrate the power of LaTeX, in main.tex file, please update the following line:\n\\usepackage[tr, phd]{ytuthesis}\ninto\n\\usepackage[eng, phd]{ytuthesis}\nAs soon as you save the document (Ctrl + s) the whole thesis document will be compiled and the language of whole thesis will be English. Please observe the changes in right pane (PDF rendering)"
+    "title": "Compiling LaTeX content",
+    "section": "The Power of LaTeX",
+    "text": "The Power of LaTeX\nLet’s see the power of LaTeX. In the main.tex file, update the following line:\n\\usepackage[tr, phd]{ytuthesis}\nto:\n\\usepackage[eng, phd]{ytuthesis}\nAs soon as you save the document (Ctrl + s), the entire thesis document will be compiled and the language of the thesis will be English. Observe the changes in the right pane (compiled PDF file)."
   },
   {
     "objectID": "latex-lecture2-en.html#document-structure",
     "href": "latex-lecture2-en.html#document-structure",
-    "title": "Writing YTU Thesis with Overleaf",
-    "section": "Document structure",
-    "text": "Document structure\nIf you observe the preamble of the main.tex file, it’s quite short: (the comments are removed for brevity)\n\\documentclass[a4paper,12pt,oneside,openany]{book}\n\n\\usepackage[tr, phd]{ytuthesis}\n\n\\addbibresource{references.bib} \nHere, ytuthesis.sty file is used for styling. That file contains rules about the YTU Thesis style (margins, font types, font sizes, line spacing, space after figures. etc.). Please do not change that file unless you know what you’re doing\nAnd, references.bib file contains references. It’s actually a txt file, go ahead and open it in Overleaf and observe it’s contents and style.\nAnd here’s the \\begin{document} - \\end{document} part:\n\\begin{document}\n\n\\input {frontPages.tex}\n\n\\input {thesisChapters/1-chapter.tex}\n\\input {thesisChapters/2-chapter.tex}\n\\input {thesisChapters/3-chapter.tex}\n\\input {thesisChapters/4-chapter.tex}\n\n\\newpage\n\\addcontentsline{toc}{chapter}{\\bibName}\n\\singlespacing\n\\printbibliography[title={\\bibName}]\n\n\\newpage\\appendix\n\n\\input {thesisChapters/A-appendix.tex}\n\n\\ifnum\\tmc=0\n\\newpage\n\\addcontentsline{toc}{chapter}{\\cvpub}\n\\input {publications.tex}\n\\fi\n\n\\end{document}\nRemember, we said LaTeX is like a programming language. Here, you can notice the command \\input which can be used to include external files which helps working with large documents such as thesis. Also, \\ifnum command checks contents of a variable (in this case tmc) and includes publications.tex file conditionally."
+    "title": "Compiling LaTeX content",
+    "section": "Document Structure",
+    "text": "Document Structure\nAt the beginning of the main.tex file, you’ll see that the preamble part is quite short: (comment lines have been removed)\n\\documentclass[a4paper,12pt,oneside,openany]{book}\n\\usepackage[tr, phd]{ytuthesis}\n\\addbibresource{references.bib} \nHere, the ytuthesis.sty file, which is the YTU Thesis style file, is being used. This file contains YTU Thesis style rules (margins, font types, font sizes, line spacing, spaces after figures, etc.). Do not modify this file unless you know what you’re doing.\nAnd the references.bib file contains the references. This is actually a plain text file, open it in Overleaf and observe its content and style.\nAnd here’s the \\begin{document} - \\end{document} part:\n\\begin{document}\n\\input {frontPages.tex}\n\\input {thesisChapters/1-chapter.tex}\n\\input {thesisChapters/2-chapter.tex}\n\\input {thesisChapters/3-chapter.tex}\n\\input {thesisChapters/4-chapter.tex}\n\\newpage\n\\addcontentsline{toc}{chapter}{\\bibName}\n\\singlespacing\n\\printbibliography[title={\\bibName}]\n\\newpage\\appendix\n\\input {thesisChapters/A-appendix.tex}\n\\ifnum\\tmc=0\n\\newpage\n\\addcontentsline{toc}{chapter}{\\cvpub}\n\\input {publications.tex}\n\\fi\n\\end{document}\nAs you may recall, we said that LaTeX is like a programming language. Here, you can notice the \\input command, which can be used to include external files, which is useful when working with large documents. Also, the \\ifnum command checks the content of a variable (in this case tmc) and conditionally adds the publications.tex file to the thesis."
   },
   {
     "objectID": "latex-lecture2-en.html#variables",
     "href": "latex-lecture2-en.html#variables",
-    "title": "Writing YTU Thesis with Overleaf",
+    "title": "Compiling LaTeX content",
     "section": "Variables",
-    "text": "Variables\nFor small documents, a single main.tex file can be feasible to work on. But for larger content, chapters as separate files, styles in a single file and variables in a separate file should allow easier management of writing process.\nIn YTU thesis case, frontPages.tex file contains certain variables and we should not modify that file. However, information.tex file contains variables about the thesis and you’re supposed to update thesis title, advisor, etc. variables in this file.\nIf you want to update the title of thesis, please open the information.tex file and then update the fields 1 and 2 and then save the file (Ctrl + s)"
+    "text": "Variables\nFor small documents, it might be appropriate to work on a single main.tex file. However, for larger contents, keeping sections as separate files, collecting styles in a single file, and keeping variables in a separate file allows you to manage the writing process more easily.\nIn the case of the YTU thesis, the frontPages.tex file contains certain variables and we shouldn’t modify this file. However, the information.tex file contains variables related to the thesis and you need to update variables such as thesis title, advisor, etc. in this file.\nIf you want to update the thesis title, please open the information.tex file and update fields 1 and 2, then save the file (Ctrl + s).\n\n\n\nthesis-title"
   },
   {
     "objectID": "latex-lecture2-en.html#your-turn",
     "href": "latex-lecture2-en.html#your-turn",
-    "title": "Writing YTU Thesis with Overleaf",
-    "section": "Your turn",
-    "text": "Your turn\nPlease fill in the various fields in information.tex file as much as you can and observe the changes in PDF render whenever your save the document."
+    "title": "Compiling LaTeX content",
+    "section": "Your Turn",
+    "text": "Your Turn\nFill in the information in the information.tex file as much as possible and observe the PDF file generated as a result of compilation in the right panel as you save the file.\nThen, try adding a figure, a table, and a citation to the 3rd chapter of the thesis (thesisChapters/3-chapter.tex)."
   }
 ]

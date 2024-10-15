@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Compiling LaTeX content – FEF1002 Introduction to Basic Computer Technologies</title>
+<title>LaTeX içeriğini derlemek – FEF1002 Introduction to Basic Computer Technologies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,25 +145,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overleaf" id="toc-overleaf" class="nav-link active" data-scroll-target="#overleaf">Overleaf</a></li>
-  <li><a href="#creating-different-document-types-in-the-overleaf-environment" id="toc-creating-different-document-types-in-the-overleaf-environment" class="nav-link" data-scroll-target="#creating-different-document-types-in-the-overleaf-environment">Creating different document types in the Overleaf environment</a></li>
-  <li><a href="#preparing-a-cv" id="toc-preparing-a-cv" class="nav-link" data-scroll-target="#preparing-a-cv">Preparing a CV</a></li>
-  <li><a href="#preparing-a-poster" id="toc-preparing-a-poster" class="nav-link" data-scroll-target="#preparing-a-poster">Preparing a poster</a></li>
-  <li><a href="#preparing-a-presentation-with-beamer" id="toc-preparing-a-presentation-with-beamer" class="nav-link" data-scroll-target="#preparing-a-presentation-with-beamer">Preparing a presentation (with Beamer)</a>
+  <li><a href="#latex-kurulumu" id="toc-latex-kurulumu" class="nav-link active" data-scroll-target="#latex-kurulumu">LaTeX kurulumu</a></li>
+  <li><a href="#overleaf" id="toc-overleaf" class="nav-link" data-scroll-target="#overleaf">Overleaf</a></li>
+  <li><a href="#overleaf-ortamında-farklı-döküman-türleri-oluşturmak" id="toc-overleaf-ortamında-farklı-döküman-türleri-oluşturmak" class="nav-link" data-scroll-target="#overleaf-ortamında-farklı-döküman-türleri-oluşturmak">Overleaf ortamında farklı döküman türleri oluşturmak</a></li>
+  <li><a href="#cv-hazırlama" id="toc-cv-hazırlama" class="nav-link" data-scroll-target="#cv-hazırlama">CV hazırlama</a></li>
+  <li><a href="#poster-hazırlama" id="toc-poster-hazırlama" class="nav-link" data-scroll-target="#poster-hazırlama">Poster hazırlama</a></li>
+  <li><a href="#beamer-ile-sunum-hazırlama" id="toc-beamer-ile-sunum-hazırlama" class="nav-link" data-scroll-target="#beamer-ile-sunum-hazırlama">(Beamer ile) sunum hazırlama</a>
   <ul class="collapse">
-  <li><a href="#beamer-presentation-title-slide" id="toc-beamer-presentation-title-slide" class="nav-link" data-scroll-target="#beamer-presentation-title-slide">Beamer: presentation title slide</a></li>
-  <li><a href="#beamer-marking-important-words-and-sentences" id="toc-beamer-marking-important-words-and-sentences" class="nav-link" data-scroll-target="#beamer-marking-important-words-and-sentences">Beamer: marking important words and sentences</a></li>
-  <li><a href="#beamer-themes" id="toc-beamer-themes" class="nav-link" data-scroll-target="#beamer-themes">Beamer: themes</a></li>
+  <li><a href="#beamer-sunum-başlık-slaytı" id="toc-beamer-sunum-başlık-slaytı" class="nav-link" data-scroll-target="#beamer-sunum-başlık-slaytı">Beamer: sunum başlık slaytı</a></li>
+  <li><a href="#beamer-önemli-kelime-ve-cümlelerin-işaretlenmesi" id="toc-beamer-önemli-kelime-ve-cümlelerin-işaretlenmesi" class="nav-link" data-scroll-target="#beamer-önemli-kelime-ve-cümlelerin-işaretlenmesi">Beamer: önemli kelime ve cümlelerin işaretlenmesi</a></li>
+  <li><a href="#beamer-temalar" id="toc-beamer-temalar" class="nav-link" data-scroll-target="#beamer-temalar">Beamer: temalar</a></li>
   </ul></li>
-  <li><a href="#writing-articles-in-overleaf" id="toc-writing-articles-in-overleaf" class="nav-link" data-scroll-target="#writing-articles-in-overleaf">Writing Articles in Overleaf</a></li>
-  <li><a href="#writing-ytu-thesis-with-overleaf" id="toc-writing-ytu-thesis-with-overleaf" class="nav-link" data-scroll-target="#writing-ytu-thesis-with-overleaf">Writing YTU Thesis with Overleaf</a>
+  <li><a href="#overleafte-makale-yazımı" id="toc-overleafte-makale-yazımı" class="nav-link" data-scroll-target="#overleafte-makale-yazımı">Overleaf’te makale yazımı</a></li>
+  <li><a href="#overleaf-ile-ytu-tez-yazımı" id="toc-overleaf-ile-ytu-tez-yazımı" class="nav-link" data-scroll-target="#overleaf-ile-ytu-tez-yazımı">Overleaf ile YTU Tez yazımı</a>
   <ul class="collapse">
-  <li><a href="#ytu-thesis-template" id="toc-ytu-thesis-template" class="nav-link" data-scroll-target="#ytu-thesis-template">YTU Thesis Template</a></li>
-  <li><a href="#uploading-ytu-thesis-template-to-overleaf" id="toc-uploading-ytu-thesis-template-to-overleaf" class="nav-link" data-scroll-target="#uploading-ytu-thesis-template-to-overleaf">Uploading YTU Thesis Template to Overleaf</a></li>
-  <li><a href="#the-power-of-latex" id="toc-the-power-of-latex" class="nav-link" data-scroll-target="#the-power-of-latex">The Power of LaTeX</a></li>
-  <li><a href="#document-structure" id="toc-document-structure" class="nav-link" data-scroll-target="#document-structure">Document Structure</a></li>
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your Turn</a></li>
+  <li><a href="#ytu-tez-şablonu" id="toc-ytu-tez-şablonu" class="nav-link" data-scroll-target="#ytu-tez-şablonu">YTU Tez Şablonu</a></li>
+  </ul></li>
+  <li><a href="#ytu-tez-şablonunu-overleafe-yükleme" id="toc-ytu-tez-şablonunu-overleafe-yükleme" class="nav-link" data-scroll-target="#ytu-tez-şablonunu-overleafe-yükleme">YTU Tez Şablonunu Overleaf’e Yükleme</a>
+  <ul class="collapse">
+  <li><a href="#latexin-gücü" id="toc-latexin-gücü" class="nav-link" data-scroll-target="#latexin-gücü">LaTeX’in gücü</a></li>
+  <li><a href="#döküman-yapısı" id="toc-döküman-yapısı" class="nav-link" data-scroll-target="#döküman-yapısı">Döküman yapısı</a></li>
+  <li><a href="#değişkenler" id="toc-değişkenler" class="nav-link" data-scroll-target="#değişkenler">Değişkenler</a></li>
+  <li><a href="#sıra-sizde" id="toc-sıra-sizde" class="nav-link" data-scroll-target="#sıra-sizde">Sıra sizde</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -173,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Compiling LaTeX content</h1>
+<h1 class="title">LaTeX içeriğini derlemek</h1>
 </div>
 
 
@@ -190,132 +193,146 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>LaTeX content needs compiling so if you’d like to compile files in your own computer you need to install LaTeX software on your own computer.</p>
+<section id="latex-kurulumu" class="level2">
+<h2 class="anchored" data-anchor-id="latex-kurulumu">LaTeX kurulumu</h2>
+<p>LaTeX içeriği derlenmesi gerektiği için, dosyaları kendi bilgisayarınızda derlemek istiyorsanız, bilgisayarınıza LaTeX yazılımı kurmanız gerekmektedir.</p>
 <ul>
-<li>For Windows, you need to install MiKTeX</li>
-<li>For Mac, you need to install MacTeX</li>
-<li>For Linux, you need to install pdflatex</li>
+<li>Windows için MiKTeX kurmanız gerekmektedir.</li>
+<li>Mac için MacTeX kurmanız gerekmektedir.</li>
+<li>Linux için pdflatex kurmanız gerekmektedir.</li>
 </ul>
-<p>After installation, you need to install required LaTeX packages. Long story short, installing and using LaTeX locally in your own computer is a hassle.</p>
+<p>Kurulumdan sonra, gerekli LaTeX paketlerini yüklemeniz gerekmektedir. Kısacası, LaTeX’i kendi bilgisayarınızda yerel olarak kurmak ve kullanmak zahmetli olabilir.</p>
+</section>
 <section id="overleaf" class="level2">
 <h2 class="anchored" data-anchor-id="overleaf">Overleaf</h2>
-<p>Overleaf provides an online environment where LaTeX and all necessary packages installed so you don’t need to install anything.</p>
-<p>In order to register for an account, please head over to <a href="https://www.overleaf.com/register">Registration page at Overleaf</a></p>
+<p>Overleaf, LaTeX ve tüm gerekli paketlerin yüklü olduğu bir çevrimiçi ortam sağlar, bu yüzden hiçbir şey yüklemenize gerek yoktur.</p>
+<p>Bir hesap oluşturmak için, lütfen <a href="https://www.overleaf.com/register">Overleaf Kayıt sayfası</a>na gidin.</p>
 </section>
-<section id="creating-different-document-types-in-the-overleaf-environment" class="level2">
-<h2 class="anchored" data-anchor-id="creating-different-document-types-in-the-overleaf-environment">Creating different document types in the Overleaf environment</h2>
-<p>The Overleaf platform can be used to create various types of documents such as articles, theses, presentations, posters, CV/Resume. For this purpose, a wide variety of ready-made templates can be found on the Overleaf site. You can visit the “Templates” link to search and try different types of templates.</p>
-<p>Let’s create examples for the following document types respectively.</p>
+<section id="overleaf-ortamında-farklı-döküman-türleri-oluşturmak" class="level2">
+<h2 class="anchored" data-anchor-id="overleaf-ortamında-farklı-döküman-türleri-oluşturmak">Overleaf ortamında farklı döküman türleri oluşturmak</h2>
+<p>Overleaf platformu, makale, tez, sunum, poster, CV/Resume gibi çok farklı türde döküman oluşturmak için kullanılabilir. Bunun için çok çeşitli hazır şablonlar Overleaf sitesinde bulunabilir. “<a href="https://www.overleaf.com/latex/templates">Templates</a>” linki ziyaret edilerek, farklı türde şablonlar arayıp, deneyebilirsiniz.</p>
+<p><img src="images/overleaf-templates.png" class="img-fluid"></p>
+<p>Sırasıyla aşağıdaki döküman türlerine göre örnekler yapalım.</p>
 <ul>
 <li>CV</li>
 <li>Poster</li>
-<li>Presentation (Beamer)</li>
-<li>Article</li>
-<li>Thesis (with YTÜ Template)</li>
+<li>Sunum (Beamer)</li>
+<li>Makale</li>
+<li>Tez (YTÜ Şablonu ile)</li>
 </ul>
-<p><img src="images/overleaf-templates.png" class="img-fluid"></p>
 </section>
-<section id="preparing-a-cv" class="level2">
-<h2 class="anchored" data-anchor-id="preparing-a-cv">Preparing a CV</h2>
-<p>After clicking on the Resume/CV templates link, you can select a sample CV template, fill it with your own information, compile it and create a PDF CV. Click here for the AltaCV template.</p>
+<section id="cv-hazırlama" class="level2">
+<h2 class="anchored" data-anchor-id="cv-hazırlama">CV hazırlama</h2>
+<p><a href="https://www.overleaf.com/latex/templates/tagged/cv">Resume/CV şablonları linkini</a> tıkladıktan sonra örnek bir CV şablonu seçip, kendi bilgileriniz ile doldurup derleme yaparak PDF halinde CV oluşturabilirsiniz. <a href="https://www.overleaf.com/project/new/template/38189?id=5915872&amp;latexEngine=pdflatex&amp;mainFile=sample.tex&amp;templateName=AltaCV+Template&amp;texImage=texlive-full%3A2024.1">AltaCV şablonu</a> için tıklayınız.</p>
 </section>
-<section id="preparing-a-poster" class="level2">
-<h2 class="anchored" data-anchor-id="preparing-a-poster">Preparing a poster</h2>
-<p>You can prepare PDF documents in poster size, in vertical or horizontal format, using Poster templates.</p>
+<section id="poster-hazırlama" class="level2">
+<h2 class="anchored" data-anchor-id="poster-hazırlama">Poster hazırlama</h2>
+<p><a href="https://www.overleaf.com/latex/templates/tagged/poster">Poster şablonları</a> ile dikey veya yatay formatta, poster boyutunda PDF dökümanları hazırlayabilirsiniz.</p>
 </section>
-<section id="preparing-a-presentation-with-beamer" class="level1">
-<h1>Preparing a presentation (with Beamer)</h1>
-<p>Beamer is a powerful and flexible LaTeX library for creating great-looking presentations. The basic steps to make a Beamer slideshow are: creating a title page, adding a logo, emphasizing important points, creating a table of contents, and adding effects to the slideshow.</p>
-<p>Below is a minimal example of a beamer presentation:</p>
+<section id="beamer-ile-sunum-hazırlama" class="level2">
+<h2 class="anchored" data-anchor-id="beamer-ile-sunum-hazırlama">(Beamer ile) sunum hazırlama</h2>
+<p>Beamer, harika görünen sunumlar oluşturmak için güçlü ve esnek bir LaTeX kütüphanesidir. Bir Beamer slayt gösterisi yapmanın temel adımları: başlık sayfası oluşturma, logo ekleme, önemli noktaları vurgulama, içindekiler tablosu oluşturma ve slayt gösterisine efektler ekleme şeklindedir.</p>
+<p>Aşağıda minimal bir beamer sunum örneği verilmiştir:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Sample title}</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Anonymous}</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\institute</span>{Overleaf}</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\date</span>{2021}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\frametitle</span>{Sample frame title}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Compiling this latex code will create the following presentation file containing two slides:</p>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\frametitle</span>{Sample frame title}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Bu latex kodunun derlenmesi ile iki slayt içeren aşağıdaki sunum dosyası oluşacaktır:</p>
 <p><img src="images/beamer1.png" class="img-fluid"></p>
-<section id="beamer-presentation-title-slide" class="level2">
-<h2 class="anchored" data-anchor-id="beamer-presentation-title-slide">Beamer: presentation title slide</h2>
-<p>Information such as title, subtitle, author name, institution name, conference name, and logo can be added to the title slide</p>
+<section id="beamer-sunum-başlık-slaytı" class="level3">
+<h3 class="anchored" data-anchor-id="beamer-sunum-başlık-slaytı">Beamer: sunum başlık slaytı</h3>
+<p>Başlık (title) slaytına, başlık, alt başlık, yazar adı, kurum adı, konferans adı ve logo gibi bilgiler ekleneibilir</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>[About Beamer] <span class="co">%optional</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>{About the Beamer class in presentation making}</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\subtitle</span>{A short story}</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>[Arthur, Doe] <span class="co">% (optional, for multiple authors)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>{A.~B.~Arthur<span class="fu">\inst</span>{1} <span class="fu">\and</span> J.~Doe<span class="fu">\inst</span>{2}}</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\institute</span>[VFU] <span class="co">% (optional)</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\inst</span>{1}<span class="co">%</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  Faculty of Physics<span class="fu">\\</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  Very Famous University</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\and</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\inst</span>{2}<span class="co">%</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  Faculty of Chemistry<span class="fu">\\</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  Very Famous University</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\date</span>[VLC 2021] <span class="co">% (optional)</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>{Very Large Conference, April 2021}</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">\logo</span>{<span class="bu">\includegraphics</span>[height=1cm]{<span class="ex">overleaf-logo</span>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The output will be obtained as follows:</p>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\subtitle</span>{A short story}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>[Arthur, Doe] <span class="co">% (optional, for multiple authors)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>{A.~B.~Arthur<span class="fu">\inst</span>{1} <span class="fu">\and</span> J.~Doe<span class="fu">\inst</span>{2}}</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\institute</span>[VFU] <span class="co">% (optional)</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\inst</span>{1}<span class="co">%</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  Faculty of Physics<span class="fu">\\</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  Very Famous University</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\and</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\inst</span>{2}<span class="co">%</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  Faculty of Chemistry<span class="fu">\\</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  Very Famous University</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">\date</span>[VLC 2021] <span class="co">% (optional)</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>{Very Large Conference, April 2021}</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">\logo</span>{<span class="bu">\includegraphics</span>[height=1cm]{<span class="ex">overleaf-logo</span>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Çıktı bu şekilde elde edilecektir:</p>
 <p><img src="images/beamer2.png" class="img-fluid"></p>
 </section>
-<section id="beamer-marking-important-words-and-sentences" class="level2">
-<h2 class="anchored" data-anchor-id="beamer-marking-important-words-and-sentences">Beamer: marking important words and sentences</h2>
-<p>You can mark parts of text</p>
+<section id="beamer-önemli-kelime-ve-cümlelerin-işaretlenmesi" class="level3">
+<h3 class="anchored" data-anchor-id="beamer-önemli-kelime-ve-cümlelerin-işaretlenmesi">Beamer: önemli kelime ve cümlelerin işaretlenmesi</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\frametitle</span>{Sample frame title}</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>In this slide, some important text will be</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\alert</span>{highlighted} because it's important.</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Please, don't abuse it.</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">block</span>}{Remark}</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Sample text</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">block</span>}</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">alertblock</span>}{Important theorem}</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Sample text in red box</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">alertblock</span>}</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">examples</span>}</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>Sample text in green box. The title of the block is ``Examples".</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">examples</span>}</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The output will look like this:</p>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>In this slide, some important text will be</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\alert</span>{highlighted} because it's important.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Please, don't abuse it.</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">block</span>}{Remark}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Sample text</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">block</span>}</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">alertblock</span>}{Important theorem}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>Sample text in red box</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">alertblock</span>}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">examples</span>}</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>Sample text in green box. The title of the block is ``Examples".</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">examples</span>}</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Çıktısı aşağıdaki gibi görünecektir:</p>
 <p><img src="images/beamer3.png" class="img-fluid"></p>
 </section>
-<section id="beamer-themes" class="level2">
-<h2 class="anchored" data-anchor-id="beamer-themes">Beamer: themes</h2>
-<p>You can see a list of beamer themes on the <a href="https://www.overleaf.com/learn/latex/Beamer#Customizing_your_presentation">Overleaf beamer page</a>.</p>
-<p>Select one of the presentation templates prepared with Beamer from the <a href="https://www.overleaf.com/latex/templates/tagged/beamer">Overleaf Templates page</a>, modify it, compile it, and prepare a PDF presentation file.</p>
-<p>Please go over the <a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf">Creating a document in Overleaf</a> documentation first and then <a href="https://www.overleaf.com/learn/how-to/Uploading_a_project">Uploading a project</a> documentation.</p>
+<section id="beamer-temalar" class="level3">
+<h3 class="anchored" data-anchor-id="beamer-temalar">Beamer: temalar</h3>
+<p><a href="https://www.overleaf.com/learn/latex/Beamer#Customizing_your_presentation">Overleaf beamer sayfası</a>nda beamer temalarını liste halinde görebilirsiniz.</p>
+<p>Beamer ile hazırlanmış sunum şablonlarından birini <a href="https://www.overleaf.com/latex/templates/tagged/beamer">Overleaf Templates sayfası</a>ndan seçip, değiştirip, derleyip PDF halinde sunum dosyası hazırlayınız.</p>
 </section>
 </section>
-<section id="writing-articles-in-overleaf" class="level1">
-<h1>Writing Articles in Overleaf</h1>
-<p>When examining the <a href="https://www.overleaf.com/articles/tagged/academic-journal">academic journal</a> page in Overleaf templates, you’ll see that official templates of many different journals are shared on Overleaf. Writing articles using the templates shared by journals will make it possible to quickly ensure formal compliance. In fact, some journal templates have a “Submit to journal” link, so you can submit to the journal directly through Overleaf once you’ve completed writing your article.</p>
-<p>Academic articles typically contain the following elements:</p>
+<section id="overleafte-makale-yazımı" class="level1">
+<h1>Overleaf’te makale yazımı</h1>
+<p>Overleaf şablonlarında <a href="https://www.overleaf.com/articles/tagged/academic-journal">akademik makale</a> sayfası incellendiğinde, farklı birçok derginin resmi şablonlarının Overleaf üzerinden paylaşıldığı görülecektir. Dergilerin paylaştıkları şablon üzerinden makale yazılması, biçimsel açıdan uygunluğu çabuk bir şekilde sağlanmasını mümkün kılacaktır. Hatta bazı dergilerin şablonlarında “Submit to journal” bağlantısı bulunmaktadır, böylelikle makale yazımı tamamlandığında dergiye Overleaf üzerinden başvuru yapılabilmektedir.</p>
+<p>Akademik makalelerde temel olarak aşağıdaki unsurlar bulunmaktadır:</p>
 <ul>
-<li>Abstract and other sections</li>
-<li>Figures</li>
-<li>Tables</li>
-<li>Citations</li>
+<li>Abstract ve diğer bölümler</li>
+<li>Figürler</li>
+<li>Tablolar</li>
+<li>Atıflar</li>
 </ul>
-<p>Let’s examine all of these using the <a href="https://www.overleaf.com/project/new/template/33520?brandVariationId=949&amp;id=245279341&amp;latexEngine=pdflatex&amp;mainFile=sn-article.tex&amp;templateName=Springer+Nature+LaTeX+Template&amp;texImage=texlive-full%3A2024.1">Springer/Nature article template</a>.</p>
-<p>The abstract information should be written inside <code>\abstract{...}</code></p>
+<p>Bütün bunları <a href="https://www.overleaf.com/project/new/template/33520?brandVariationId=949&amp;id=245279341&amp;latexEngine=pdflatex&amp;mainFile=sn-article.tex&amp;templateName=Springer+Nature+LaTeX+Template&amp;texImage=texlive-full%3A2024.1">Springer/Nature makale şablonu</a> üzerinden inceleyelim.</p>
+<p>Abstract bilgisi <code>\abstract{...}</code> içine yazılmalıdır</p>
 <p><img src="images/makale-abstract.png" class="img-fluid"></p>
-<p>When adding a figure, the following code is used:</p>
+<p>Figür eklerken, aşağıdaki kod kullanılmaktadır:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[h]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\centering</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\includegraphics</span>[width=0.9<span class="fu">\textwidth</span>]{<span class="ex">fig.eps</span>}</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\caption</span>{This is a widefig. This is an example of long caption this is an example of long caption  this is an example of long caption this is an example of long caption}<span class="kw">\label</span>{<span class="ex">fig1</span>}</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In this code, <code>\textwidth</code> determines how wide the figure will be relative to the text width. After uploading an image in PDF, EPS, PNG, or JPG format to Overleaf, you can add it to your article by writing its name inside the <code>\includegraphics</code> command. The text given in <code>\caption</code> will be added as a description below the figure, according to the journal’s template. Finally, you can add a label to your figure or table with the <code>\label</code> command, allowing you to refer to your figures or tables within the article text. The above code will appear as follows in PDF format:</p>
+<p>Bu kodda, <code>\textwidth</code> sayesinde figürün yazı genişliğine göre ne kadar geniş olacağı belirlenmektedir. PDF, EPS, PNG veya JPG formatındaki bir resmi Overleaf’e yükledikten sonra <code>\includegraphics</code> komutu içinde adını yazarak makalenize ekleyebilirsiniz. <code>\caption</code> içinde verilen yazı, derginin şablonuna uygun olarak figürün altında, açıklama olarak eklenecektir. Son olarak, <code>\label</code> komutu ile figür veya tablonuza etiket ekleyebilir böylelikle makale metni içinde figür veya tablolarınıza atıfta bulunabilirsiniz. Yukarıdaki kod, PDF formatında aşağıdaki gibi görünecektir</p>
 <p><img src="images/makale-figure.png" class="img-fluid"></p>
-<p>The following code is used to add a table:</p>
+<p>Tablo eklemek için aşağıdaki kod kullanılmıştır:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">table</span>}[h]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\caption</span>{Caption text}<span class="kw">\label</span>{<span class="ex">tab1</span>}<span class="co">%</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{<span class="ch">@{}</span>llll<span class="ch">@{}</span>}</span>
@@ -331,94 +348,111 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\footnotetext</span>[1]{Example for a first table footnote. This is an example of table footnote.}</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">\footnotetext</span>[2]{Example for a second table footnote. This is an example of table footnote.}</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">table</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>When preparing a table, cells should be separated by the <code>&amp;</code> symbol, and row endings should be indicated with the <code>\\</code> symbol. To use horizontal lines in the table, expressions such as <code>\toprule</code>, <code>\botrule</code>, or <code>\midrule</code> should be used. Footnotes can be used in the table to explain special cases, as shown in the code. The above code will appear as follows in PDF format according to the journal template:</p>
+<p>Tablo hazırlarken, hücreler <code>&amp;</code> işareti ile, satır sonları <code>\\</code> işareti ile belirtilmelidir. Tabloda yatay çizgiler kullanmak için <code>\toprule</code>, <code>\botrule</code> veya <code>\midrule</code> şeklinde ifadeler kullanılmalıdır. Tabloda, özel durumları açıklamak için dipnotlar, kodda gösterildiği gibi kullanılabilir. Yukarıdaki kod, dergi şablonuna göre aşağıdaki gibi PDF formatında görünecektir.</p>
 <p><img src="images/makale-tablo.png" class="img-fluid"></p>
-<p>Preparing tables manually in LaTeX is quite laborious, so use the <a href="https://www.tablesgenerator.com/latex_tables">Tables Generator</a> site to convert your table from Excel or another environment to LaTeX format. When you copy and paste your table from Excel or another format to this site and click the “Generate” button, the necessary code for the table in LaTeX format will be generated.</p>
-<p>Let’s demonstrate adding citations to LaTeX articles with an example. To cite the article titled “<a href="https://www.nature.com/articles/nature10888">The microcosmos of cancer</a>”, we need to obtain the information about this article in bibtex format. The best source for this is the DOI number. The DOI number for this article can be found as <code>10.1038/nature10888</code>. When you go to the <a href="https://www.doi2bib.org/">doi2bib</a> site and enter the DOI number, you will be given information in bibtex format.</p>
+<p>Latex’te manuel olarak tablo hazırlamak oldukça zahmetlidir, bu yüzden Excel veya başka bir ortamdaki tablonuzu Latex formatına çevirmek için <a href="https://www.tablesgenerator.com/latex_tables">Tables Generator</a> sitesini kullanınız. Excel veya başka formattaki tablonuzu kopyalayıp bu siteye yapıştırdığınızda ve “Generate” butonunu tıkladığınızda Latex formatında tablo için gerekli kod üretilecektir.</p>
+<p>Latex makalelerine atıf eklemeyi bir örnek ile gösterelim. “<a href="https://www.nature.com/articles/nature10888">The microcosmos of cancer</a>” adlı makaleye atıfta bulunmak için bu makaleye dair bilgileri bibtex formatında elde etmemiz gerekmektedir. Bunun içiin en iyi kaynak, DOI numarasıdır. Bu makaleye ait DOI numarası <code>10.1038/nature10888</code> olarak bulunabilir. <a href="https://www.doi2bib.org/">doi2bib</a> sitesine gidip DOI numarasını girdiğinizde size bibtex formatında bilgiler verilecektir.</p>
 <p><img src="images/makale-doi2bib.png" class="img-fluid"></p>
-<p>To add this information to the article template, you need to identify the file where the citations are located. In the template we are currently using, citations are in the <code>sn-bibliography.bib</code> file. We can click on this file to open it and paste the information we obtained from the doi2bib page (preferably) at the end of the file.</p>
+<p>Bu bilgiyi, makale şablonuna eklemek için, atıfların bulunduğu dosyayı tespit etmek gerekmektedir. Şu an kullandığımız şablonda atıflar <code>sn-bibliography.bib</code> dosyasında bulunmaktadır. Bu dosyanın üstüne tıklayıp, dosyayı açıp, (tercihen) dosyanın sonuna doi2bib sayfasından elde ettiğimiz bilgiyi yapıştırabiliriz.</p>
 <p><img src="images/makale-bib.png" class="img-fluid"></p>
-<p>As you can see, at the beginning of the bib information, it says <code>@article{Lujambio2012,</code>, where “article” indicates that the citation belongs to an article. The expression that follows, “Lujambio2012”, is the “key” value of this study, which we need to use when we want to cite it in the article. This value can be changed by you; it’s usually created in the form of “first author surname + publication year”, but you can also name it yourself, such as “cosmos-article” if you prefer.</p>
-<p>When we write the expression <code>This sentence refers to "The microcosmos of cancer" article \cite{Lujambio2012}.</code> in our article and compile it, you will see the following citation and reference updates:</p>
+<p>Farkedildiği üzere, bib bilgisinin başında <code>@article{Lujambio2012,</code> yazmaktadır, “article” ifadesi atıfın bir makaleye ait olduğunu göstermektedir. Arkasından gelen ifade “Lujambio2012” ise, bu çalışmanın “anahtar” değeridir, makale içinde atıf vermek istediğimizde bu değeri kullanmamız gerekmektedir. Bu değer, sizler tarafından değiştirilebilir, genellikle “ilk yazar soyad+basım yılı” şeklinde oluşturulmaktadır ama dilerseniz “cosmos-makalesi” şeklinde kendiniz de isimlendirebilirsiniz.</p>
+<p>Makalemize <code>This sentence refers to "The microcosmos of cancer" article \cite{Lujambio2012}.</code> ifadesini yazıp, makalemizi derlediğimizde aşağıdaki atıf ve referans güncellemelerini göreceksiniz:</p>
 <p><img src="images/makale-cosmos.png" class="img-fluid"></p>
 <p><img src="images/makale-cosmos-ref.png" class="img-fluid"></p>
 </section>
-<section id="writing-ytu-thesis-with-overleaf" class="level1">
-<h1>Writing YTU Thesis with Overleaf</h1>
-<p>In this section, we will use the YTU Thesis LaTeX template with Overleaf.</p>
-<p>First, review the documents on <a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf">creating a document in Overleaf</a> and then <a href="https://www.overleaf.com/learn/how-to/Uploading_a_project">Uploading a project</a>.</p>
-<section id="ytu-thesis-template" class="level2">
-<h2 class="anchored" data-anchor-id="ytu-thesis-template">YTU Thesis Template</h2>
-<p>Please visit the <a href="https://fbe.yildiz.edu.tr/sayfa/MEZUN%C4%B0YET/TEZ-YAZIM-VE-KURALLARI/399">Thesis Writing Rules</a> page and then download the zip file under the “Latex-Thesis Template” heading.</p>
-<p>After downloading, you should have a file named *YTU_Thesis_Latex_Template__08_05_2024.zip* in your folder.</p>
+<section id="overleaf-ile-ytu-tez-yazımı" class="level1">
+<h1>Overleaf ile YTU Tez yazımı</h1>
+<p>Bu bölümde, YTU Tez LaTeX şablonunu Overleaf ile kullanacağız.</p>
+<p>Öncelikle Overleaf’te <a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf">bir belge oluşturma</a> belgesini ve ardından <a href="https://www.overleaf.com/learn/how-to/Uploading_a_project">Bir proje yükleme</a> belgesini inceleyin.</p>
+<section id="ytu-tez-şablonu" class="level2">
+<h2 class="anchored" data-anchor-id="ytu-tez-şablonu">YTU Tez Şablonu</h2>
+<p>Lütfen <a href="https://fbe.yildiz.edu.tr/sayfa/MEZUN%C4%B0YET/TEZ-YAZIM-VE-KURALLARI/399">Tez Yazım Kuralları</a> sayfasını ziyaret edin ve ardından “Latex-Tez Şablonu” başlığındaki zip dosyasını indirin.</p>
+<p>İndirme sonunda klasörünüzde *YTU_Thesis_Latex_Template__08_05_2024.zip* dosyasına sahip olmalısınız.</p>
 </section>
-<section id="uploading-ytu-thesis-template-to-overleaf" class="level2">
-<h2 class="anchored" data-anchor-id="uploading-ytu-thesis-template-to-overleaf">Uploading YTU Thesis Template to Overleaf</h2>
+</section>
+<section id="ytu-tez-şablonunu-overleafe-yükleme" class="level1">
+<h1>YTU Tez Şablonunu Overleaf’e Yükleme</h1>
 <blockquote class="blockquote">
-<p><strong>Before uploading the YTU thesis template to Overleaf, you should register and log in to Overleaf.</strong> After logging in to Overleaf, click on “New Project” and then select “Project from Archive”.</p>
+<p><strong>YTU tez şablonunu Overleaf’e yüklemeden önce, Overleaf’e kayıt olup giriş yapmalısınız.</strong></p>
 </blockquote>
+<p>Overleaf’e giriş yaptıktan sonra, “New Project/Yeni Proje”ye tıklayın ve ardından “Project from Archive/Arşivden Proje”yi seçin.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/08/Step1NewProject.png" class="img-fluid figure-img"></p>
 <figcaption>new-upload</figcaption>
 </figure>
 </div>
-<p>Then you can drag and drop the zip file you just downloaded from the YTU website, or click on “Select a .zip file” and choose the zip file from your local folders. <img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/46/UploadZIPfile4.png" class="img-fluid" alt="upload-zip"> When all these steps are completed, you should see the YTU Thesis template in Overleaf like this:</p>
+<p>Daha sonra YTÜ web sitesinden yeni indirdiğiniz zip dosyasını sürükleyip bırakabilir veya “Bir .zip dosyası seçin”e tıklayıp yerel klasörlerinizden zip dosyasını seçebilirsiniz.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/46/UploadZIPfile4.png" class="img-fluid figure-img"></p>
+<figcaption>upload-zip</figcaption>
+</figure>
+</div>
+<p>Tüm bu adımlar tamamlandığında, Overleaf’te YTÜ Tez şablonunu şu şekilde görmelisiniz:</p>
 <p><img src="images/ytu-template-upload.png" class="img-fluid"></p>
-</section>
-<section id="the-power-of-latex" class="level2">
-<h2 class="anchored" data-anchor-id="the-power-of-latex">The Power of LaTeX</h2>
-<p>Let’s see the power of LaTeX. In the <em>main.tex</em> file, update the following line:</p>
+<section id="latexin-gücü" class="level2">
+<h2 class="anchored" data-anchor-id="latexin-gücü">LaTeX’in gücü</h2>
+<p>LaTeX’in gücünü görelim, <em>main.tex</em> dosyasında aşağıdaki satırı:</p>
 <p><code>\usepackage[tr, phd]{ytuthesis}</code></p>
-<p>to:</p>
+<p>şu şekilde güncelleyin:</p>
 <p><code>\usepackage[eng, phd]{ytuthesis}</code></p>
-<p>As soon as you save the document (<kbd>Ctrl</kbd> + <kbd>s</kbd>), the entire thesis document will be compiled and the language of the thesis will be English. Observe the changes in the right pane (compiled PDF file).</p>
+<p>Belgeyi kaydeder kaydetmez (<kbd>Ctrl</kbd> + <kbd>s</kbd>), tüm tez belgesi derlenecek ve tezin dili İngilizce olacaktır. Değişiklikleri sağ bölmede (derlenmiş PDF dosyası) gözlemleyin.</p>
 </section>
-<section id="document-structure" class="level2">
-<h2 class="anchored" data-anchor-id="document-structure">Document Structure</h2>
-<p>At the beginning of the <em>main.tex</em> file, you’ll see that the preamble part is quite short: (comment lines have been removed)</p>
+<section id="döküman-yapısı" class="level2">
+<h2 class="anchored" data-anchor-id="döküman-yapısı">Döküman yapısı</h2>
+<p><em>main.tex</em> dosyasının başında, preamble kısmının oldukça kısa olduğunu göreceksiniz: (yorum satırları kaldırılmıştır)</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt,oneside,openany]{<span class="ex">book</span>}</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[tr, phd]{<span class="ex">ytuthesis</span>}</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\addbibresource</span>{references.bib} </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Here, the <code>ytuthesis.sty</code> file, which is the YTU Thesis style file, is being used. This file contains YTU Thesis style rules (margins, font types, font sizes, line spacing, spaces after figures, etc.). <strong>Do not modify this file unless you know what you’re doing.</strong></p>
-<p>And the <em>references.bib</em> file contains the references. This is actually a plain text file, open it in Overleaf and observe its content and style.</p>
-<p>And here’s the <code>\begin{document} - \end{document}</code> part:</p>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[tr, phd]{<span class="ex">ytuthesis</span>}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\addbibresource</span>{references.bib} </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Burada, YTU Tez stil dosyası olan <code>ytuthesis.sty</code> dosyası kullanılıyor. Bu dosya, YTU Tez stil kurallarını (kenar boşlukları, yazı tipi türleri, yazı tipi boyutları, satır aralığı, şekillerden sonra boşluklar vb.) içerir. <strong>Bu dosyayı ne yaptığınızı bilmiyorsanız değiştirmeyiniz.</strong></p>
+<p>Ve <em>references.bib</em> dosyası referansları içerir. Bu aslında bir düz yazı dosyasıdır, Overleaf’te açın ve içeriğini ve stilini gözlemleyin.</p>
+<p>Ve işte <code>\begin{document} - \end{document</code> kısmı:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {frontPages.tex}</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/1-chapter.tex}</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/2-chapter.tex}</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/3-chapter.tex}</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/4-chapter.tex}</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\bibName</span>}</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\singlespacing</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\printbibliography</span>[title={<span class="fu">\bibName</span>}]</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage\appendix</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/A-appendix.tex}</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\ifnum\tmc</span>=0</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\cvpub</span>}</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {publications.tex}</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">\fi</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>As you may recall, we said that LaTeX is like a programming language. Here, you can notice the <code>\input</code> command, which can be used to include external files, which is useful when working with large documents. Also, the <code>\ifnum</code> command checks the content of a variable (in this case <code>tmc</code>) and conditionally adds the <em>publications.tex</em> file to the thesis.</p>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {frontPages.tex}</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/1-chapter.tex}</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/2-chapter.tex}</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/3-chapter.tex}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/4-chapter.tex}</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\bibName</span>}</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\singlespacing</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\printbibliography</span>[title={<span class="fu">\bibName</span>}]</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage\appendix</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {thesisChapters/A-appendix.tex}</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="fu">\ifnum\tmc</span>=0</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\cvpub</span>}</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span> {publications.tex}</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="fu">\fi</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Hatırlanacağı üzere, LaTeX’in bir programlama dili gibi olduğunu söylemiştik. Burada, büyük belgelerle çalışırken işe yarayan dış dosyaları dahil etmek için kullanılabilecek <code>\input</code> komutunu fark edebilirsiniz. Ayrıca, <code>\ifnum</code> komutu bir değişkenin içeriğini kontrol eder (bu durumda <code>tmc</code>) ve <em>publications.tex</em> dosyasını koşullu olarak teze ekler.</p>
 </section>
-<section id="variables" class="level2">
-<h2 class="anchored" data-anchor-id="variables">Variables</h2>
-<p>For small documents, it might be appropriate to work on a single <em>main.tex</em> file. However, for larger contents, keeping sections as separate files, collecting styles in a single file, and keeping variables in a separate file allows you to manage the writing process more easily.</p>
-<p>In the case of the YTU thesis, the <em>frontPages.tex</em> file contains certain variables and we shouldn’t modify this file. However, the <em>information.tex</em> file contains variables related to the thesis and you need to update variables such as thesis title, advisor, etc. in this file.</p>
-<p>If you want to update the thesis title, please open the <em>information.tex</em> file and update fields <strong>1</strong> and <strong>2</strong>, then save the file (<kbd>Ctrl</kbd> + <kbd>s</kbd>).</p>
+<section id="değişkenler" class="level2">
+<h2 class="anchored" data-anchor-id="değişkenler">Değişkenler</h2>
+<p>Küçük belgeler için, tek bir <em>main.tex</em> dosyası üzerinde çalışmak uygun olabilir. Ancak, daha büyük içerikler için, bölümleri ayrı dosyalar halinde tutmak, stilleri tek bir dosyada toplamak ve değişkenleri ayrı bir dosyada tutmak, yazma sürecini daha kolay yönetmenizi sağlar.</p>
+<p>YTU tezi durumunda, <em>frontPages.tex</em> dosyası belirli değişkenleri içerir ve bu dosyayı değiştirmememiz gerekir. Ancak, <em>information.tex</em> dosyası tezle ilgili değişkenleri içerir ve bu dosyada tez başlığı, danışman vb. değişkenleri güncellemeniz gerekmektedir.</p>
+<p>Tez başlığını güncellemek isterseniz, lütfen <em>information.tex</em> dosyasını açın ve <strong>1</strong> ve <strong>2</strong> numaralı alanlarını güncelleyin ve ardından dosyayı kaydedin (<kbd>Ctrl</kbd> + <kbd>s</kbd>).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tez-basligi.png" class="img-fluid figure-img"></p>
-<figcaption>thesis-title</figcaption>
+<figcaption>tez-basligi</figcaption>
 </figure>
 </div>
 </section>
-<section id="your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn">Your Turn</h2>
-<p>Fill in the information in the <em>information.tex</em> file as much as possible and observe the PDF file generated as a result of compilation in the right panel as you save the file.</p>
-<p>Then, try adding a figure, a table, and a citation to the 3rd chapter of the thesis (<code>thesisChapters/3-chapter.tex</code>).</p>
+<section id="sıra-sizde" class="level2">
+<h2 class="anchored" data-anchor-id="sıra-sizde">Sıra sizde</h2>
+<p><em>information.tex</em> dosyasındaki bilgileri olabildiğince doldurunuz ve dosyayı kaydettikçe, derleme sonucunda oluşan PDF dosyasını sağ panelde gözlemleyiniz.</p>
+<p>Ardından, tezin 3. bölümüne (<code>thesisChapters/3-chapter.tex</code>) figür eklemeyi, tablo eklemeyi ve atıf eklemeyi deneyiniz.</p>
 
 
 </section>
