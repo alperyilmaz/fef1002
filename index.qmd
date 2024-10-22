@@ -21,3 +21,9 @@
 *October 15th, 2024, Thursday 4-7pm, ONLINE*
 
 **Contents**: Latex at Overleaf [link for lecture materials](latex-lecture2-en.ipynb)
+
+## Lecture4
+
+*October 22th, 2024, Thursday 4-7pm, ONLINE*
+
+**Contents**: Introduction to algoritms [link for lecture material](week4-algoritms-en.qmd) and Excel [link for lecture material](week4-excel-en.qmd)

@@ -1,0 +1,305 @@
+---
+title: "Basic Programming - Algoritms"
+subtitle: "FEF1002 - Lecture4"
+author: "Res. Asst. PhD Hülya YÜREKLİ"
+date: 2024-10-22
+format: html
+typora-copy-images-to: images
+---
+
+## Algorithms
+
+## Let's visualize algoritms
+
+* [Lightbot game online](https://www.gameflare.com/online-game/light-bot/)
+* Play the [guess the number game](https://maththebeautiful.com/binary-search/) interactively.
+* [Khan Academy Binary Search](https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search)
+
+
+### What is an Algorithm?
+
+An algorithm is an ordered list of steps that must be followed to solve a specific problem or perform a specific task.
+
+### General Characteristics of Algorithms
+
+1. **Precision:** Each step must be defined clearly and precisely.
+2. **Finiteness:** The algorithm must end at a certain point and produce a result.
+3. **Sequentiality:** Steps must be applied in a specific order.
+
+## Problem Solving Steps
+
+1. **Problem Definition:** Problem definition is the clear expression of the problem that needs to be solved. In this step, the scope and objectives of the problem are determined.
+2. **Determining Inputs and Outputs:** In this step, the data to be used in solving the problem (inputs) and the results to be obtained (outputs) are determined. The relationship between inputs and outputs is defined.
+3. **Developing Solution Methods:** Multiple methods or ways can be developed to solve the problem. In this step, potential solutions are evaluated and the most appropriate one is selected.
+4. **Algorithm Control and Improvement:** The chosen solution is written as an algorithm and this algorithm is checked and necessary improvements are made. It is ensured that the algorithm works correctly.
+5. **Coding the Algorithm:** In this step, the developed algorithm is coded using a specific programming language. During coding, each step of the algorithm is converted into programming language.
+6. **Code Control and Improvement:** Testing the written code and fixing errors are done in this step. The performance and accuracy of the code are checked and necessary improvements are made.
+
+## Algorithm Steps
+
+1. Start
+2. Define variables: number1, number2, sum
+3. Get values for number1 and number2
+4. sum = number1 + number2
+5. Print sum value
+6. Stop
+
+## Simple Addition Operation with Python Code
+
+> Note: You can run the Python codes at [this link](https://bit.ly/enf1170-gr5) 
+
+_Get two numbers from the user and perform addition_
+
+```python
+number1 = int(input("Enter the first number: "))
+
+number2 = int(input("Enter the second number: "))
+
+sum = number1 + number2
+
+print(sum)
+```
+
+## Flow Charts
+
+### What is a Flow Chart?
+
+Flow charts are diagrams that visually represent the steps of an algorithm. Flow charts make the process flow and control structure more understandable.
+
+Flow diagrams enable easy understanding, tracking, and control of the algorithm. Their disadvantage is that they can be very long in detailed algorithms.
+
+The symbols used in flow diagrams and their meanings are shown in the image below.
+
+### Flow Chart Symbols and Usage
+
+1. **Start/End:** Oval shapes indicate the start and end points of the algorithm.
+2. **Process:** Rectangle shapes show process steps.
+3. **Decision:** Diamond shapes indicate conditional branching points.
+4. **Input/Output:** Parallelogram shapes show data input and output.
+5. **Arrows:** Indicate flow direction.
+
+![schema1](images/sema1.png)
+
+_This image shows the meanings of shapes used in flow charts._
+
+### Example Flow Chart
+
+![schema2](images/sema2.png)
+
+_This image shows a flow chart containing a decision structure._
+
+## Basic Coding for Programming 
+
+## Variables and Data Types
+
+Variables are areas used to store data in the program. Data types specify what kind of data the variables will store.
+
+1. number = 10      **integer**
+2. name = "Ali"     **string**
+3. pi = 3.14        **float**
+4. is_true = True   **boolean**
+
+## Basic Input/Output Operations
+
+Operations used to get data from the user and print data to the screen.
+
+# Example: Input/Output Operations
+
+```python
+name = input("Enter your name: ")
+
+print("Hello", name)
+```
+
+## Mathematical Operations and Operators
+
+|                       |  Python  |   R   |
+|-----------------------|----------|-------|
+|Equals                 |    ==    |   ==  |
+|Less Than              |<         |<      |
+|Greater Than           |>         |>      |
+|Less Than or Equal     |<=        |<=     |
+|Greater Than or Equal  |>=        |>=     |
+|Not Equal             |!=         |!=     |
+
+#### R Mathematical Operations
+
+```r
+a <- 5
+b <- 3
+
+#Addition
+
+result_add <- a + b
+print(result_add)
+
+Output: 8
+
+#Subtraction
+
+result_sub <- a - b
+print(result_sub)
+
+Output: 2
+
+#Multiplication
+
+result_mul <- a * b
+print(result_mul)
+
+Output: 15
+
+#Division
+
+result_div <- a / b
+print(result_div)
+
+Output: 1.6666666666666667
+
+#Modulus
+
+result_mod <- a %% b
+print(result_mod)
+
+Output: 2
+
+#Exponentiation
+
+result_exp <- a ^ b
+print(result_exp)
+
+Output: 125
+```
+#### Python
+
+> Note: You can run the Python codes at [this link](https://bit.ly/enf1170-gr5) 
+
+```python
+#### Python Mathematical Operations
+a = 5
+b = 3
+
+#Addition
+print(a + b)
+```
+
+```python
+#Subtraction
+print(a - b)
+```
+
+```python
+#Multiplication
+print(a * b)
+```
+
+```python
+#Division
+print(a / b)
+```
+
+```python
+#Modulus
+print(a % b)
+```
+
+## Control Structures If-Else
+Control structures allow the program to follow different paths based on certain conditions.
+
+```python
+# Example: if-else Structure
+number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print("Number is even")
+else:
+    print("Number is odd")
+```
+
+```python
+# Example: if-else Structure (giving 5)
+number = 5
+if number % 2 == 0:
+    print("Number is even")
+else:
+    print("Number is odd")
+```
+
+```python
+# Example: if-else Structure (giving 6)
+number = 6
+if number % 2 == 0:
+    print("Number is even")
+else:
+    print("Number is odd")
+```
+
+```python
+a = 5
+b = 10
+if (a > b):
+    print("a is greater than b")
+else:
+    print("a is less than or equal to b")
+```
+
+## Logical Operators: and, or, not
+
+Logical operators allow multiple conditions to be evaluated together.
+
+```python
+# Example: Logical Operators
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+```
+
+**_Logical operators allow multiple conditions to be evaluated together._**
+**_True value is evaluated as 1, False value is evaluated as 0._**
+
+```python
+# Logical operators with values 1 and 0
+a = 1
+b = 0
+print(a and b)  # Output: 0 (False)
+print(a or b)   # Output: 1 (True)
+print(not a)    # Output: False
+```
+
+## Loops: for and while
+
+_Loops allow a specific operation to be repeated._
+
+```python
+# Example: for Loop
+for i in range(5):
+    print("Hello World")
+```
+
+```python
+# Example: while Loop
+i = 0
+while i < 5:
+    print("Hello World") #Prints Hello World 5 times on separate lines
+    i += 1
+```
+
+```python
+# for Loop
+for i in range(1, 6):
+    print(i)
+```
+
+```python
+# while Loop
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+```
+
+# References
+1. C Programming Language (For Beginners) - Dr. Selçuk Alp, Arzu Kilitci, Umuttepe Publications
+2. https://byildirim.wordpress.com/2012/04/01/algoritmanin-temeli-sayilan-akis-semalari/
+3. https://www.robotiksistem.com/akis_diyagramlari_flowchart.html
