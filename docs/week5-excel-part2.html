@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Assoc. Prof.&nbsp;Öyküm Esra YİĞİT">
+<meta name="dcterms.date" content="2024-11-05">
+
+<title>Excel - Part2 – FEF1002 Introduction to Basic Computer Technologies</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">FEF1002 Introduction to Basic Computer Technologies</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Main</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#week-5-excel---part2" id="toc-week-5-excel---part2" class="nav-link active" data-scroll-target="#week-5-excel---part2">Week 5: Excel - Part2</a>
+  <ul class="collapse">
+  <li><a href="#sorting-filtering-conditional-formatting" id="toc-sorting-filtering-conditional-formatting" class="nav-link" data-scroll-target="#sorting-filtering-conditional-formatting">Sorting, Filtering, Conditional Formatting</a>
+  <ul class="collapse">
+  <li><a href="#sorting" id="toc-sorting" class="nav-link" data-scroll-target="#sorting">Sorting</a></li>
+  <li><a href="#text-sorting" id="toc-text-sorting" class="nav-link" data-scroll-target="#text-sorting">Text Sorting</a></li>
+  <li><a href="#number-sorting" id="toc-number-sorting" class="nav-link" data-scroll-target="#number-sorting">Number Sorting</a></li>
+  <li><a href="#filtering" id="toc-filtering" class="nav-link" data-scroll-target="#filtering">Filtering</a></li>
+  <li><a href="#conditional-formatting" id="toc-conditional-formatting" class="nav-link" data-scroll-target="#conditional-formatting">Conditional Formatting</a></li>
+  <li><a href="#cell-highlighting-rules" id="toc-cell-highlighting-rules" class="nav-link" data-scroll-target="#cell-highlighting-rules">Cell Highlighting Rules</a></li>
+  <li><a href="#topbottom-rules" id="toc-topbottom-rules" class="nav-link" data-scroll-target="#topbottom-rules">Top/Bottom Rules</a></li>
+  <li><a href="#data-bars" id="toc-data-bars" class="nav-link" data-scroll-target="#data-bars">Data Bars</a></li>
+  <li><a href="#color-scales" id="toc-color-scales" class="nav-link" data-scroll-target="#color-scales">Color Scales</a></li>
+  <li><a href="#icon-sets" id="toc-icon-sets" class="nav-link" data-scroll-target="#icon-sets">Icon Sets</a></li>
+  </ul></li>
+  <li><a href="#writing-functions-in-excel" id="toc-writing-functions-in-excel" class="nav-link" data-scroll-target="#writing-functions-in-excel">Writing Functions in EXCEL</a>
+  <ul class="collapse">
+  <li><a href="#entering-data-series" id="toc-entering-data-series" class="nav-link" data-scroll-target="#entering-data-series">Entering Data Series</a></li>
+  <li><a href="#formula-creation" id="toc-formula-creation" class="nav-link" data-scroll-target="#formula-creation">Formula Creation</a></li>
+  <li><a href="#if-function" id="toc-if-function" class="nav-link" data-scroll-target="#if-function">IF Function</a></li>
+  <li><a href="#and-and-or-operators" id="toc-and-and-or-operators" class="nav-link" data-scroll-target="#and-and-or-operators">AND and OR Operators</a></li>
+  <li><a href="#nested-if" id="toc-nested-if" class="nav-link" data-scroll-target="#nested-if">Nested IF</a></li>
+  </ul></li>
+  <li><a href="#tables-and-charts-in-excel" id="toc-tables-and-charts-in-excel" class="nav-link" data-scroll-target="#tables-and-charts-in-excel">Tables and Charts in EXCEL</a>
+  <ul class="collapse">
+  <li><a href="#pivot-tables" id="toc-pivot-tables" class="nav-link" data-scroll-target="#pivot-tables">Pivot Tables</a></li>
+  <li><a href="#charts" id="toc-charts" class="nav-link" data-scroll-target="#charts">Charts</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Excel - Part2</h1>
+<p class="subtitle lead">FEF1002 - Lecture5</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Assoc. Prof.&nbsp;Öyküm Esra YİĞİT </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 5, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="week-5-excel---part2" class="level1">
+<h1>Week 5: Excel - Part2</h1>
+<p>This module will cover the following concepts:</p>
+<ul>
+<li><del>History of Excel</del></li>
+<li><del>Excel Interface and Screen Elements</del></li>
+<li><del>Data Entry and Editing</del></li>
+<li><del>Excel Error Codes</del></li>
+<li><del>Shortcuts</del></li>
+<li>Sorting, Filtering, Conditional Formatting</li>
+<li>Writing Functions in Excel</li>
+<li>Tables and Charts in Excel</li>
+</ul>
+<section id="sorting-filtering-conditional-formatting" class="level2">
+<h2 class="anchored" data-anchor-id="sorting-filtering-conditional-formatting">Sorting, Filtering, Conditional Formatting</h2>
+<section id="sorting" class="level3">
+<h3 class="anchored" data-anchor-id="sorting">Sorting</h3>
+<p>Sorting data is an integral part of data analysis. You might want to organize a name list in alphabetical order, compile a product stock levels list from highest to lowest, or sort rows by colors or icons. Sorting data helps you better see and understand your data, find and organize the data you want, and ultimately make much more effective decisions.</p>
+</section>
+<section id="text-sorting" class="level3">
+<h3 class="anchored" data-anchor-id="text-sorting">Text Sorting</h3>
+<p>Select a cell in the column you want to sort.</p>
+<p>In the Data tab, in the Sort and Filter group, do one of the following:</p>
+<p>For quick ascending order sorting, click the A to Z command (Sort A to Z) which sorts in Excel from A to Z or from smallest to largest number.</p>
+<p>For quick descending order sorting, click the Z to A command (Sort Z to A) which sorts in Excel from Z to A or from largest to smallest number.</p>
+<p><img src="images/resim29.png" class="img-fluid"></p>
+</section>
+<section id="number-sorting" class="level3">
+<h3 class="anchored" data-anchor-id="number-sorting">Number Sorting</h3>
+<p>Select a cell in the column you want to sort.</p>
+<p>In the Data tab, in the Sort and Filter group, do one of the following:</p>
+<p>To sort from smallest to largest, click the A to Z command (Sort Smallest to Largest) which sorts in Excel from smallest to largest number.</p>
+<p>To sort from largest to smallest, click the Z to A command (Sort Largest to Smallest) which sorts in Excel from largest to smallest number.</p>
+<p><img src="images/resim30.png" class="img-fluid"></p>
+</section>
+<section id="filtering" class="level3">
+<h3 class="anchored" data-anchor-id="filtering">Filtering</h3>
+<section id="filtering-an-entire-column" class="level4">
+<h4 class="anchored" data-anchor-id="filtering-an-entire-column">Filtering an Entire Column</h4>
+<blockquote class="blockquote">
+<p>Please use the sample Excel file <a href="files/ornek1.xlsx">ornek1.xlsx</a> for the following samples.</p>
+</blockquote>
+<p>Let’s enter the following data and find all cells with the name Esra.</p>
+<p><img src="images/resim31.png" class="img-fluid"></p>
+<p><img src="images/resim32.png" class="img-fluid"></p>
+<p><img src="images/resim33.png" class="img-fluid"></p>
+<p><img src="images/resim34.png" class="img-fluid"></p>
+</section>
+<section id="filtering-specific-numbers" class="level4">
+<h4 class="anchored" data-anchor-id="filtering-specific-numbers">Filtering Specific Numbers</h4>
+<p>Let’s filter those younger than 18 in the same example</p>
+<p><img src="images/resim35.png" class="img-fluid"></p>
+<p><img src="images/resim36.png" class="img-fluid"></p>
+<p><img src="images/resim37.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="conditional-formatting" class="level3">
+<h3 class="anchored" data-anchor-id="conditional-formatting">Conditional Formatting</h3>
+<p>Conditional formatting can help make patterns and trends in your data more apparent. It works with the logic of if… then…. If cell content has a specific value according to certain criteria, that cell’s formatting changes according to the selected option or any format you desire. You can change formatting elements such as cell background color, borders, fonts, and you can also display icons in the cell. In other words, it allows you to see values that are more important or special to you more easily at first glance. You can even use it for error checking; for example, in a formula that multiplies values from different cells for a subtotal, you can use formatting that will quickly show you cells that don’t return values.</p>
+</section>
+<section id="cell-highlighting-rules" class="level3">
+<h3 class="anchored" data-anchor-id="cell-highlighting-rules">Cell Highlighting Rules</h3>
+<p>As shown below, you can select one of the preset formats in cell highlighting rules or create custom formatting.</p>
+<p>The formatting option includes “Greater Than”, “Less Than”, “Between”, “Equal To”, “Text Contains”, “Date” and “Duplicate Value”. For example, when “Duplicate” is clicked, an additional window appears with a dropdown box where you can select “Duplicate” or “Unique” options to format repeated values or unique values.</p>
+<p><img src="images/resim41.png" class="img-fluid"></p>
+<p>For example, let’s highlight those over 18 years old</p>
+<p><img src="images/resim38.png" class="img-fluid"></p>
+<p>Similarly, let’s highlight those under 18 years old</p>
+<p><img src="images/resim39.png" class="img-fluid"></p>
+<p><img src="images/resim40.png" class="img-fluid"></p>
+</section>
+<section id="topbottom-rules" class="level3">
+<h3 class="anchored" data-anchor-id="topbottom-rules">Top/Bottom Rules</h3>
+<p>With this option, you can select self-explanatory preferences including top 10, top 10%, bottom 10, bottom 10%, below average, and above average in your selected range.</p>
+<p>Let’s highlight the data above average</p>
+<p><img src="images/resim42.png" class="img-fluid"></p>
+<p><img src="images/resim43.png" class="img-fluid"></p>
+<p>Similarly, to highlight repeated or unique values, you just need to select other rules option.</p>
+<p><img src="images/resim44.png" class="img-fluid"></p>
+</section>
+<section id="data-bars" class="level3">
+<h3 class="anchored" data-anchor-id="data-bars">Data Bars</h3>
+<p>Data bars fill cells with horizontal bar graphs according to the values in your selected range, with the largest value filling the entire cell horizontally and other values scaled proportionally in comparison.</p>
+<p>If you click on Other Rules, you can apply formatting according to your own preferences or formula through a form. Additionally, you can modify the fill and border of the bars within cells to create custom formatting.</p>
+<p><img src="images/resim45.png" class="img-fluid"></p>
+</section>
+<section id="color-scales" class="level3">
+<h3 class="anchored" data-anchor-id="color-scales">Color Scales</h3>
+<p>This option creates a scale between the largest and smallest values in your selected range and adjusts the cell fill color according to the scale between two colors you choose.</p>
+<p><img src="images/resim46.png" class="img-fluid"></p>
+</section>
+<section id="icon-sets" class="level3">
+<h3 class="anchored" data-anchor-id="icon-sets">Icon Sets</h3>
+<p>Icon sets show different symbols next to the value in the cell indicating which range the value falls into based on a scale between the largest and smallest values in your selected range. You can create rules and assign icons according to your rules.</p>
+<p><img src="images/resim47.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="writing-functions-in-excel" class="level2">
+<h2 class="anchored" data-anchor-id="writing-functions-in-excel">Writing Functions in EXCEL</h2>
+<section id="entering-data-series" class="level3">
+<h3 class="anchored" data-anchor-id="entering-data-series">Entering Data Series</h3>
+<p>When you need to enter sequential numbers like serial numbers in a table, instead of typing these numbers one by one manually, we can enter them using the auto-fill method. For this: * Enter the first two sequence numbers in cells either vertically or horizontally. * Select these two cells, starting with the cell containing the first number. * Take the mouse pointer to the fill handle (small dot) in the bottom right corner of the selected area (mouse pointer becomes a small plus), hold down the left mouse button and drag down or to the side.</p>
+<p><strong>Note:</strong> You determine the rule. If the first two cells contain 2 and 4, you will create numbers increasing by 2.</p>
+<p><img src="images/resim48.png" class="img-fluid"></p>
+</section>
+<section id="formula-creation" class="level3">
+<h3 class="anchored" data-anchor-id="formula-creation">Formula Creation</h3>
+<p>You can perform calculations using formulas in Excel tables. When entering a formula into a cell, you need to pay attention to the following:</p>
+<ul>
+<li>Formulas start with = sign</li>
+<li>No spaces should be given when writing formulas (except for text in quotes within the formula)</li>
+<li>The number of opening parentheses should match the number of closing parentheses</li>
+<li>Constant numbers, cell names, and range names can be used when writing formulas</li>
+<li>F2 key is used to edit the formula</li>
+<li>DELETE key is used to delete the formula</li>
+<li>ESC key is used to exit the formula</li>
+<li>Formulas can be replicated</li>
+<li>Addition and multiplication operations have functions. However, division and subtraction operations don’t have functions</li>
+<li>Colon: Includes the cell range in the operation. For example, if A2:A8, all cells from A2 to A8 are included in the operation</li>
+<li>Semicolon; Only includes those specific cells in the operation. Does not take the range. For example, if A2;A8, only A2 and A8 are included in the operation</li>
+<li>If the value in the formula is a number, it is written directly. For example; A2=50</li>
+<li>If the value in the formula is a word, it is written in quotes. For example; A2=“female”</li>
+<li>During formula replication, cell fixing can be done to prevent cell changes. Press F4 key to fix a cell. Or it can be fixed by writing manually.</li>
+</ul>
+<p><img src="images/resim49.png" class="img-fluid"></p>
+<p><em>Source: HANIFE BOZKURT BATMAN</em></p>
+<p><strong>Addition Operation</strong></p>
+<p>=SUM(A1:A10) Performs Addition Operation. Adds Cells from A1 to A10.</p>
+<p><img src="images/resim50.png" class="img-fluid"></p>
+<p><strong>Multiplication Operation</strong></p>
+<p>=PRODUCT(A1:A10) Performs Multiplication Operation. Multiplies Cells from A1 to A10. <img src="images/resim51.png" class="img-fluid"></p>
+<p><strong>=AVERAGE(A1:A10)</strong> Calculates Average. Finds the Average of Cells from A1 to A10.</p>
+<p><strong>=MAX(A1:A10)</strong> Finds the Largest Number. Finds the Highest Number in Cells from A1 to A10.</p>
+<p><strong>=MIN(A1:A10)</strong> Finds the Smallest Number. Finds the Smallest Number in Cells from A1 to A10.</p>
+<p><strong>=SMALL(A1:A10;2)</strong> Returns the SMALL number in the Range. However, which small number is required must be specified in the formula. Finds the 2nd smallest number from A1 to A10.</p>
+<p><strong>=LARGE(A1:A10;3)</strong> Returns the LARGE number in the Range. However, which large number is required must be specified in the formula. Finds the 3rd largest number from A1 to A10.</p>
+<p><strong>=ROW(A1)</strong> Returns the Row Number of the Cell.</p>
+<p><strong>=COLUMN(A1)</strong> Returns the Column Number of the Cell.</p>
+<p><strong>=LOWER(A1)</strong> Converts Text in Cell to Lowercase.</p>
+<p><strong>=UPPER(A1)</strong> Converts Text in Cell to Uppercase.</p>
+<p><strong>=PROPER(A1)</strong> Capitalizes the First Letters of Text in Cell.</p>
+<p><strong>=CONCATENATE(A1;A2)</strong> Writes Values from Two Cells Side by Side, Combines Them.</p>
+<p><strong>=TEXT(A1;“000”)</strong> Converts the Value in Cell to Text, Adds Zeros at the Beginning.</p>
+<p><strong>=TEXT(A1;“DDDD”)</strong> If the Value in Cell is a Date, Returns the Day of the Week.</p>
+<p><strong>=LEN(A1)</strong> Returns the Number of Characters in Cell Value.</p>
+<p><strong>=INT(A1)</strong> Removes Everything After the Decimal Point in Cell’s Decimal Number. Converts to Integer.</p>
+<p><strong>=ROUND(A1;1)</strong> Rounds the Decimal Places After the Decimal Point According to the Digit Value in the Formula.</p>
+<p><strong>=ROUNDUP(A1;0)</strong> Rounds Up the Decimal Places After the Decimal Point to the Next Number.</p>
+<p><strong>=ROUNDDOWN(A1;0)</strong> Rounds Down the Decimal Places After the Decimal Point to the Previous Number.</p>
+<p><strong>=QUOTIENT(B2;C2)</strong> Is Division Operation. B2: Represents Numerator C2: Represents Denominator. Gives Quotient. Doesn’t Show Remainder.</p>
+<p><strong>=MOD(B2;C2)</strong> B2: Represents Dividend, C2: Represents Divisor. Gives Remainder. Doesn’t Show Quotient.</p>
+<p><strong>=COUNTBLANK(B2:B8)</strong> Returns Number of Empty Cells. Finds How Many Empty Cells There Are from B2 to B8.</p>
+<p><strong>=COUNTA(B2:B8)</strong> Returns Number of Non-Empty Cells. Finds How Many Non-Empty Cells There Are from B2 to B8.</p>
+<p><strong>=COUNT(B2:B8)</strong> Returns Number of Cells Containing Numbers. Finds How Many Cells Contain Numbers from B2 to B8.</p>
+<p><strong>=COUNTIF(B2:B12;“Female”)</strong> Finds How Many of the Searched Value Exist. Finds How Many Cells Contain “Female” from B2 to B12.</p>
+<blockquote class="blockquote">
+<p>You can use <a href="files/ornek2a.xlsx">ornek2a.xlsx</a> file for the following examples</p>
+</blockquote>
+<p><img src="images/resim52.png" class="img-fluid"></p>
+<p><strong>COUNTIFS(B2:B12;“Female”;C2:C12;“&gt;18”)</strong> Finds How Many Match Multiple Search Criteria. Finds How Many Cells Contain “Female” Value from B2 to B12 AND Are Greater Than 18 from C2 to C12.</p>
+<p><img src="images/resim53.png" class="img-fluid"></p>
+<p><strong>=SUMIF(B2:B12;“Female”;C2:C12)</strong> Finds the Sum of the Range That Matches the Search Value. Finds the Sum of the Range from C2 to C12 Corresponding to Cells Containing “Female” from B2 to B12.</p>
+<p><img src="images/resim54.png" class="img-fluid"></p>
+<p><strong>=SUMIFS(C2:C12;A2:A12;“Sevgi”;B2:B12;“Female”)</strong> Finds the Sum of the Range That Matches Multiple Search Values. This formula sums the ages of those named Sevgi and who are Female.</p>
+<p><img src="images/resim55.png" class="img-fluid"></p>
+<p><strong>=AVERAGEIF(B2:B12;“Female”;C2:C12)</strong> Calculates the Average of Values Corresponding to Cells That Match the Search Criteria. Finds “Female” Values from B2 to B12 And Calculates the Average of Their Corresponding Values from C2 to C12.</p>
+<p><strong>=AVERAGEIFS(C2:C12;A2:A12;“Sevgi”;B2:B12;“Female”)</strong> Calculates the Average of Values Corresponding to Cells That Match Multiple Search Criteria. Finds “Female” Values. Finds “Sevgi” Values. Takes Average of Ages.</p>
+<p><img src="images/resim56.png" class="img-fluid"></p>
+</section>
+<section id="if-function" class="level3">
+<h3 class="anchored" data-anchor-id="if-function">IF Function</h3>
+<p>This function allows for evaluating outcomes based on whether a condition is met or not.</p>
+<p>Usage format: <strong>=IF(condition;true result;false result)</strong></p>
+<p><strong>condition</strong> can be written by comparing a cell with a number or comparing values of two cells.</p>
+<p><strong>true result</strong> is the expression or value to be written when the condition is met.</p>
+<p><strong>false result</strong> is the expression or value to be written when the condition is not met.</p>
+<p>Let’s Look at the Examples Below.</p>
+<p>We assigned label 1 to True Result and 0 to False Result. After writing the first function, we can copy the same function for other cells by dragging the cells.</p>
+<p><img src="images/resim57.png" class="img-fluid"></p>
+<p><img src="images/resim58.png" class="img-fluid"></p>
+<p>We assigned “Can Vote” to True Result and “Cannot Vote” to False Result. After writing the first function, we can copy the same function for other cells by dragging the cells.</p>
+<p><img src="images/resim59.png" class="img-fluid"></p>
+<p><img src="images/resim60.png" class="img-fluid"></p>
+</section>
+<section id="and-and-or-operators" class="level3">
+<h3 class="anchored" data-anchor-id="and-and-or-operators">AND and OR Operators</h3>
+<p>When you need to check multiple conditions in an IF function, you can use AND operator or OR operator. If you want all multiple conditions to be met for a positive result in the IF function, use the AND operator; if meeting just one of the conditions is sufficient, write the formula with the OR operator.</p>
+<p>Let’s add another column to the above table (Mental Status)</p>
+<p>If age is 18 and mental status is sound, they can vote. That is, both conditions must be met.</p>
+<blockquote class="blockquote">
+<p>You can use file <a href="files/ornek2b.xlsx">ornek2b.xlsx</a> for the following examples</p>
+</blockquote>
+<p><img src="images/resim61.png" class="img-fluid"></p>
+<p><img src="images/resim62.png" class="img-fluid"></p>
+<p>If age is 18 or mental status is sound, they can vote. Meeting one condition is sufficient.</p>
+<p><img src="images/resim63.png" class="img-fluid"></p>
+<p><img src="images/resim64.png" class="img-fluid"></p>
+</section>
+<section id="nested-if" class="level3">
+<h3 class="anchored" data-anchor-id="nested-if">Nested IF</h3>
+<p>Let’s say we have students and their grades. We want to show students who got:</p>
+<ul>
+<li>80 - 100 as “Very Good”</li>
+<li>60 - 79 as “Good”</li>
+<li>40 - 59 as “Average”</li>
+<li>20 - 39 as “Poor”</li>
+<li>0 - 19 as “Very Poor”</li>
+</ul>
+<p>Let’s examine the following function:</p>
+<p>=IF(B2&gt;=80;“Very Good”;IF(B2&gt;=60;“Good”;IF(B2&gt;=40;“Average”;IF(B2&gt;=20;“Poor”;“Very Poor”))))</p>
+<blockquote class="blockquote">
+<p>You can use file <a href="files/ornek3.xlsx">ornek3.xlsx</a> for the following examples</p>
+</blockquote>
+<p><img src="images/resim65.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="tables-and-charts-in-excel" class="level2">
+<h2 class="anchored" data-anchor-id="tables-and-charts-in-excel">Tables and Charts in EXCEL</h2>
+<section id="pivot-tables" class="level3">
+<h3 class="anchored" data-anchor-id="pivot-tables">Pivot Tables</h3>
+<p>Excel Pivot table is a method used to quickly create reports from list-formatted data and compare data. Pivot Tables, one of Excel’s most frequently used features, are extensively used in creating Reporting screens.</p>
+<p>Pivot Tables, where we can create reports by dragging and dropping table headers into row and column areas, have become an even more powerful and indispensable Excel feature with the features developed with new Excel versions. Pivot Tables have a very wide usage area, from comparing monthly sales values of salespeople to reporting monthly expenses of vehicles, and are an indispensable tool in managers’ Excel usage.</p>
+<p>There are certain conditions for creating a Pivot Table from Excel data:</p>
+<ul>
+<li>Your data must be listed downward in columns.</li>
+<li>Should not contain empty rows or columns.</li>
+<li>When you create a Pivot Table from a table with continuous data entry, when you add a new row and refresh the data, your Pivot Table automatically updates.</li>
+<li>Data types in columns should be of the same type. For example, if a column has a date header, that column should only contain date values.</li>
+</ul>
+<p>Let’s look at the following example</p>
+<blockquote class="blockquote">
+<p>You can use file <a href="files/ornek4.xlsx">ornek4.xlsx</a> for the following examples</p>
+</blockquote>
+<p><img src="images/resim69.png" class="img-fluid"></p>
+<p><strong>Research Question: How many sales were made in each region?</strong></p>
+<p>Insert–&gt;Pivot Table–&gt;Select Table/Range option and select all data range.</p>
+<p><img src="images/resim70.png" class="img-fluid"></p>
+<p>When you select the desired information from the Pivot Table fields on the right side, the pivot table appears.</p>
+<p><img src="images/resim71.png" class="img-fluid"></p>
+<p>In this pivot table, for example, 125 sales were made in Adana. If you click on 125, you can see the details of the sales on a separate page.</p>
+<p><img src="images/resim72.png" class="img-fluid"></p>
+<p><strong>Research Question: How many sales were made by region and month, and what is the total amount?</strong></p>
+<p><img src="images/resim73.png" class="img-fluid"></p>
+<p>You can choose the row and column yourself. For example, we click on the brand on the right and drag it to row instead, so it separates by brands. When you select brand and price, a table like below can be created.</p>
+<p><img src="images/resim74.png" class="img-fluid"></p>
+</section>
+<section id="charts" class="level3">
+<h3 class="anchored" data-anchor-id="charts">Charts</h3>
+<p>There are three basic chart types you can create in Excel, and they’re all very suitable for specific data types:</p>
+<p>Line - Displays one or more data sets using vertical bars. Can be used to list changes over time or compare two similar data sets</p>
+<p>Column - Displays one or more data sets using horizontal lines. Can be used to show growth or decline in data over time</p>
+<p>Pie - Displays a data set as parts of a whole. Can be used to show the visual distribution of data</p>
+<p>Let’s consider the following data set. We can create a chart by selecting all data and using the Insert–&gt;Recommended Charts tab.</p>
+<blockquote class="blockquote">
+<p>You can use file <a href="files/ornek5.xlsx">ornek5.xlsx</a> for the following examples</p>
+</blockquote>
+<p><img src="images/resim75.png" class="img-fluid"></p>
+<p><img src="images/resim76.png" class="img-fluid"></p>
+<p><img src="images/resim77.png" class="img-fluid"></p>
+<p>From chart elements, adjustments can be made to the chart.</p>
+<p><img src="images/resim78.png" class="img-fluid"></p>
+<p><img src="images/resim79.png" class="img-fluid"></p>
+<p>Let’s try a different chart for the example above.</p>
+<p>Select and copy the row containing dates and paste it to a different area using special paste–&gt;transpose</p>
+<p>Repeat the same process by selecting the apple row.</p>
+<p>Afterward, we can select the pie chart and modify the data labels as desired.</p>
+<p><img src="images/resim80.png" class="img-fluid"></p>
+<p><img src="images/resim81.png" class="img-fluid"></p>
+<p><img src="images/resim82.png" class="img-fluid"></p>
+<p><img src="images/resim83.png" class="img-fluid"></p>
+<p><img src="images/resim84.png" class="img-fluid"></p>
+<p><img src="images/resim85.png" class="img-fluid"></p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
