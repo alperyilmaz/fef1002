@@ -27,3 +27,9 @@
 *October 22th, 2024, Thursday 4-7pm, ONLINE*
 
 **Contents**: Introduction to algoritms [link for lecture material](week4-algoritms-en.qmd) and Excel [link for lecture material](week4-excel-en.qmd)
+
+## Lecture5
+
+*November 5th, 2024, Thursday 4-7pm, ONLINE*
+
+**Contents**: Excel Part2 [link for lecture material](week5-excel-part2.qmd)
