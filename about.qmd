@@ -4,4 +4,12 @@ Lecture materials for FEF1002 for 2024 FALL semester at YTU Faculty of Science a
 
 ## Frequently Asked Questions
 
-To be determined..
+1. What are the midterm topics?
+
+*The midterm will cover all topics up to and including Excel*
+
+2. Is the midterm exam classical or multiple choice?
+
+*The exam will be (most likely) multiple choice*
+
+
