@@ -256,7 +256,13 @@ window.Quarto = {
 <p>Rest of the content is taken from <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Learn LaTeX in 30 minutes</a> at Overleaf</p>
 <section id="the-preamble-of-a-document" class="level2">
 <h2 class="anchored" data-anchor-id="the-preamble-of-a-document">The preamble of a document</h2>
-<p>The preamble part of a latex Document contains the following information: * Document type (article, report, book, etc.) * Packages to use/include * Information to be used in the document (title, author name, date, etc.) * Macros</p>
+<p>The preamble part of a latex Document contains the following information:</p>
+<ul>
+<li>Document type (article, report, book, etc.)</li>
+<li>Packages to use/include</li>
+<li>Information to be used in the document (title, author name, date, etc.)</li>
+<li>Macros</li>
+</ul>
 <p>Here’s sample document which contains simple preamble part.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[12pt, letterpaper]{<span class="ex">article</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{My first LaTeX document}</span>
@@ -355,11 +361,10 @@ Underline
 <p><img src="https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg" class="img-fluid"></p>
 <p>Here are the explanations of each command:</p>
 <ul>
-<li><strong></strong>: This form of \includegraphics instructs LaTeX to set the figure’s width to 75% of the text width—whose value is stored in the command.</li>
-<li>**
-**: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.</li>
-<li><strong></strong>: To reference this image within your document you give it a label using the command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.</li>
-<li><strong><code>\ref{fig:mesh1}</code></strong>: This code will be substituted by the number corresponding to the referenced figure.</li>
+<li><code>\includegraphics[width=0.75\textwidth]{mesh}</code>: This form of \includegraphics instructs LaTeX to set the figure’s width to 75% of the text width—whose value is stored in the command.</li>
+<li><code>\caption{A nice plot.}</code>: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.</li>
+<li><code>\label{fig:mesh1}</code>: To reference this image within your document you give it a label using the command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.</li>
+<li><code>\ref{fig:mesh1}</code>: This code will be substituted by the number corresponding to the referenced figure.</li>
 </ul>
 </section>
 </section>
@@ -383,18 +388,9 @@ Underline
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span> The list numbers increase with each entry we add.</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The lists above will render as:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://images.ctfassets.net/nrgyaltdicpt/1lDj29Mg9ZuLNHXwZrTJew/cd7d950c65fd05b251c4aa55746f4eb7/LL30Fig7-plain.svg" class="img-fluid figure-img"></p>
-<figcaption>unordered-list</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://images.ctfassets.net/nrgyaltdicpt/2vkfa7RiAIJxv5wIZbg9UK/530c384f159d091a587de279d13fefec/LL30Fig8-plain.svg" class="img-fluid figure-img"></p>
-<figcaption>ordered-list</figcaption>
-</figure>
-</div>
+<p><img src="https://images.ctfassets.net/nrgyaltdicpt/1lDj29Mg9ZuLNHXwZrTJew/cd7d950c65fd05b251c4aa55746f4eb7/LL30Fig7-plain.svg" class="img-fluid"></p>
+<p>OR</p>
+<p><img src="https://images.ctfassets.net/nrgyaltdicpt/2vkfa7RiAIJxv5wIZbg9UK/530c384f159d091a587de279d13fefec/LL30Fig8-plain.svg" class="img-fluid"></p>
 </section>
 </section>
 <section id="adding-math" class="level2">
@@ -440,12 +436,7 @@ E=mc^2
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">abstract</span>}</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Will render as:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://images.ctfassets.net/nrgyaltdicpt/4cPu8x8ZxuDVF6efcZ03yi/91aa6aa84719613b0e25c725b70aa0b8/LL30Fig14-plain.svg" class="img-fluid figure-img"></p>
-<figcaption>abstract</figcaption>
-</figure>
-</div>
+<p><img src="https://images.ctfassets.net/nrgyaltdicpt/4cPu8x8ZxuDVF6efcZ03yi/91aa6aa84719613b0e25c725b70aa0b8/LL30Fig14-plain.svg" class="img-fluid"></p>
 </section>
 <section id="paragraphs-and-new-lines" class="level3">
 <h3 class="anchored" data-anchor-id="paragraphs-and-new-lines">Paragraphs and new lines</h3>
