@@ -6,30 +6,36 @@
 
 ## Lecture1
 
-*October 1st, 2024, Thursday 4-7pm, ONLINE*
+*October 1st, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: Introduction about the lecture
 
 ## Lecture2
 
-*October 8th, 2024, Thursday 4-7pm, ONLINE*
+*October 8th, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: Latex [link for lecture materials](latex-lecture1-en.ipynb)
 
 ## Lecture3
 
-*October 15th, 2024, Thursday 4-7pm, ONLINE*
+*October 15th, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: Latex at Overleaf [link for lecture materials](latex-lecture2-en.ipynb)
 
 ## Lecture4
 
-*October 22th, 2024, Thursday 4-7pm, ONLINE*
+*October 22th, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: Introduction to algoritms [link for lecture material](week4-algoritms-en.qmd) and Excel [link for lecture material](week4-excel-en.qmd)
 
 ## Lecture5
 
-*November 5th, 2024, Thursday 4-7pm, ONLINE*
+*November 5th, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: Excel Part2 [link for lecture material](week5-excel-part2.qmd)
+
+## Lecture6
+
+*November 12th, 2024, Tuesday 4-7pm, ONLINE*
+
+**Contents**: Excel Pivot tables and charts [link for lecture material](week5-excel-part2.qmd)
