@@ -38,4 +38,4 @@
 
 *November 12th, 2024, Tuesday 4-7pm, ONLINE*
 
-**Contents**: Excel Pivot tables and charts [link for lecture material](week5-excel-part2.qmd)
+**Contents**: Excel Pivot tables and charts [link for lecture material](week6-excel-part3.qmd)

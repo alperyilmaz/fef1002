@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Assoc. Prof.&nbsp;Öyküm Esra YİĞİT">
+<meta name="dcterms.date" content="2024-11-12">
 
-<title>FEF1002 Introduction to Basic Computer Technologies</title>
+<title>Excel - Part3 – FEF1002 Introduction to Basic Computer Technologies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Main</span></a>
   </li>  
   <li class="nav-item">
@@ -111,15 +113,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fef1002-introduction-to-basic-computer-technologies" id="toc-fef1002-introduction-to-basic-computer-technologies" class="nav-link active" data-scroll-target="#fef1002-introduction-to-basic-computer-technologies">FEF1002 Introduction to Basic Computer Technologies</a>
+  <li><a href="#week-6-excel---part3" id="toc-week-6-excel---part3" class="nav-link active" data-scroll-target="#week-6-excel---part3">Week 6: Excel - Part3</a>
   <ul class="collapse">
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#lecture1" id="toc-lecture1" class="nav-link" data-scroll-target="#lecture1">Lecture1</a></li>
-  <li><a href="#lecture2" id="toc-lecture2" class="nav-link" data-scroll-target="#lecture2">Lecture2</a></li>
-  <li><a href="#lecture3" id="toc-lecture3" class="nav-link" data-scroll-target="#lecture3">Lecture3</a></li>
-  <li><a href="#lecture4" id="toc-lecture4" class="nav-link" data-scroll-target="#lecture4">Lecture4</a></li>
-  <li><a href="#lecture5" id="toc-lecture5" class="nav-link" data-scroll-target="#lecture5">Lecture5</a></li>
-  <li><a href="#lecture6" id="toc-lecture6" class="nav-link" data-scroll-target="#lecture6">Lecture6</a></li>
+  <li><a href="#tables-and-charts-in-excel" id="toc-tables-and-charts-in-excel" class="nav-link" data-scroll-target="#tables-and-charts-in-excel">Tables and Charts in EXCEL</a>
+  <ul class="collapse">
+  <li><a href="#pivot-tables" id="toc-pivot-tables" class="nav-link" data-scroll-target="#pivot-tables">Pivot Tables</a></li>
+  <li><a href="#charts" id="toc-charts" class="nav-link" data-scroll-target="#charts">Charts</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -127,48 +127,103 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Excel - Part3</h1>
+<p class="subtitle lead">FEF1002 - Lecture6</p>
+</div>
 
 
 
-<section id="fef1002-introduction-to-basic-computer-technologies" class="level1">
-<h1>FEF1002 Introduction to Basic Computer Technologies</h1>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Assoc. Prof.&nbsp;Öyküm Esra YİĞİT </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 12, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="week-6-excel---part3" class="level1">
+<h1>Week 6: Excel - Part3</h1>
+<p>This module will cover the following concepts:</p>
 <ul>
-<li>The lecture materials will be provided at this website</li>
+<li>Tables and Charts in Excel</li>
 </ul>
+<section id="tables-and-charts-in-excel" class="level2">
+<h2 class="anchored" data-anchor-id="tables-and-charts-in-excel">Tables and Charts in EXCEL</h2>
+<section id="pivot-tables" class="level3">
+<h3 class="anchored" data-anchor-id="pivot-tables">Pivot Tables</h3>
+<p>Excel Pivot table is a method used to quickly create reports from list-formatted data and compare data. Pivot Tables, one of Excel’s most frequently used features, are extensively used in creating Reporting screens.</p>
+<p>Pivot Tables, where we can create reports by dragging and dropping table headers into row and column areas, have become an even more powerful and indispensable Excel feature with the features developed with new Excel versions. Pivot Tables have a very wide usage area, from comparing monthly sales values of salespeople to reporting monthly expenses of vehicles, and are an indispensable tool in managers’ Excel usage.</p>
+<p>There are certain conditions for creating a Pivot Table from Excel data:</p>
+<ul>
+<li>Your data must be listed downward in columns.</li>
+<li>Should not contain empty rows or columns.</li>
+<li>When you create a Pivot Table from a table with continuous data entry, when you add a new row and refresh the data, your Pivot Table automatically updates.</li>
+<li>Data types in columns should be of the same type. For example, if a column has a date header, that column should only contain date values.</li>
+</ul>
+<p>Let’s look at the following example</p>
+<blockquote class="blockquote">
+<p>You can use file <a href="files/ornek4.xlsx">ornek4.xlsx</a> for the following examples</p>
+</blockquote>
+<p><img src="images/resim69.png" class="img-fluid"></p>
+<p><strong>Research Question: How many sales were made in each region?</strong></p>
+<p>Insert–&gt;Pivot Table–&gt;Select Table/Range option and select all data range.</p>
+<p><img src="images/resim70.png" class="img-fluid"></p>
+<p>When you select the desired information from the Pivot Table fields on the right side, the pivot table appears.</p>
+<p><img src="images/resim71.png" class="img-fluid"></p>
+<p>In this pivot table, for example, 125 sales were made in Adana. If you click on 125, you can see the details of the sales on a separate page.</p>
+<p><img src="images/resim72.png" class="img-fluid"></p>
+<p><strong>Research Question: How many sales were made by region and month, and what is the total amount?</strong></p>
+<p><img src="images/resim73.png" class="img-fluid"></p>
+<p>You can choose the row and column yourself. For example, we click on the brand on the right and drag it to row instead, so it separates by brands. When you select brand and price, a table like below can be created.</p>
+<p><img src="images/resim74.png" class="img-fluid"></p>
 </section>
-<section id="lecture1" class="level2">
-<h2 class="anchored" data-anchor-id="lecture1">Lecture1</h2>
-<p><em>October 1st, 2024, Tuesday 4-7pm, ONLINE</em></p>
-<p><strong>Contents</strong>: Introduction about the lecture</p>
-</section>
-<section id="lecture2" class="level2">
-<h2 class="anchored" data-anchor-id="lecture2">Lecture2</h2>
-<p><em>October 8th, 2024, Tuesday 4-7pm, ONLINE</em></p>
-<p><strong>Contents</strong>: Latex <a href="./latex-lecture1-en.html">link for lecture materials</a></p>
-</section>
-<section id="lecture3" class="level2">
-<h2 class="anchored" data-anchor-id="lecture3">Lecture3</h2>
-<p><em>October 15th, 2024, Tuesday 4-7pm, ONLINE</em></p>
-<p><strong>Contents</strong>: Latex at Overleaf <a href="./latex-lecture2-en.html">link for lecture materials</a></p>
-</section>
-<section id="lecture4" class="level2">
-<h2 class="anchored" data-anchor-id="lecture4">Lecture4</h2>
-<p><em>October 22th, 2024, Tuesday 4-7pm, ONLINE</em></p>
-<p><strong>Contents</strong>: Introduction to algoritms <a href="./week4-algoritms-en.html">link for lecture material</a> and Excel <a href="./week4-excel-en.html">link for lecture material</a></p>
-</section>
-<section id="lecture5" class="level2">
-<h2 class="anchored" data-anchor-id="lecture5">Lecture5</h2>
-<p><em>November 5th, 2024, Tuesday 4-7pm, ONLINE</em></p>
-<p><strong>Contents</strong>: Excel Part2 <a href="./week5-excel-part2.html">link for lecture material</a></p>
-</section>
-<section id="lecture6" class="level2">
-<h2 class="anchored" data-anchor-id="lecture6">Lecture6</h2>
-<p><em>November 12th, 2024, Tuesday 4-7pm, ONLINE</em></p>
-<p><strong>Contents</strong>: Excel Pivot tables and charts <a href="./week6-excel-part3.html">link for lecture material</a></p>
+<section id="charts" class="level3">
+<h3 class="anchored" data-anchor-id="charts">Charts</h3>
+<p>There are three basic chart types you can create in Excel, and they’re all very suitable for specific data types:</p>
+<p>Line - Displays one or more data sets using vertical bars. Can be used to list changes over time or compare two similar data sets</p>
+<p>Column - Displays one or more data sets using horizontal lines. Can be used to show growth or decline in data over time</p>
+<p>Pie - Displays a data set as parts of a whole. Can be used to show the visual distribution of data</p>
+<p>Let’s consider the following data set. We can create a chart by selecting all data and using the Insert–&gt;Recommended Charts tab.</p>
+<blockquote class="blockquote">
+<p>You can use file <a href="files/ornek5.xlsx">ornek5.xlsx</a> for the following examples</p>
+</blockquote>
+<p><img src="images/resim75.png" class="img-fluid"></p>
+<p><img src="images/resim76.png" class="img-fluid"></p>
+<p><img src="images/resim77.png" class="img-fluid"></p>
+<p>From chart elements, adjustments can be made to the chart.</p>
+<p><img src="images/resim78.png" class="img-fluid"></p>
+<p><img src="images/resim79.png" class="img-fluid"></p>
+<p>Let’s try a different chart for the example above.</p>
+<p>Select and copy the row containing dates and paste it to a different area using special paste–&gt;transpose</p>
+<p>Repeat the same process by selecting the apple row.</p>
+<p>Afterward, we can select the pie chart and modify the data labels as desired.</p>
+<p><img src="images/resim80.png" class="img-fluid"></p>
+<p><img src="images/resim81.png" class="img-fluid"></p>
+<p><img src="images/resim82.png" class="img-fluid"></p>
+<p><img src="images/resim83.png" class="img-fluid"></p>
+<p><img src="images/resim84.png" class="img-fluid"></p>
+<p><img src="images/resim85.png" class="img-fluid"></p>
 
 
+</section>
 </section>
 </section>
 
