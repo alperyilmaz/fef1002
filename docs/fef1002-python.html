@@ -145,12 +145,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-python" id="toc-what-is-python" class="nav-link active" data-scroll-target="#what-is-python">What is Python?</a>
-  <ul class="collapse">
+  <li><a href="#what-is-python" id="toc-what-is-python" class="nav-link active" data-scroll-target="#what-is-python">What is Python?</a></li>
   <li><a href="#how-python-works" id="toc-how-python-works" class="nav-link" data-scroll-target="#how-python-works">How Python Works</a></li>
-  </ul></li>
   <li><a href="#installing-and-using-jupyter-notebook-through-anaconda" id="toc-installing-and-using-jupyter-notebook-through-anaconda" class="nav-link" data-scroll-target="#installing-and-using-jupyter-notebook-through-anaconda">Installing and Using Jupyter Notebook through Anaconda</a></li>
-  <li><a href="#python-basics" id="toc-python-basics" class="nav-link" data-scroll-target="#python-basics">Python Basics</a></li>
+  <li><a href="#python-basics" id="toc-python-basics" class="nav-link" data-scroll-target="#python-basics">Python Basics</a>
+  <ul class="collapse">
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
+  <li><a href="#python-block-structure" id="toc-python-block-structure" class="nav-link" data-scroll-target="#python-block-structure">Python Block Structure</a></li>
+  </ul></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a>
+  <ul class="collapse">
+  <li><a href="#variable-naming-rules" id="toc-variable-naming-rules" class="nav-link" data-scroll-target="#variable-naming-rules">Variable Naming Rules</a></li>
+  </ul></li>
+  <li><a href="#python-functions" id="toc-python-functions" class="nav-link" data-scroll-target="#python-functions">Python Functions</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types">Data Types</a></li>
+  <li><a href="#advanced-data-structures-list-tuple-dictionary" id="toc-advanced-data-structures-list-tuple-dictionary" class="nav-link" data-scroll-target="#advanced-data-structures-list-tuple-dictionary">Advanced Data Structures (List, Tuple, Dictionary)</a></li>
   </ul>
 </nav>
     </div>
@@ -193,13 +202,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>It has many development environments such as Jupyter, PyCharm, and Spyder.
 </li>
 </ul>
-<section id="how-python-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-python-works">How Python Works</h3>
+</section>
+<section id="how-python-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-python-works">How Python Works</h2>
 <p><img src="images/python.JPG" class="img-fluid"></p>
 <p>The bytecode compiler takes source code (Python commands) as input. It then produces Python bytecode (.pyc file) that can be read by the machine as output.</p>
 <p>The virtual machine takes Python bytecode (.pyc) and any relevant library modules as input, executes the virtual machine instructions represented by the bytecode, converting it into executable file format.</p>
 <p>In Python, the import statement is used to add/import a library module to the current source file.</p>
-</section>
 </section>
 <section id="installing-and-using-jupyter-notebook-through-anaconda" class="level2">
 <h2 class="anchored" data-anchor-id="installing-and-using-jupyter-notebook-through-anaconda">Installing and Using Jupyter Notebook through Anaconda</h2>
@@ -294,10 +303,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p><strong>Comments</strong></p>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">Comments</h3>
 <p>Comments are expressions that are not considered or interpreted by the Python interpreter. Comments are generally used for the following operations: - Adding a reminder - Making an explanation about the program or code - Making an unused code line passive - Such comment lines help others better understand the code</p>
 <p><strong>Note:</strong> These are expressions that are not considered and interpreted by the Python interpreter. The <code>#</code> symbol is used for single-line comments. For multiple comment lines, comments are written between <b>triple single quotes</b> or <b>triple double quotes</b> blocks.</p>
-<p><strong>Python Block Structure</strong></p>
+</section>
+<section id="python-block-structure" class="level3">
+<h3 class="anchored" data-anchor-id="python-block-structure">Python Block Structure</h3>
 <p>In Python (and other programming languages), codes are expressed in certain subsets (blocks). This structure is created with indentation in Python. In Python, codes that are vertically aligned are in the same block structure. It is recommended to use a tab (4 spaces) to easily distinguish code blocks. If an IDE (integrated development environment) is used, these indentations will be set automatically. Loops, functions, and conditional statements are created using code blocks.</p>
 <div id="bf31f068-6fa8-433d-b9d9-61a5c146768b" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Age<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Age= "</span>))</span>
@@ -308,7 +320,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"You are not in the if block!!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the program above, a block was created by creating an indent under the <code>if</code> statement. The result of the logical expression “age&gt;=18” causes all codes in the block to be skipped or executed. When writing code in Python, attention must be paid to indentation. Since indentation determines the block structure, it can cause the program to run incorrectly or not run at all.</p>
-<p><strong>Variables</strong></p>
+</section>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
 <ul>
 <li>When writing code, it may be necessary to get data from users or other sources. For example, if we want to find the sum of two numbers, we need to get two numbers as input from the user. These inputs (values) must be stored in memory to perform operations. A certain space must be allocated in memory to store these inputs. When a variable is defined, the interpreter allocates space in memory depending on the data type and determines what type of data can be stored in the allocated section.</li>
 <li>Variables represent this space allocated in memory for a string, number, or different type of data. Values of different data types can be assigned to variables. Integer, decimal number, array, or string type values can be stored in variables through value assignment.<br>
@@ -342,7 +357,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"2.Number="</span>, s2)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total="</span>, t)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Variable Naming Rules</strong></p>
+<section id="variable-naming-rules" class="level3">
+<h3 class="anchored" data-anchor-id="variable-naming-rules">Variable Naming Rules</h3>
 <ul>
 <li>Case sensitivity exists</li>
 <li>Reserved words like “False, True, None, continue, break, class, and, as, else, elif” cannot be used as variables</li>
@@ -357,7 +373,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Number1)</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">"""number1 with capital N is differenet variable than all small letter"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Python Functions</strong></p>
+</section>
+</section>
+<section id="python-functions" class="level2">
+<h2 class="anchored" data-anchor-id="python-functions">Python Functions</h2>
 <ol type="1">
 <li><strong>print()</strong>:</li>
 </ol>
@@ -451,7 +470,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> math.sqrt(x)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.log10(<span class="dv">100</span>),y, sep<span class="op">=</span><span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Data Types</strong></p>
+</section>
+<section id="data-types" class="level2">
+<h2 class="anchored" data-anchor-id="data-types">Data Types</h2>
 <p>Frequently used data types in Python programming language are given in the table below:</p>
 <table class="caption-top table">
 <colgroup>
@@ -551,7 +572,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>a,b<span class="op">=</span>b,a <span class="co">#Swap process</span></span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a,b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Advanced Data Structures (List, Tuple, Dictionary)</strong></p>
+</section>
+<section id="advanced-data-structures-list-tuple-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-data-structures-list-tuple-dictionary">Advanced Data Structures (List, Tuple, Dictionary)</h2>
 <p>1. <strong>List:</strong></p>
 <p>Lists are ordered and modifiable data structures. Different data types can be stored in the same list.</p>
 <p>Features: - Elements can be added, removed, or modified. - The order of elements in lists is important and can be accessed by indexes. List indexes start at 0 (zero). - Different types of data (numbers, strings, other lists, etc.) can exist in the same list.</p>
