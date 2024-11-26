@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Python - part 2 – FEF1002 Introduction to Basic Computer Technologies</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">FEF1002 Introduction to Basic Computer Technologies</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Main</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#conditional-statements" id="toc-conditional-statements" class="nav-link active" data-scroll-target="#conditional-statements">Conditional Statements</a></li>
+  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops">Loops</a>
+  <ul class="collapse">
+  <li><a href="#loop-exit-commands" id="toc-loop-exit-commands" class="nav-link" data-scroll-target="#loop-exit-commands">Loop Exit Commands</a></li>
+  </ul></li>
+  <li><a href="#python-libraries" id="toc-python-libraries" class="nav-link" data-scroll-target="#python-libraries">Python Libraries</a></li>
+  <li><a href="#scientific-computing-in-python-numpy" id="toc-scientific-computing-in-python-numpy" class="nav-link" data-scroll-target="#scientific-computing-in-python-numpy">Scientific computing in Python: Numpy</a></li>
+  <li><a href="#data-analysis-in-python-pandas" id="toc-data-analysis-in-python-pandas" class="nav-link" data-scroll-target="#data-analysis-in-python-pandas">Data Analysis in Python: Pandas</a>
+  <ul class="collapse">
+  <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import">Data Import</a></li>
+  <li><a href="#data-manipulation" id="toc-data-manipulation" class="nav-link" data-scroll-target="#data-manipulation">Data Manipulation</a></li>
+  </ul></li>
+  <li><a href="#data-visualization-in-python-matplotlib" id="toc-data-visualization-in-python-matplotlib" class="nav-link" data-scroll-target="#data-visualization-in-python-matplotlib">Data Visualization in Python: Matplotlib</a>
+  <ul class="collapse">
+  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic Usage</a></li>
+  </ul></li>
+  <li><a href="#graph-size-and-resolution" id="toc-graph-size-and-resolution" class="nav-link" data-scroll-target="#graph-size-and-resolution">Graph Size and Resolution</a></li>
+  <li><a href="#graph-types" id="toc-graph-types" class="nav-link" data-scroll-target="#graph-types">Graph Types</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Python - part 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>This is HTML version of the lecture notes. If you’d like to run the sample Python codes please visit this <a href="https://mybinder.org/v2/gh/alperyilmaz/jupyterlab-python-binder/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Falperyilmaz%252Ffef1002%26urlpath%3Dlab%252Ftree%252Ffef1002%252F%26branch%3Dmain">LINK</a> and open file <code>fef1002-pythonB.ipynb</code></p>
+</blockquote>
+<section id="conditional-statements" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-statements">Conditional Statements</h2>
+<p>1. <strong><code>if/else</code> statement</strong>:<br>
+The <code>if</code> statement, which means IF, is used to control conditions based on a specific criterion as the name suggests. The <code>if/else</code> statement works together with the <code>if</code> statement and covers all cases where the <code>if</code> conditions are not met.</p>
+<p><img src="images/if.png" class="img-fluid"></p>
+<div id="ada2536a-0c67-4de0-8ba8-2a9f845975cd" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Division operation will be performed:"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dividend<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter the first number for operation:"</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>divisor<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter the second number for operation:"</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> divisor<span class="op">!=</span><span class="dv">0</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(dividend,<span class="st">"/"</span>,divisor,<span class="st">"="</span>, dividend<span class="op">/</span>divisor)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Division by zero is not possible!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>2. <strong><code>if/elif/else</code> statement</strong>: In Python, multi-way conditional statements can be used with both nested <code>if</code> statements and the <code>if/elif/else</code> statement. The <code>elif</code> statement is short for <code>else if</code>. While simple <code>if/else</code> statements have two different conditions, multi-way decision statements perform operations based on more conditions being met.</p>
+<div id="f4c49694-4146-4420-a3c9-5ac7f55f3d3c" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter an integer between 0 - 2: "</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"too small"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"zero"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"one"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"two"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"too big"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Completed!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="loops" class="level2">
+<h2 class="anchored" data-anchor-id="loops">Loops</h2>
+<p>1. <strong><code>for</code> Loop:</strong> These are loops used for repeating operations a specific number of times. It repeats between start and end values according to the increment amount.</p>
+<div id="0e4b78b5-3a0f-4e6b-9e0e-b42be1eaf54c" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#range (start value, end value, increment/decrement value) </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">30</span>,<span class="dv">1</span>) <span class="co"># range(30)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">11</span>,<span class="dv">2</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">5</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">7</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">20</span>,<span class="dv">10</span>,<span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>r<span class="op">=</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">20</span>,<span class="dv">2</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">11</span> <span class="kw">in</span> r)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">10</span> <span class="kw">in</span> r)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(r.index(<span class="dv">10</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#writes integers from 1 to 9</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 2 3 4 5 6 7 8 9</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>): </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i, end<span class="op">=</span><span class="st">" "</span>)    </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Finished!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>2. <strong><code>while</code> Loop:</strong> The <code>while</code> statement determines whether the relevant code lines should be executed. It repeatedly executes the code block as long as the condition is true. When the condition becomes false, the loop ends.</p>
+<div id="e5d15450-663c-4ac5-8f28-cb194cfccbc9" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#A while loop that displays how many times it has looped until N/n character is entered from outside</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>entry<span class="op">=</span> <span class="st">"Y"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> entry<span class="op">!=</span> <span class="st">"N"</span> <span class="kw">and</span> entry<span class="op">!=</span> <span class="st">"n"</span>:</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    entry<span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter 'Y' to continue – 'N' to exit: "</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> entry <span class="op">==</span> <span class="st">"Y"</span> <span class="kw">or</span> entry <span class="op">==</span> <span class="st">"y"</span>:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> entry <span class="op">!=</span> <span class="st">"N"</span> <span class="kw">and</span> entry <span class="op">!=</span> <span class="st">"n"</span>:</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Not a valid entry code! Please enter a valid code."</span>) </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of valid entries="</span>,counter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="loop-exit-commands" class="level3">
+<h3 class="anchored" data-anchor-id="loop-exit-commands">Loop Exit Commands</h3>
+<p>The While loop executes the relevant code lines as long as the condition is met. Similarly, the for loop performs the relevant operations within the range. However, it’s possible to exit the loop structure for certain values, in other words, to make changes in the loop operation.</p>
+<p>For this, <code>break</code> and <code>continue</code> commands can be used.</p>
+<p>When the <code>break</code> statement is used, the relevant code lines are skipped without execution, while when the <code>continue</code> statement is used, the loop starts over to process the next new value.</p>
+<div id="3bbed76e-7e13-4ec2-af94-0f87a21e5d0c" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A while loop that adds positive numbers entered until a negative number is entered from outside</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>number <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Enter a number, negative number ends the loop:"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> number <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    number<span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> number <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span>    <span class="co"># Exiting the loop</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    total <span class="op">+=</span> number</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total="</span>, total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a02a7016-6f6f-431d-8cfa-599e2922c052" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Program that prints odd numbers from 1 to 10</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>n<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> n<span class="op">&lt;=</span><span class="dv">10</span>:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   print(n)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    n<span class="op">=</span>n<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(n) <span class="co">#using print(n,end=' ') will print side by side</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="python-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="python-libraries">Python Libraries</h2>
+<p>Commonly used libraries in Python:</p>
+<ol type="1">
+<li><strong>NumPy</strong>:
+<ul>
+<li><strong>Description</strong>: A fundamental library for scientific computing. Enables working with multi-dimensional arrays and matrices.</li>
+<li><strong>Usage Area</strong>: Mathematical operations, linear algebra, Fourier transforms.</li>
+</ul></li>
+<li><strong>Pandas</strong>:
+<ul>
+<li><strong>Description</strong>: Provides powerful tools for data analysis and manipulation.</li>
+<li><strong>Usage Area</strong>: Data cleaning, data transformation, working with data frames.</li>
+</ul></li>
+<li><strong>Matplotlib</strong>:
+<ul>
+<li><strong>Description</strong>: Enables creating graphs and visualizations.</li>
+<li><strong>Usage Area</strong>: Graph plotting, data visualization, histograms.</li>
+</ul></li>
+<li><strong>SciPy</strong>:
+<ul>
+<li><strong>Description</strong>: Offers a wide range of functions for scientific and technical computing.</li>
+<li><strong>Usage Area</strong>: Statistical analysis, optimization, signal processing.</li>
+</ul></li>
+<li><strong>scikit-learn</strong>:
+<ul>
+<li><strong>Description</strong>: A library for machine learning algorithms.</li>
+<li><strong>Usage Area</strong>: Classification, regression, clustering, model evaluation.</li>
+</ul></li>
+<li><strong>TensorFlow</strong>:
+<ul>
+<li><strong>Description</strong>: A library developed by Google, used for machine learning and deep learning.</li>
+<li><strong>Usage Area</strong>: Creating, training, and evaluating deep learning models.</li>
+</ul></li>
+<li><strong>Keras</strong>:
+<ul>
+<li><strong>Description</strong>: A high-level neural network library. Works on backends like TensorFlow and Theano.</li>
+<li><strong>Usage Area</strong>: Rapid prototyping of deep learning models.</li>
+</ul></li>
+<li><strong>Requests</strong>:
+<ul>
+<li><strong>Description</strong>: A simple and user-friendly library for making HTTP requests.</li>
+<li><strong>Usage Area</strong>: API calls, fetching data from websites.</li>
+</ul></li>
+<li><strong>BeautifulSoup</strong>:
+<ul>
+<li><strong>Description</strong>: Used for parsing HTML and XML files.</li>
+<li><strong>Usage Area</strong>: Web scraping, data mining.</li>
+</ul></li>
+<li><strong>Flask</strong>:
+<ul>
+<li><strong>Description</strong>: A lightweight web application framework.</li>
+<li><strong>Usage Area</strong>: Web application development, creating RESTful APIs.</li>
+</ul></li>
+<li><strong>Django</strong>:
+<ul>
+<li><strong>Description</strong>: A full-featured web application framework.</li>
+<li><strong>Usage Area</strong>: Developing complex web applications, rapid prototyping.</li>
+</ul></li>
+<li><strong>Pygame</strong>:
+<ul>
+<li><strong>Description</strong>: A library used for developing 2D games.</li>
+<li><strong>Usage Area</strong>: Game development, interactive applications.</li>
+</ul></li>
+<li><strong>OpenCV</strong>:
+<ul>
+<li><strong>Description</strong>: A library used for image processing and computer vision tasks.</li>
+<li><strong>Usage Area</strong>: Image analysis, object detection, face recognition.</li>
+</ul></li>
+<li><strong>NLTK (Natural Language Toolkit)</strong>:
+<ul>
+<li><strong>Description</strong>: A library providing extensive tools for natural language processing (NLP).</li>
+<li><strong>Usage Area</strong>: Text analysis, language modeling, part-of-speech tagging.</li>
+</ul></li>
+</ol>
+<p>The choice of library depends on the specific task at hand.</p>
+</section>
+<section id="scientific-computing-in-python-numpy" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-computing-in-python-numpy">Scientific computing in Python: Numpy</h2>
+<p>NumPy is a library used in Python that can perform complex mathematical operations, process very large arrays and matrices, and is used in data mining and data analysis. It has similar features to Python lists. The main difference is that numpy arrays must consist of elements of the same type while lists can contain elements of different types. Additionally, numpy arrays are much faster than Python lists and can perform matrix operations.</p>
+<p>NumPy package is imported with <code>import numpy as np</code>. With this definition, the numpy package will now be represented by the name <code>np</code> within the program.</p>
+<div id="caf50bf8-9c28-4036-8cdb-fb575915f783" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Creating Numpy Arrays</strong></p>
+<p>Various arrays can be created using the numpy methods given below. Numpy arrays can be used to create one-dimensional (vector), two-dimensional (matrix), and multi-dimensional arrays.</p>
+<p><strong>NumPy array/matrix creation methods</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 30%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>NumPy methods</th>
+<th>Description</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>np.array()</td>
+<td>Converts list to NumPy array.</td>
+<td>np.array([1, 3, 5, 7]) print(d) # [1, 3, 5, 7]</td>
+</tr>
+<tr class="even">
+<td>np.arange(n)</td>
+<td>Creates an array of numbers from 0 to n (not including n).</td>
+<td>np.arange(5) print(d) # [0 1 2 3 4]</td>
+</tr>
+<tr class="odd">
+<td>np.arange(4, 20, 2)</td>
+<td>Creates an array of consecutive numbers in the specified range (4-20) with increment amount (2).</td>
+<td>np.arange(4, 20, 2) print(d) # [4 6 8 10 12 14 16 18]</td>
+</tr>
+<tr class="even">
+<td>np.linspace(0, 5, n)</td>
+<td>Creates an array of n equally spaced numbers in the specified range (0-5).</td>
+<td>np.linspace(0, 5, 10) print(d) # [0. 0.555 1.11 1.667 2.22 2.778 3.33 3.89 4.44 5.]</td>
+</tr>
+<tr class="odd">
+<td>np.logspace(0, 2, n)</td>
+<td>Creates an array of n logarithmic numbers as powers of 10 in the specified range (0-2).</td>
+<td>np.logspace(0, 2, 5) print(d) # [1. 3.16227766 10. 31.6227766 100.]</td>
+</tr>
+<tr class="even">
+<td>np.zeros((n,m), dtype=int)</td>
+<td>Creates an array/matrix of zeros (0) with desired dimensions (n rows, m columns) and type.</td>
+<td>e = np.zeros((2,3)) print(d) # [[0. 0. 0.] [0. 0. 0.]]</td>
+</tr>
+<tr class="odd">
+<td>np.ones((n,m), dtype=int)</td>
+<td>Creates an array/matrix of ones (1) with desired dimensions (n rows, m columns) and type.</td>
+<td>d = np.ones((2,3), dtype=int) print(d) # [[1 1 1] [1 1 1]]</td>
+</tr>
+<tr class="even">
+<td>np.full((n,m), a)</td>
+<td>Creates an array/matrix filled with value a of desired dimensions (n rows, m columns).</td>
+<td>d = np.full((2,3),6) print(d) # [[6 6 6] [6 6 6]]</td>
+</tr>
+<tr class="odd">
+<td>np.repeat(a, (n))</td>
+<td>Creates an array of n elements with repeating numbers (a).</td>
+<td>e = np.repeat(3,4) print(e) # [3 3 3 3]</td>
+</tr>
+<tr class="even">
+<td>np.eye(n, dtype=int)</td>
+<td>Creates an n*n identity matrix.</td>
+<td>d = np.eye(3, dtype=int) print(d) # [[1 0 0] [0 1 0] [0 0 1]]</td>
+</tr>
+<tr class="odd">
+<td>np.trace(d)</td>
+<td>Returns the trace (sum of diagonals) of a matrix.</td>
+<td>print(np.trace(d)) # 3</td>
+</tr>
+<tr class="even">
+<td>np.random.rand(n)</td>
+<td>Creates an array of n random (floating-point) numbers between 0-1.</td>
+<td>d = np.random.rand(5) print(d) # [0.12 0.27 0.32 0.41 0.54]</td>
+</tr>
+<tr class="odd">
+<td>np.random.rand(n,m)</td>
+<td>Creates an array/matrix of random (floating-point) numbers between 0-1 with n rows, m columns.</td>
+<td>d = np.random.rand((2,3)) print(d) # [[0.54 0.5 0.67] [0.12 0.42 0.99]]</td>
+</tr>
+<tr class="even">
+<td>np.random.randint(a,size=n)</td>
+<td>Creates an n-dimensional array of positive integers up to a.</td>
+<td>d=np.random.randint(25,size=3]) print(d) # [9, 15, 7]</td>
+</tr>
+<tr class="odd">
+<td>np.random.randint(a,b, [n,m])</td>
+<td>Creates an n row, m column matrix ([n,m] dimensional matrix) of integers between (a-b).</td>
+<td>d=np.random.randint(1,9,[2,3]) print(d) # [[5 7 6] [7 7 6]]</td>
+</tr>
+</tbody>
+</table>
+<div id="462ea107-7e43-4c52-a1dd-94ffd4bfd5ed" class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data types must be the same, otherwise they are converted to a single type</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.array([<span class="dv">50</span>, <span class="dv">25</span>, <span class="dv">350</span>, <span class="dv">400</span>, <span class="dv">450</span>, <span class="dv">100</span>, <span class="dv">550</span>])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>V<span class="op">=</span>np.array([<span class="st">"ali"</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(V)  <span class="co"># integer expressions are also converted to strings</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Array elements in Numpy can be accessed with index numbers, just like list elements. The dimension of Numpy arrays is expressed with axes and ranks. These axes in NumPy arrays are expressed with the “axis” parameter. In a 2-dimensional (matrix) array, columns are “axis=0”, rows are “axis=1”, and in a 3-dimensional (3D) array, height (degree) is “axis=0”, columns are “axis=1”, and rows are “axis=2”.</li>
+<li>For those who confuse array dimensions: in 3-dimensional array definition, three “[[[…]]]” square brackets are used, in 2-dimensional array two “[[..]]” square brackets, in one-dimensional array one “[.]” square bracket is used.</li>
+<li><code>ndarray</code> is an n-dimensional array, and different properties of an ndarray type array can be learned using the methods given in the table below.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 30%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>NumPy methods</th>
+<th>Description</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ndarray.dtype</td>
+<td>Returns the type of the array.</td>
+<td>a=np.arange(6) print(a.dtype) # int32</td>
+</tr>
+<tr class="even">
+<td>ndarray.ndim</td>
+<td>Returns the dimension of the array.</td>
+<td>print(a.ndim) # 1</td>
+</tr>
+<tr class="odd">
+<td>ndarray.shape</td>
+<td>Shows the dimensional shape of the array.</td>
+<td>b=np.zeros((3,7)) print(b.shape) # (3,7)</td>
+</tr>
+<tr class="even">
+<td>ndarray.size</td>
+<td>Returns the number of elements (n x m) in the array.</td>
+<td>print(b.size) # 21</td>
+</tr>
+<tr class="odd">
+<td>ndarray.reshape(n, m) or ndarray.resize((n,m))</td>
+<td>Converts a one-dimensional array into an n row, m column matrix. That is, reshapes the array.</td>
+<td>d = np.arange(6) A = d.reshape(2,3) print(A) # [[0 1 2] [3 4 5]]</td>
+</tr>
+<tr class="even">
+<td>A.ravel() or A.flat</td>
+<td>Converts matrix A to a one-dimensional array.</td>
+<td>d = A.ravel() #d=[0 1 2 3 4 5]</td>
+</tr>
+<tr class="odd">
+<td>A.T or A.transpose()</td>
+<td>Takes the transpose of matrix A. That is, swaps its rows and columns.</td>
+<td>c = A.T print(c) # [[0 3] [1 4] [2 5]]</td>
+</tr>
+<tr class="even">
+<td>np.mean()</td>
+<td>Returns the average of array elements.</td>
+<td>d = np.array([1,2,3,4]) Avg = d.mean() print(Avg) # 2.5</td>
+</tr>
+<tr class="odd">
+<td>np.sum()</td>
+<td>Adds all elements of the array.</td>
+<td>T = d.sum() print(T) # 10</td>
+</tr>
+<tr class="even">
+<td>np.prod()</td>
+<td>Multiplies all elements of the array.</td>
+<td>T = d.prod() print(T) # 24</td>
+</tr>
+<tr class="odd">
+<td>np.cumsum(axis= )</td>
+<td>Performs cumulative addition operation on elements (rows for axis=1) in the given axis.</td>
+<td>d = np.array([[1,2,3],[4,5,6]]) t = d.cumsum(axis=1) print(t) # [[ 1 3 6] [ 4 9 15]]</td>
+</tr>
+<tr class="even">
+<td>np.cumprod(axis=)</td>
+<td>Performs cumulative multiplication operation on elements (rows for axis=1) in the given axis.</td>
+<td>c = d.cumprod(axis=1) print(c) # [[ 1 2 6] [ 4 20 120]]</td>
+</tr>
+<tr class="odd">
+<td>ndarray.max(axis= )</td>
+<td>Returns the element with the largest value in the given axis.</td>
+<td>d.max(axis=1) # [3,6] # returns the largest value in each row of matrix d.</td>
+</tr>
+<tr class="even">
+<td>ndarray.min(axis= )</td>
+<td>Returns the element with the smallest value in the given axis.</td>
+<td>d.min(axis=1) #[1,4] # returns the smallest value in each row of matrix d.</td>
+</tr>
+<tr class="odd">
+<td>ndarray.argmax(axis=)</td>
+<td>Returns the index number of the element with the largest value in the given axis.</td>
+<td>d.argmax(axis=1) #[2,2] # returns the index number of the largest value in each row of matrix d.</td>
+</tr>
+<tr class="even">
+<td>ndarray.argmin(axis=)</td>
+<td>Returns the index number of the element with the smallest value in the given axis.</td>
+<td>d.argmin(axis=1) #[2,2] # returns the index number of the largest value in each row of matrix d.</td>
+</tr>
+<tr class="odd">
+<td>np.add()</td>
+<td>Adds two arrays / matrices.</td>
+<td>T = np.add(d,t) print(T) #[[ 2 5 9] [ 8 14 21]]</td>
+</tr>
+<tr class="even">
+<td>np.copy()</td>
+<td>Copies all elements of the array to another array.</td>
+<td>C = np.copy(T) print(C) #[[ 2 5 9] [ 8 14 21]]</td>
+</tr>
+<tr class="odd">
+<td>np.sort()</td>
+<td>Sorts the elements of the array.</td>
+<td>S=np.array([[20, 40, 4.56], [5, 77, 0.17]]) print(np.sort(S), np.sort(S.T), sep=“” )</td>
+</tr>
+</tbody>
+</table>
+<div id="818de1bc-cb19-4af6-94ab-526f40329460" class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># - Selecting array elements</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.randint(<span class="dv">100</span>, size<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Selecting any row of the array</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1st row</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>first_row <span class="op">=</span> y[<span class="dv">0</span>]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First row"</span>, first_row)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 1st column</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>first_column <span class="op">=</span> y[:,<span class="dv">0</span>]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First column"</span>, first_column)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 1st and 2nd column</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>first_and_second_column <span class="op">=</span> y[:,<span class="dv">0</span>:<span class="dv">2</span>]</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First and second column: </span><span class="ch">\n</span><span class="st">"</span>, first_and_second_column)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="5579cf0a-d02d-425c-af83-e4bc65fb9c0a" class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">30</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[<span class="dv">3</span>:])</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[:<span class="dv">3</span>])</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[<span class="dv">1</span>:<span class="dv">6</span>])</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[<span class="dv">1</span>::<span class="dv">6</span>])</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[::<span class="op">-</span><span class="dv">2</span>])</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(t[<span class="dv">4</span>::<span class="op">-</span><span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-analysis-in-python-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis-in-python-pandas">Data Analysis in Python: Pandas</h2>
+<p>Pandas is a Python library designed for data analysis and manipulation, built on top of NumPy. It works with two fundamental data structures: Series and DataFrame. Series are used for holding and processing data in single-dimensional arrays, while DataFrames are used for multi-column tabular data.</p>
+<p>The Pandas package is imported with <code>import pandas as pd</code>. With this definition, the pandas package will now be represented by the name <code>pd</code> within the program.</p>
+<div id="74067336-2f2c-4423-b2ac-9515d42bddc5" class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Series:</strong> These are one-dimensional array-like objects that can store data of any type and can be labeled. Each element in a Series gets an index value. The index value of the first element in the Series is zero.</p>
+<div id="08259db3-07bb-489c-9488-3749464cb9ae" class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filtering can be done within series</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>series <span class="op">=</span> pd.Series([<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">25</span>,<span class="dv">30</span>,<span class="dv">35</span>])</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series[series<span class="op">&gt;</span><span class="dv">20</span>]) <span class="co">#printing numbers greater than 20</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.unique()) <span class="co">#unique values in the series</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.value_counts()) <span class="co">#prints how many times each value repeats in the series</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>grades <span class="op">=</span> {<span class="st">"Mathematics"</span>:<span class="dv">70</span>,<span class="st">"Data_Analysis"</span>:<span class="dv">90</span>,<span class="st">"Operations_Research"</span>:<span class="dv">96</span>,<span class="st">"Statistics"</span>:<span class="dv">60</span>}</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>grades <span class="op">=</span> pd.Series(grades)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grades<span class="op">*</span><span class="fl">1.05</span>)  <span class="co">#5% increase added to grades</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.sqrt(grades)) <span class="co">#square root of grades taken</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>DataFrame:</strong> These are objects that represent Series in multiple dimensions. It’s an electronic spreadsheet structure containing row index labels, column names, and cell values. DataFrames are similar to Excel sheets. Each column in a DataFrame can contain values of different data types.</p>
+<div id="c76a99d8-c32a-4857-b835-32baa696e114" class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>students_dict <span class="op">=</span> {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"school_no"</span>: pd.Series([<span class="dv">101</span>,<span class="dv">110</span>,<span class="dv">606</span>],</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>               index <span class="op">=</span> [<span class="st">"Ayse"</span>,<span class="st">"Fatma"</span>, <span class="st">"Betul"</span>]),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"average"</span>:pd.Series([<span class="dv">90</span>,<span class="dv">95</span>,<span class="dv">85</span>],</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>               index<span class="op">=</span>[<span class="st">"Ayse"</span>,<span class="st">"Fatma"</span>, <span class="st">"Betul"</span>]),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"department"</span>:pd.Series([<span class="st">"Business"</span>,<span class="st">"Economics"</span>,<span class="st">"Mathematics"</span>],</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>               index<span class="op">=</span>[<span class="st">"Ayse"</span>,<span class="st">"Fatma"</span>, <span class="st">"Betul"</span>]),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"birth_year"</span>:pd.Series([<span class="dv">2000</span>,<span class="dv">1999</span>,<span class="dv">1998</span>],</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>               index<span class="op">=</span>[<span class="st">"Ayse"</span>,<span class="st">"Fatma"</span>, <span class="st">"Betul"</span>]),</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> pd.DataFrame(students_dict)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[table[<span class="st">"average"</span>] <span class="op">&lt;</span> <span class="dv">95</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="data-import" class="level3">
+<h3 class="anchored" data-anchor-id="data-import">Data Import</h3>
+<p>For a machine learning application, you may need to work with very large datasets containing many rows and columns. Data can be obtained from a database, an Excel file, or a text file. The Pandas library provides ease of use by converting datasets in different file formats into DataFrame structures.</p>
+<div id="a43ab68b-f7f3-4a97-b3f7-0e867d716e39" class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#CSV = pd.read_csv()</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#JSON = pd.read_json()</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#HTML = pd.read_html()</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#MS EXCEL = pd.read_excel()</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SQL = pd.read_sql()</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'files/vgsales.csv'</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.head())  <span class="co"># Shows first few rows of the data</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.info())  <span class="co"># Shows general information about the data</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.describe())  <span class="co"># Shows statistical summary of the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-manipulation" class="level3">
+<h3 class="anchored" data-anchor-id="data-manipulation">Data Manipulation</h3>
+<div id="1954aa30-797e-4616-af47-9a8fbdef7175" class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data.isnull()  <span class="co">#is there null in the data (cell by cell)?</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>data.isna()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>data.isnull().<span class="bu">any</span>(axis<span class="op">=</span><span class="dv">0</span>)  <span class="co"># are there any nulls?</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>data.isnull().<span class="bu">sum</span>() <span class="co">#how many empty (missing data) are there in columns?</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">#deleting missing data</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>data.dropna(axis<span class="op">=</span><span class="dv">0</span>, how<span class="op">=</span><span class="st">"any"</span>, inplace<span class="op">=</span><span class="va">True</span>) <span class="co">#delete rows with empty cells and modify data dataframe</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>data2<span class="op">=</span>data.dropna(axis<span class="op">=</span><span class="st">"index"</span>, how<span class="op">=</span><span class="st">"any"</span>) <span class="co">#when we perform the operation without assigning to data2 dataframe, it doesn't change data dataframe, only shows the operation</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isna().<span class="bu">any</span>())</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="dd355ca7-f176-406d-82b2-c2c27afe1a9e" class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'vgsales.csv'</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.isna().<span class="bu">any</span>())</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.shape)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">"""let's run these again so that the changed data dataFrame returns to its initial state"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="de38e75f-b7e2-412b-958e-7019b4a65c75" class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filling missing data </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[<span class="st">'number'</span>])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>data.fillna(numeric_columns.mean(),inplace<span class="op">=</span><span class="va">True</span>)  <span class="co">#will only fill numeric ones</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>data.fillna(<span class="st">"unknown publisher"</span>, inplace<span class="op">=</span><span class="va">True</span>) <span class="co">#since only publisher column has missing data now, we filled it this way</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="f1b272d5-0121-40c2-8e67-4dfb344a5fba" class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Getting Columns and Rows from Data Table </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>data.head() <span class="co">#first 5 rows of dataset by index</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>data.head(<span class="dv">3</span>) <span class="co">#first 3 rows of dataset</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>data.tail() <span class="co">#last 5 rows of dataset by index</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>data.tail(<span class="dv">2</span>) <span class="co">#last 2 rows of dataset</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>data[<span class="dv">200</span>:<span class="dv">301</span>] <span class="co">#rows between 200-301</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>data.sample(<span class="dv">3</span>) <span class="co">#random 3 samples</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>data.sample(frac<span class="op">=</span><span class="fl">0.05</span>) <span class="co">#Brings random 5% from dataset</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Name"</span>] <span class="co">#only name column</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Publisher"</span>].head() <span class="co">#first 5 rows of publisher column</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>data.Publisher <span class="co">#only publisher column but it's not always good to get it this way because column names might have spaces causing errors</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"Name"</span>,<span class="st">"Publisher"</span>]]</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"Name"</span>,<span class="st">"Year"</span>]].head(<span class="dv">7</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>data[data.Year <span class="op">&gt;=</span> <span class="dv">2010</span>].head(<span class="dv">5</span>)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>data[(data.Year <span class="op">&gt;=</span> <span class="dv">2002</span>)<span class="op">&amp;</span>(data.Year <span class="op">&lt;=</span><span class="dv">2018</span>)].head(<span class="dv">20</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(data) <span class="co">#dataFrame</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(data.Publisher) <span class="co">#series</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(data[[<span class="st">"Name"</span>,<span class="st">"Publisher"</span>]])  <span class="co">#dataFrame</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="f9f8b3a0-9248-42a7-803e-8d025c141a5b" class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating subset from dataset</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>data.iloc[:<span class="dv">5</span>] <span class="co">#first 5 records of dataframe</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>data.iloc[:<span class="dv">5</span>,:<span class="dv">3</span>] <span class="co">#first 3 columns of first 5 records of dataframe</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>data.iloc[<span class="dv">3</span>,<span class="dv">1</span>] <span class="co">#cell at index 3 record's index 1 column</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>data.iloc[<span class="dv">100</span>:<span class="dv">110</span>,<span class="dv">3</span>:<span class="dv">5</span>] <span class="co">#genre and year of games between 100-110</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>data.iloc[:,<span class="dv">3</span>:<span class="dv">5</span>] <span class="co">#genre and year of all games</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="6aed05fb-de6b-4372-bb36-19d1288766a0" class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">10</span>)][<span class="st">"Publisher"</span>] <span class="co">#publishers of records with Global_Sales greater than 10 million</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">10</span>)][<span class="st">"Publisher"</span>].count() <span class="co">#how many games total meet the condition</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">10</span>)][<span class="st">"Publisher"</span>].value_counts() <span class="co">#how many games each publisher made in the list meeting the condition</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">10</span>)][<span class="st">"Publisher"</span>].<span class="bu">sum</span>() <span class="co">#concatenated elements in the list meeting the condition</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">10</span>)][<span class="st">"Publisher"</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>) <span class="co">#percentage distributions</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Genre"</span>]<span class="op">==</span><span class="st">"Sports"</span> ) <span class="op">&amp;</span> (data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">3</span>)][<span class="st">"Publisher"</span>] <span class="co">#publishers of sports games that sold more than 3 million</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>data[(data[<span class="st">"Publisher"</span>]<span class="op">==</span><span class="st">"Electronic Arts"</span> ) <span class="op">&amp;</span> (data[<span class="st">"Global_Sales"</span>]<span class="op">&gt;</span><span class="dv">3</span>)][<span class="st">"Genre"</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="203d4aab-c130-4476-b1d0-f285a7ad2c55" class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Data analysis</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">"Global_Sales"</span>].<span class="bu">sum</span>())  <span class="co">#sum of Global_Sales column</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">"Global_Sales"</span>].mean())  <span class="co">#mean of Global_Sales column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="data-visualization-in-python-matplotlib" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization-in-python-matplotlib">Data Visualization in Python: Matplotlib</h2>
+<p>Matplotlib is a drawing library designed for data visualization and graphics, developed based on NumPy. The Pylab library under Matplotlib bears considerable similarity to Matlab graphing commands.</p>
+<p>Matplotlib package is imported with <code>import matplotlib.pyplot as plt</code>. With this definition, the matplotlib package will now be represented by the name <code>plt</code> within the program.</p>
+<div id="2887365d-493e-4fb6-a8f4-1d29c3e5a5bc" class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">#to show graphs below in jupyter without opening a new page</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="basic-usage" class="level3">
+<h3 class="anchored" data-anchor-id="basic-usage">Basic Usage</h3>
+<div id="e4461e6d-aeb7-4d48-a541-f319d223f365" class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple line graph example containing x and y data points</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">6</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating the graph</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Showing the graph</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="graph-size-and-resolution" class="level2">
+<h2 class="anchored" data-anchor-id="graph-size-and-resolution">Graph Size and Resolution</h2>
+<p>Output quality can be controlled by adjusting the graph’s size and resolution.</p>
+<div id="24e03b8e-f023-479f-91b2-8d48e8ae6683" class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjusting graph size and resolution</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Graph Size and Resolution'</span>)   <span class="co"># Adding title</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="graph-types" class="level2">
+<h2 class="anchored" data-anchor-id="graph-types">Graph Types</h2>
+<p><strong>1. Line Graph:</strong> Line graphs are mostly used to show changes in data over time.</p>
+<div id="b875d83a-61cc-4681-9d9b-8a56c97280f0" class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Drawing line graph</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>years<span class="op">=</span>np.arange(<span class="dv">2018</span>,<span class="dv">2022</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>gpa<span class="op">=</span>[<span class="fl">3.2</span>, <span class="fl">2.9</span>, <span class="fl">3.5</span>, <span class="fl">3.8</span>]</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gpa)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"GPA"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Years"</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="5f3e5760-fea8-4201-b29b-9e6e6dddc0ee" class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>years<span class="op">=</span>[<span class="dv">2018</span>, <span class="dv">2019</span>, <span class="dv">2020</span>, <span class="dv">2021</span>]</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>gpa<span class="op">=</span>[<span class="fl">3.2</span>, <span class="fl">2.9</span>, <span class="fl">3.5</span>, <span class="fl">3.8</span>]</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>gpa2<span class="op">=</span>[<span class="fl">2.7</span>, <span class="fl">2.2</span>, <span class="fl">1.8</span>, <span class="fl">3.1</span>]</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gpa, label<span class="op">=</span><span class="st">"student1"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gpa2, label<span class="op">=</span><span class="st">"student2"</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">"lower left"</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"GPA"</span>)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Years"</span>)</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>plt.axis([<span class="dv">2018</span>,<span class="dv">2021</span>,<span class="dv">0</span>,<span class="dv">4</span>])</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="fb885706-b3f0-4048-a68a-112bf154d823" class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Graph formatting</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gpa2, <span class="st">"o"</span>, label<span class="op">=</span><span class="st">"student2"</span>) <span class="co"># using any of " o * p s ^ " will show markers instead of lines</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gpa2, <span class="st">"o-"</span>, label<span class="op">=</span><span class="st">"student2"</span>) <span class="co"># connects the markers</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>plt.plot(years, gpa, <span class="st">":b^"</span>, label<span class="op">=</span><span class="st">"student1"</span>) <span class="co"># marks points with blue triangles and connects with dots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>2. Pie Chart:</strong> Pie charts are used to show proportions of categorical data.</p>
+<div id="a5d08d47-786f-46a8-b0a8-6bf886d47969" class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Drawing pie chart</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>shares<span class="op">=</span>{<span class="st">"A"</span>:<span class="dv">20</span>, <span class="st">"B"</span>:<span class="dv">10</span>, <span class="st">"C"</span>:<span class="dv">40</span>, <span class="st">"D"</span>:<span class="dv">30</span>}</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shares.keys())</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shares.values())</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>plt.pie(shares.values(), explode<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">0</span>,<span class="fl">0.1</span>,<span class="dv">0</span>], labels<span class="op">=</span>shares.keys(), shadow<span class="op">=</span><span class="va">True</span>, autopct<span class="op">=</span><span class="st">"</span><span class="sc">%1.1f%%</span><span class="st">"</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>3. Bar Graph:</strong> Bar graphs are used for comparing categorical data.</p>
+<div id="61627c14-bf37-44ae-90db-8221200da9e9" class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Drawing bar graph</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>people<span class="op">=</span>[<span class="st">"Ahmed"</span>, <span class="st">"Michael"</span>, <span class="st">"Python"</span>, <span class="st">"Jupyter"</span>]</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>salaries<span class="op">=</span>[<span class="fl">2.5</span>, <span class="fl">1.1</span>, <span class="fl">3.9</span>, <span class="fl">1.8</span>]</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>plt.bar(people, salaries)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Salary Graph"</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="3945bbe6-9a2c-44ab-b80e-704c3a69b1ae" class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>np.random.random(size<span class="op">=</span><span class="dv">100</span>)<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>x_axis<span class="op">=</span>np.arange(<span class="dv">100</span>)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>plt.bar(x_axis, data)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>np.random.random(size<span class="op">=</span><span class="dv">10</span>)<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>height<span class="op">=</span>np.arange(<span class="dv">10</span>)</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>plt.barh(data, height)</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>4. Scatter Plot:</strong> Scatter plots are used to see if there is a correlation between values on the axes.</p>
+<div id="0a3c2fc2-94b7-4259-8210-cfcc4f66bdd9" class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Drawing scatter plot</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>ages<span class="op">=</span>[<span class="fl">3.5</span>, <span class="fl">2.5</span>, <span class="fl">1.5</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="fl">4.5</span>, <span class="dv">2</span>]</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>words<span class="op">=</span>[<span class="dv">45</span>, <span class="dv">30</span>, <span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">80</span>, <span class="dv">3</span>, <span class="dv">35</span>, <span class="dv">55</span>, <span class="dv">67</span>, <span class="dv">15</span>]</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>scatter<span class="op">=</span>plt.scatter(ages, words, c<span class="op">=</span>ages, s<span class="op">=</span>np.array(words)<span class="op">*</span><span class="dv">10</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>plt.colorbar(scatter)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>5. Histogram:</strong> Histograms are used to show data distribution.</p>
+<div id="c5bd86a0-215f-455e-b550-713f381eb549" class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Histogram</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>hist_data<span class="op">=</span>np.random.normal(size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>hist_data</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.hist(hist_data, bins<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ol type="1">
+<li><a href="https://docs.python.org/3/">Python Official Documentation</a></li>
+<li><a href="https://ahgal.meb.k12.tr/meb_iys_dosyalar/08/03/125513/dosyalar/2018_02/07085232_PYTHON-II.DYNEM.pdf">Fundamentals of Programming with Python</a></li>
+<li>Van Rossum, Guido. “Python Programming Language.” Python Software Foundation, 2023.</li>
+<li>Sorhun, E. “Machine Learning with Python.” 2021.</li>
+<li>Çobanoğlu, Bülent. “Python for Everyone.” Pusula, 2020.</li>
+<li>McKinney, Wes. “Python for Data Analysis.” O’Reilly Media, 2017.</li>
+<li>Gowrishankar, S., &amp; Veena, A. “Introduction to Python programming.” Chapman and Hall/CRC, 2018.</li>
+<li>Mitchell, Ryan. “Web Scraping with Python.” O’Reilly Media, 2015.</li>
+<li><a href="https://www.kaggle.com/datasets/gregorut/videogamesales">Kaggle Dataset</a></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
