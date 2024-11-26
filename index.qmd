@@ -39,3 +39,9 @@
 *November 12th, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: Excel Pivot tables and charts [link for lecture material](week6-excel-part3.qmd)
+
+## Lecture7
+
+*November 26th, 2024, Tuesday 4-7pm, ONLINE*
+
+**Contents**: Python part1 [link for lecture material](fef1002-python.ipynb)
