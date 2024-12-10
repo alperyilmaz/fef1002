@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SPSS Üzerinde Betimleyici İstatistiklerin Hesaplanması – FEF1002 Introduction to Basic Computer Technologies</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">FEF1002 Introduction to Basic Computer Technologies</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Main</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#yer-eğilim-ölçüleri-measures-of-location" id="toc-yer-eğilim-ölçüleri-measures-of-location" class="nav-link active" data-scroll-target="#yer-eğilim-ölçüleri-measures-of-location">1. <strong>Yer (Eğilim) Ölçüleri (Measures of Location)</strong></a>
+  <ul class="collapse">
+  <li><a href="#ortalama-neden-gerekli" id="toc-ortalama-neden-gerekli" class="nav-link" data-scroll-target="#ortalama-neden-gerekli">Ortalama neden gerekli?</a></li>
+  <li><a href="#spssde-betimleyici-istatistiklerin-hesaplanması" id="toc-spssde-betimleyici-istatistiklerin-hesaplanması" class="nav-link" data-scroll-target="#spssde-betimleyici-istatistiklerin-hesaplanması">SPSS’de Betimleyici İstatistiklerin Hesaplanması</a></li>
+  </ul></li>
+  <li><a href="#dağılım-ölçüleri" id="toc-dağılım-ölçüleri" class="nav-link" data-scroll-target="#dağılım-ölçüleri">2. <strong>Dağılım Ölçüleri</strong></a>
+  <ul class="collapse">
+  <li><a href="#dağılım-ölçülerinin-uygulaması" id="toc-dağılım-ölçülerinin-uygulaması" class="nav-link" data-scroll-target="#dağılım-ölçülerinin-uygulaması">Dağılım Ölçülerinin Uygulaması</a></li>
+  <li><a href="#frekans-serisi-oluşturma" id="toc-frekans-serisi-oluşturma" class="nav-link" data-scroll-target="#frekans-serisi-oluşturma">Frekans Serisi Oluşturma</a></li>
+  </ul></li>
+  <li><a href="#explore-keşfetme-seçeneği" id="toc-explore-keşfetme-seçeneği" class="nav-link" data-scroll-target="#explore-keşfetme-seçeneği">Explore (Keşfetme) Seçeneği</a>
+  <ul class="collapse">
+  <li><a href="#explore-keşfetme-seçeneği-uygulaması" id="toc-explore-keşfetme-seçeneği-uygulaması" class="nav-link" data-scroll-target="#explore-keşfetme-seçeneği-uygulaması">Explore (Keşfetme) Seçeneği Uygulaması</a></li>
+  <li><a href="#tabakalı-betimleyiciler-stratified-descriptives-uygulaması" id="toc-tabakalı-betimleyiciler-stratified-descriptives-uygulaması" class="nav-link" data-scroll-target="#tabakalı-betimleyiciler-stratified-descriptives-uygulaması">Tabakalı Betimleyiciler (Stratified Descriptives) Uygulaması</a></li>
+  <li><a href="#şartlı-seçim-conditional-select-uygulaması" id="toc-şartlı-seçim-conditional-select-uygulaması" class="nav-link" data-scroll-target="#şartlı-seçim-conditional-select-uygulaması">Şartlı Seçim (Conditional Select) Uygulaması</a></li>
+  <li><a href="#şartlı-seçim-conditional-select---string-uygulaması" id="toc-şartlı-seçim-conditional-select---string-uygulaması" class="nav-link" data-scroll-target="#şartlı-seçim-conditional-select---string-uygulaması">Şartlı Seçim (Conditional Select - String) Uygulaması</a></li>
+  <li><a href="#şartlı-seçim-conditional-select---range-uygulaması" id="toc-şartlı-seçim-conditional-select---range-uygulaması" class="nav-link" data-scroll-target="#şartlı-seçim-conditional-select---range-uygulaması">Şartlı Seçim (Conditional Select - Range) Uygulaması</a></li>
+  <li><a href="#transform-menüsü" id="toc-transform-menüsü" class="nav-link" data-scroll-target="#transform-menüsü">Transform Menüsü</a></li>
+  </ul></li>
+  <li><a href="#yeni-değişken-oluşturma" id="toc-yeni-değişken-oluşturma" class="nav-link" data-scroll-target="#yeni-değişken-oluşturma">Yeni Değişken Oluşturma</a></li>
+  <li><a href="#çapraz-tablolarin-oluşturulmasi" id="toc-çapraz-tablolarin-oluşturulmasi" class="nav-link" data-scroll-target="#çapraz-tablolarin-oluşturulmasi">ÇAPRAZ TABLOLARIN OLUŞTURULMASI</a>
+  <ul class="collapse">
+  <li><a href="#spssde-çapraz-tablo-oluşturulması" id="toc-spssde-çapraz-tablo-oluşturulması" class="nav-link" data-scroll-target="#spssde-çapraz-tablo-oluşturulması">SPSS’de Çapraz Tablo Oluşturulması</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>SPSS Üzerinde Betimleyici İstatistiklerin Hesaplanması</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Belirtici istatistikler iki grupta incelenebilir. Öncelikle kullanılacak olan terimlerin neler olduğunu anlamamız gerekir.</p>
+<section id="yer-eğilim-ölçüleri-measures-of-location" class="level2">
+<h2 class="anchored" data-anchor-id="yer-eğilim-ölçüleri-measures-of-location">1. <strong>Yer (Eğilim) Ölçüleri (Measures of Location)</strong></h2>
+<p>Verilerin merkezi eğilimlerini ve verilerin belirli yüzdelerinin hangi değerlerde toplanma eğilimini gösteren tipik değerlerdir. Bu istatistikler toplum parametresini tahmine yardımcı olur. Ortalama, medyan, kartiller Yer ölçüleri ve açıklamaları aşağıda verilmiştir.</p>
+<section id="ortalama-neden-gerekli" class="level3">
+<h3 class="anchored" data-anchor-id="ortalama-neden-gerekli">Ortalama neden gerekli?</h3>
+<ul>
+<li><p>Elde edilen ham verinin frekans tablosu ya da sınıfandırılmış hale getirilmesi ya da düzenlenen verinin grafiksel yöntemlerle ifade edilmesi incelenen konuyla ilgili bir fikir verebilir ancak bu bilgiler kesin değerlendirmeler yapılması için yeterli değildir.</p></li>
+<li><p>Bu yüzden tüm seriyi tek bir sayıyla ifade eden, karşılaştırılabilir ölçütlere ihtiyaç duyulmuştur.</p></li>
+<li><p>Bu ölçütlere genel olarak merkezi eğilim ölçütleri denir.</p></li>
+<li><p>Ortalamalar en çok kullanılan ve en temel merkezi eğilim ölçütlerindendir</p>
+<p>En çok kullanılan ortalama türleri aşağıdaki gibidir..</p></li>
+</ul>
+<p><strong><em>Aritmetik Ortalama (Mean, Average)</em></strong> * n değerin toplamının n’e (birim sayısına) bölünmesiyle bulunur. * Çan eğrisi biçiminde simetrik dağılım gösteren verileri en iyi temsil eden merkezi eğilim ölçüsüdür. * Analitik araştırmalarda en sık kullanılan istatistiktir.</p>
+<p><strong><em>Geometrik Ortalama (Geometric Mean)</em></strong> * n birimin değerleri çarpımlarının n kökünün alınması ile bulunan bir istatistiktir. * n değerin logaritmaları toplamının n’e bölünmesi ile bulunan logaritmik ortalamanın antilogaritması alınarak da hesaplanabilir. * Aritmetik ya da geometrik olarak düzenli artan ya da azalan dizilerin merkezi eğilimini belirtmekte kullanılır.</p>
+</section>
+<section id="spssde-betimleyici-istatistiklerin-hesaplanması" class="level3">
+<h3 class="anchored" data-anchor-id="spssde-betimleyici-istatistiklerin-hesaplanması">SPSS’de Betimleyici İstatistiklerin Hesaplanması</h3>
+<p>Bu örnekte kullanacağımız veri <strong><em>hs0.sav</em></strong> SPSS veri dosyası kullanılacaktır.</p>
+<p>SPSS programı üzerinde <strong><em>Analyze</em></strong> menüsü üzerinden işlemler yapılır.</p>
+<p>Analyze &gt; Descriptive Statistics &gt; Descriptives seçenekleri tıklanır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/d3d28b88-425a-45a8-8be6-8ce54f4e5a3a-1-f22b864f-c655-4f05-9d05-5eb65e7d901a.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Belirtici istatistikleri hesaplanacak olan veriler <strong><em>Variables</em></strong> alanına taşınır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/700d1e16-9914-476b-a734-2e9dbc1882ec-2-385fef14-003e-4b55-afaa-6d005a26746a.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Hangi istatistiklerin hesaplanacağını belirlemek için <strong><em>Options</em></strong> butonu tıklanır. SPSS’de hesaplanabilecek belirtici istatistikler ve dağılım istatistikleri aşağıdaki şekilde belirtilmiştir.</p>
+<p>Seçimler yapıldıktan sonra Continue tıklanır ve ana ekrana dönülür.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/700d1e16-9914-476b-a734-2e9dbc1882ec-1-1ae7ed5e-c71b-42cb-beb8-71dcb3404dc3.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Daha sonra <strong><em>OK</em></strong> tıklanır ve sonuçlar <strong><em>Output</em></strong> pencesinde karşımıza çıkar. Bu çıktıda ortalama, standart sapma, standart hata, varyans, min, max, range istatistikleri, kurtosis, skewnees istatistikleri ile standart hata yer almaktadır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/700d1e16-9914-476b-a734-2e9dbc1882ec-3-41deb1b6-4734-4163-99c4-07b84c80370a.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Descriptive statistics tablosunda ilk sütun değişkenleri gösterir. N ise toplam birim sayısını gösterir.</p>
+</section>
+</section>
+<section id="dağılım-ölçüleri" class="level2">
+<h2 class="anchored" data-anchor-id="dağılım-ölçüleri">2. <strong>Dağılım Ölçüleri</strong></h2>
+<p>Verileri dağılım biçimini, ortalama etrafında değişimini, yayılmalarını ve serpilmelerini belirlemeye yarayan ölçülerdir. Değişim ölçüleri ve açıklamaları aşağıda verilmiştir.</p>
+<p><strong><em>Değişim Aralığı (Range, DA)</em></strong> * Bir dizide en büyük değer (Xmax) ile en küçük değer (Xmin) arasındaki farktır.</p>
+<p><strong><em>Varyans (Variance)</em></strong> * Bir dizideki değerlerin ortalamadan olan farkları kareleri toplamının (n-1) sayısına bölünmesiyle bulunan bir dağılım ölçüsüdür. * Kare farklarının ortalaması diye de isimlendirilir.</p>
+<p><strong><em>Standart Sapma (Standart Deviation)</em></strong> * Varyansın karekökü alınarak bulunan bir standart dağılım ölçüsüdür. * Birimi değişkenin ölçü birimine eşittir.</p>
+<p><strong><em>Standart Hata (Standart Error of Mean)</em></strong> * Standart sapmanın birim sayısının kare köküne bölünmesiyle bulunan bir dağılım ölçüsüdür. * Ölçü birimi değişkenin ölçü birimi ile aynıdır.</p>
+<p><strong><em>Enbüyük Değer (Maximum, Xmax)</em></strong> * Bir dizideki gözlenen en büyük değerli gözlemdir. * Xmax biçiminde gösterilir.</p>
+<p><strong><em>Enküçük Değer (Minimum, Xmin)</em></strong> * Bir dizideki gözlenen en küçük değerli gözlemdir. * Xmin biçiminde gösterilir.</p>
+<p><strong><em>Değişim Katsayısı (Coefficient of Variation)</em></strong> * Bir dizinin standart sapmasının ortalamasına bölünmesi ve 100 ile çarpılması ile bulunan bir dağılım ölçüsüdür. * Ölçü birimleri birbirinden farklı iki ya da daha fazla değişkenin dağılım yoğunluklarını karşılaştırmak amacıyla yararlanılan bir ölçüdür. * Birimi yoktur.</p>
+<p><strong><em>Çarpıklık (Skewness)</em></strong> * Bir dağılımın normal dağılıma göre simetrik ya da çarpık (asimetrik) olup olmadığını belirten bir ölçüdür. <span class="math inline">\(α_3\)</span> gösterilir. * Simetrik (normal) dağılımda <span class="math inline">\(α_3\)</span> ’ün değeri 0’dır. * <span class="math inline">\(α_3\)</span> ’ün önemliliği, dağılımın simetrik olup olmadığı, normal dağılım yaklaşımıyla test edilir.</p>
+<p><strong><em>Basıklık (Kurtosis)</em></strong> * Bir dağılımın normal dağılıma göre basık ya da sivri sivri (tepeleşmiş) olup olmadığını belirten bir ölçüdür. * Basıklık ölçüsü normal dağılımda 3 değerini alır. * Dağılımın basıklığının önemliliği, normal dağılıma göre basık olup olmadığı normal dağılım yaklaşımıyla test edilir.</p>
+<section id="dağılım-ölçülerinin-uygulaması" class="level3">
+<h3 class="anchored" data-anchor-id="dağılım-ölçülerinin-uygulaması">Dağılım Ölçülerinin Uygulaması</h3>
+<p>Menü yoluyla:</p>
+<p><strong><em>Analyze &gt; Descriptive Statistics &gt; Descriptives</em></strong> seçenekleri tıklanır.</p>
+<p>Değişkenler <strong><em>Variables</em></strong> tarafına koyulduktan sonra <strong><em>Options</em></strong> seçeneğinden ölçüler seçilir ve <strong><em>Continue</em></strong> seçeneği ile diyalog kutusu kapatılır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/160910e5-5d06-40c3-8cae-615a4f5a6d30-1-ee9cc762-3ca1-44dc-9a0a-6ae8e8a23e71.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Daha sonra <strong><em>OK</em></strong> denilerek sonuçlar tablo halinde elde edilir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/cf1bd0cc-4d61-441d-b758-b3ba89425205-1-e21b0073-5031-43e6-8157-decc4a425142.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="frekans-serisi-oluşturma" class="level3">
+<h3 class="anchored" data-anchor-id="frekans-serisi-oluşturma">Frekans Serisi Oluşturma</h3>
+<p>SPSS te tasnif edilmiş (frekanslı) seriyi oluşturmak için <strong><em>Analyze</em></strong> menüsünden <strong><em>Descriptive Statistics</em></strong> ve <strong><em>Frequencies</em></strong> tıklanır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/b054b25b-4c51-428f-b687-52a0a677b762-1-3b31eeaf-ead9-4f15-ad52-0d8b2a7ac7b3.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Gelen ekranda frekans dağılımı araştırılan değişken <strong><em>Variable(s)</em></strong> kısmına girilir. Biz otomobillerin modellerinin dağılımını görmek istiyoruz. Bunun için <strong><em>variable(s)</em></strong> kısmına Model değişkeni girilir. <strong><em>Statistics</em></strong> ve <strong><em>Charts</em></strong> kısmından ilgili seçenekler işaretlenip <strong><em>OK</em></strong> tıklanır.</p>
+<p><strong>Not:</strong> Kullanılan değişkenler <strong>mtcars (otomobiller)</strong> verisetinin Türkçe ve İngilizce değişken isimleridir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/5f3d0a98-ad83-43a5-91c2-c8ecccbac640-1-2379613b-7b33-4331-9f73-7cc50a365ea2.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Silindir Sayısının dağılımı aşağıdaki şekilde çıktı ekranında görüntülenir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/d3bd45fc-9a02-4eb3-98f3-25cc08834f87-2-d216c735-9fcc-41bd-a29f-beec8849f525.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Dağılımın çubuk grafiği aşağıdaki şekilde görüntülenir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/d3bd45fc-9a02-4eb3-98f3-25cc08834f87-1-1716ad5b-9149-4dfc-bfcf-fe29822f3604.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="explore-keşfetme-seçeneği" class="level2">
+<h2 class="anchored" data-anchor-id="explore-keşfetme-seçeneği">Explore (Keşfetme) Seçeneği</h2>
+<p>Explore prosedürü, tüm vakalarınız için veya vaka grupları için ayrı ayrı özet istatistikler ve grafiksel görüntüler üretir. Araştırma prosedürünü kullanmanın birçok nedeni vardır: * veri taraması, * aykırı değerlerin belirlenmesi, * açıklama, * varsayım kontrolü ve alt popülasyonlar (vaka grupları) arasındaki farklılıkların karakterize edilmesi.</p>
+<p>Veri taraması olağandışı değerlere, aşırı değerlere, verilerdeki boşluklara veya diğer özelliklere sahip olduğunuzu gösterebilir. Verileri araştırmak, veri analizi için düşündüğünüz istatistiksel tekniklerin uygun olup olmadığını belirlemenize yardımcı olabilir.</p>
+<section id="explore-keşfetme-seçeneği-uygulaması" class="level3">
+<h3 class="anchored" data-anchor-id="explore-keşfetme-seçeneği-uygulaması">Explore (Keşfetme) Seçeneği Uygulaması</h3>
+<p>Explore (Keşfetme) Seçeneği Uygulaması için <strong>hs0.sav</strong> datası kullanılmıştır.</p>
+<p>SPSS’deki <strong>Explore</strong> işlevini kullanarak reading score (okuma skoru) için daha ayrıntılı özet istatistikler elde edebiliriz.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-9-d5f90688-80e8-4f8a-9f24-282ae10f37a3.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Sonuçları</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-5-af7b0733-1b13-4e69-9699-433963e6e1dd.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Daha detaylı bilgiler için (aşırı değerler: outliers, yüzdelikler: percentiles vb.) <strong><em>Statistics</em></strong> seçeneği seçilebilir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-3-88ee2608-b109-43c4-984b-88fe38a86829.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Daha detaylı grafiksel bilgiler için (histogram, steam-leaf diyagramı, boxplot) <strong><em>Plots</em></strong> seçeneği seçilebilir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-8-c7aa9126-cc12-436d-b54b-eecc72dd5640.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Sonuçları</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-2-7e915a0d-922f-49ce-9175-b7d03f8edb42.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-6-b821f15f-0ed9-449d-b6f9-b19463d5515e.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Grafiksel Sonuçlar</strong></p>
+<p>Histogram</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-4-8eaa4606-bde2-459d-beba-36551bb6e885.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Stem-leaf diyagramı</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-7-c31233ff-6613-4dd2-b7b2-6d321d2931d4.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Boxplot</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0b3d05c4-4fb1-42b8-876a-db3989788080-1-1603e534-f3a9-4398-9b68-6c7c9746575b.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="tabakalı-betimleyiciler-stratified-descriptives-uygulaması" class="level3">
+<h3 class="anchored" data-anchor-id="tabakalı-betimleyiciler-stratified-descriptives-uygulaması">Tabakalı Betimleyiciler (Stratified Descriptives) Uygulaması</h3>
+<p>Tabakalı Betimleyiciler için <strong><em>Split File</em></strong> Kullanımı</p>
+<p>Değişik analizlerde kullanılmak üzere bir veri dosyasını alt gruplara böler, ayırır. Tablo içindeki değişkenleri belli değişkenlere göre gruplayıp her grubun ayrı ayrı istatistik değerlendirmesini yapabiliriz.</p>
+<p>Menü yoluyla:</p>
+<p><strong><em>Data &gt; Split File</em></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/d1931dae-7722-4f24-8ee6-005c17e0956b-2-ce361467-498a-4312-826e-e8d260d9abac.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong><em>Ses (Sosyo Ekonomik Statü)</em></strong> değişkeni üzerinde veri bölümlemesini yapalım. Bu değişkenin 3 alt kategorisi (düşük, orta ve yüksek) vardır. Veriyi artık yapacağımız bütün işlemlerde bu 3 alt gruba ayrılmış olarak yapacağız.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/d1931dae-7722-4f24-8ee6-005c17e0956b-1-ce35d29d-51c2-4917-bbbc-318443c084a2.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Ses (Sosyo Ekonomik Statü)</strong> değişkenini tabakalandırdıktan diğer değişkenlerinde özet istatistiklerini alalım.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/58c6f674-509c-437a-996b-a4fd3417c0f1-2-ea63f66c-cdcf-400d-90e0-e1005ec37325.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/58c6f674-509c-437a-996b-a4fd3417c0f1-1-d6adccd4-340e-4324-a279-57db3a2808b5.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Daha sonra verimizi filtreleme işlemini yaptıktan sonra bir daha özet betimleyici istatistiklerine bakalım. Burada daha önce yaptığımız betimleyici istatistiklerinden farkı bu bilgileri 3 gruba ayırarak vermesidir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/3ccf8d73-57f6-4c40-a294-aa1aa052f1fb-1-39799bea-56d0-457a-bfcd-5c05964f39a5.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Tabakalı Betimleyiciler (Stratified Descriptives) ile verimiz bölümlendirildikten sonra bütün yapacağımız analizler bu filtrelemeye göre yapılacaktır. Bu filtreyi kaldırmak için aynı menüyü açıp <strong>Analyze all cases, do not create groups</strong> seçilip <strong>OK</strong> ’e tıklanması gerekir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/3ccf8d73-57f6-4c40-a294-aa1aa052f1fb-2-8e1554ca-2295-42cd-80f1-2b0e3b944bc8.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="şartlı-seçim-conditional-select-uygulaması" class="level3">
+<h3 class="anchored" data-anchor-id="şartlı-seçim-conditional-select-uygulaması">Şartlı Seçim (Conditional Select) Uygulaması</h3>
+<p><strong>Select Cases</strong></p>
+<p>Belirli bir özelliğe uyan birimlerin seçilmesini sağlar. Belirli bir kritere göre aynı özelliklere sahip birimleri diğerlerinden ayırarak işlemlere almayı sağlayan bir seçenektir.</p>
+<p>Menü yoluyla:</p>
+<p><strong><em>Data &gt; Select Case</em></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/1ad23e74-c8e0-4cf7-9f5f-e073d9afbe3f-1-09d5bce1-dccb-41df-9171-d6ef8aca4f10.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Uygulama</strong></p>
+<p>Örnek olarak okuma skoru (reading score) için 60 geçme skoru puanı olsun ve bu skoru geçen öğrencileri filtreleyelim.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8ae2881c-f130-40df-b575-97df40529d31-3-ede9b310-07f9-44c6-9eff-0abd829362b2.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Artık yapacağımız bütün çalışmalarda okuma skoru değişkeni için 60 ve üzeri olan değerler alınacaktır. Örnek olarak bu değişkenin betimleyici istatistiklerini inceleyelim.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8ae2881c-f130-40df-b575-97df40529d31-1-5439b1dc-caba-45ea-8155-cbf5cdcdea25.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Bu tip filtreleme kullanıldıktan sonra aynı menü üzerinden <strong>All Cases</strong> seçeneği kullanılıp veri üzerindeki filtre kaldırılmalıdır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8ae2881c-f130-40df-b575-97df40529d31-2-d62480f7-0978-4a01-ae06-5a046ca40352.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="şartlı-seçim-conditional-select---string-uygulaması" class="level3">
+<h3 class="anchored" data-anchor-id="şartlı-seçim-conditional-select---string-uygulaması">Şartlı Seçim (Conditional Select - String) Uygulaması</h3>
+<p><strong>Select Cases</strong></p>
+<p>Örnek olarak string tipinde okul tipini görmek için filtreleyelim.</p>
+<p>Menü yoluyla:</p>
+<p><strong><em>Data &gt; Select Case</em></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/38b1cd94-5b61-4899-8778-b34dff05fa6c-3-ebba4f79-1419-407f-8f37-b957d8f5c8d0.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/38b1cd94-5b61-4899-8778-b34dff05fa6c-2-d72b025d-ac3d-45b2-ad5c-7b8ceeb84a44.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Artık yapacağımız bütün çalışmalarda <strong>program tipi</strong> için sadece <strong><em>academic</em></strong> kategorisi alınacaktır. Örnek olarak bu değişkenin betimleyici istatistiklerini inceleyelim.</p>
+<p><img src="2_SPSS_files/figure-html/38b1cd94-5b61-4899-8778-b34dff05fa6c-1-5e73d370-210f-4b8c-a875-0ffdd2999efe.png" class="img-fluid" alt="image.png">)</p>
+</section>
+<section id="şartlı-seçim-conditional-select---range-uygulaması" class="level3">
+<h3 class="anchored" data-anchor-id="şartlı-seçim-conditional-select---range-uygulaması">Şartlı Seçim (Conditional Select - Range) Uygulaması</h3>
+<p><strong>Select Cases</strong></p>
+<p>Örnek olarak ilk 40 veriyi range seçeneğini kullanarak filtreleyelim.</p>
+<p>Menü yoluyla:</p>
+<p><strong><em>Data &gt; Select Case</em></strong></p>
+<p>![image.png](2_SPSS_files/figure-html/25a4ef37-2ebb-482b-b1e9-1333944c363c-1-7a0824ac-9b82-47f2-b892-d87670ba1538.png</p>
+<p>Veriyi 1-40 aralığında filtreledikten sonra SPSS <strong>Data View</strong> kısmında aşağıdaki şekilde görünecektir.</p>
+<p><img src="2_SPSS_files/figure-html/25a4ef37-2ebb-482b-b1e9-1333944c363c-2-f6c27969-64d6-4616-8bfa-d519b23d3261.png" class="img-fluid" alt="image.png">)</p>
+</section>
+<section id="transform-menüsü" class="level3">
+<h3 class="anchored" data-anchor-id="transform-menüsü">Transform Menüsü</h3>
+<p>Veri dosyasının ana yapısını değiştirmeden veri değerleri üzerinde ihtiyac duyulan bazı dönüştürmeleri yapar.</p>
+<p>Veri üzerinde kök alma, kübik hale getirme, log haline getirme ve matematiksel işlemler gibi noktalarda kullanılır.</p>
+<p>Bu menüde en çok kullanılan seçenekler uygulamalı olarak gösterilecektir.</p>
+<p><strong>Compute Variable</strong></p>
+<p>Bazı durumlarda mevcut değişken değerlerini çeşitli matematiksel ya da mantıksal işlemlere tabi tutularak, bunlardan yeni değişken tanımlama ve yeni değişken değerlerinin hesaplanması gerekebilir. SPSS’de bu işlemleri yapabilme seçenekleri ve imkânı vardır. Uygulanan matematiksel işlem sonucu elde edilen yeni değerler, araştırmacı tarafından tanımlanan farklı bir değişkene (<strong><em>Target Variable</em></strong>) atanır. Tanımlanan yeni değişken ve değerleri <strong>Data View</strong> sayfasında farklı bir sütunda görüntülenir. Bu işlemler için işlem algoritması aşağıdaki gibi uygulanır.</p>
+<p>Bu seçenek veri setinde yeralan değişkenlerden belirli bir cebirsel (trigonometrik, aritmetik ve mantıksal fonksiyon) kritere göre tüm birimler için yeni değişkenler belirlemeyi sağlar. Bu seçenek tıklandığında aşağıdaki ekran görüntülenir ve ekrana girişler yapılır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/0a886888-ee9c-4b5a-9081-25749ff42bf3-1-0d3fe856-52df-4b2a-973a-272d09462136.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Örnek</strong></p>
+<p>Okuma skoru (read) değişkeninin kareakökünü alalım ve karekökü alınmış değişkeni yeni bir değişken olarak tanımlayalım. Yeni değişken <strong>Data View</strong> kısmı üzerinde oluşacaktır.</p>
+<p>Bu yeni değişkenimize <strong><em>new_read</em></strong> ismini pencerede <strong>Target Variable</strong> bölümüne yazalım.</p>
+<p>Daha sonra <strong>Numeric Expression</strong> kısmına yapmak istediğmiz düzenlemeye dair formülü girelim.</p>
+<p>Burada karekökü alma <strong><em>SQRT()</em></strong> formülü ile gerçekleştirilir.</p>
+<p>Bu ve diğer bütün seçeneklere <strong>Function group:</strong> bölmesi üzerinden de erişebilirsiniz.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/996a89b7-d15d-4404-959b-28b318403912-1-d3052e1d-7ea0-418d-86ef-74c62405cc7e.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Örnek</strong></p>
+<p>Bernoulli dağılımını (dağılım parametre değeri = 0.5) kullanarak rastgele sayılar üretelim ve ismi *<strong>new_read1</strong> olarak veritabanımıza eklensin.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/ceea19bd-e86f-4e48-b678-1de3431147bf-1-df47c72d-6f55-4d2c-8622-7c54fafa1346.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Recode Into Different Variables (Kategorik)</strong></p>
+<p>Recode Into Different Variables iletişim kutusu, mevcut değişkenlerin değerlerini yeniden atamanıza veya mevcut değer aralıklarını yeni bir değişken için yeni değerlere daraltmanıza olanak tanır. Örneğin maaşları, maaş aralığı kategorilerini içeren yeni bir değişkene daraltabilirsiniz.</p>
+<p>Sayısal ve dize (string) değişkenlerini yeniden kodlayabilirsiniz. Sayısal değişkenleri dize değişkenlerine (veya tam tersi) yeniden kodlayabilirsiniz.</p>
+<p>Eğer birden fazla değişken seçerseniz hepsinin aynı türde olması gerekir. Sayısal ve dize (string) değişkenlerini birlikte yeniden kodlayamazsınız.</p>
+<p><strong>Recode</strong> iki alt menüden oluşmaktadır. * <strong><em>Into Same Variables</em></strong>: Kayıtlı değerlerin kodlanmasını sağlar. Bir değişkenin belirlenen aralıktaki değerlerini yeni kod değerleri ile <strong><em>aynı</em></strong> isim altında veri sayfasına yazmaya yarar. * <strong><em>Into Different Variables</em></strong>: Kayıtlı değerlerin kodlanmasını sağlar. Bir değişkenin belirlenen aralıktaki değerlerini yeni kod değerleri ile <strong><em>farklı</em></strong> bir değişken ismi altında veri sayfasına yazmaya yarar.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/f4f1bd17-e070-4e42-a875-775e8ca60dd1-1-1929cc60-19c8-4b11-a3f2-9629904403d8.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Örnek</strong></p>
+<p>SES (Sosyo-Ekonomik-Statü) değişkenini 3 kategoriden (1-Low, 2-Middle, 3-High) 2 kategoriye çevirme (1-Low, 2-High) işlemini gerçekleştirelim. Yeni oluşturacağımız değişkenin ismi <strong><em>ses_final</em></strong> olsun</p>
+<p>Yeni Değişkenler İçin Yeniden Kodlanacak Değerleri Belirleme</p>
+<ol type="1">
+<li><p>Menü yoluyla: <br> <strong><em>Transform &gt; Recode into Different Variables…</em></strong></p></li>
+<li><p>Yeniden kodlamak istediğiniz değişkenleri seçin. Birden fazla değişken seçerseniz bunların aynı türde (sayısal veya dize) olması gerekir.</p></li>
+<li><p>Her yeni değişken için bir çıktı (yeni) değişken adı girin ve <strong><em>Change</em></strong>’e tıklayın.</p></li>
+<li><p>*<strong>Old and New Values</strong>’e tıklayın.</p></li>
+<li><p>Eski değeri ve yeni olmasını istediğiniz değeri belirtin.</p></li>
+<li><p>Eski ve yeni değişimini yapmak için <strong><em>Old–&gt;New</em></strong> listesine yerleştirmek için <strong><em>Add</em></strong> seçeneğini tıklayın.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/2d2295a2-da77-4dbb-b0db-c96d94661532-3-f07dd239-2664-4ee8-964d-b39ee47b6926.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>*<strong>Old and New Values</strong> üzerinden kategori numara değişimlerini yapalım.</p>
+<p>1 (<strong><em>old value</em></strong>) olan kategori sınıfını 3 (<strong><em>new value</em></strong>) yapalım ve <strong><em>Add</em></strong> seçeneği ile diyalog kutusuna ekleyelim. Yani yüksek sosyo-ekonomik sınıf ile düşük sosyo-ekonomik sınıf değerlerini değiştirelim.</p>
+<p>3 olan kategori sınıfını da aynı işlemleri yaparak 1 yapalım ve <strong><em>Continue</em></strong> ile işlemi tamamlayalım.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/2d2295a2-da77-4dbb-b0db-c96d94661532-2-8fcb7bf0-9b65-4c0b-9724-0335d49cd58b.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/2d2295a2-da77-4dbb-b0db-c96d94661532-1-79ce814c-af1d-41cc-91fb-d1885c3a3b8e.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Daha sonra yeni oluşan değişkenin alt kategorileri SPSS ana sayfasında <strong>Variable view</strong> kısmından <strong><em>Values</em></strong> seçeneği ile tanımlanır.</p>
+<p><strong>Automatic Recode</strong></p>
+<p>Bir değişkenin değerlerini büyüklük sırasına göre dizerek yeni bir değişkene birden başlayarak yeni değerlerle kodlayarak yazar. Yeni değişken sınıflandırıldığında orjinal değerlerde tabloda görüntülenir.</p>
+<p>Menü yoluyla:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/3e567e47-ea38-481b-b908-1264ede7bcbc-2-bec5bdc0-500b-4020-9757-6d0cd2804bfc.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong><em>Read</em></strong> değişkenimizi autorecode ile yeni bir değişken haline getirelim ve yeni ismi <strong><em>read_autorecode</em></strong> olsun.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/3e567e47-ea38-481b-b908-1264ede7bcbc-3-ec7745c3-104d-4c34-addd-366790259ac6.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong><em>Add New Name</em></strong> tıklayarak ekleyelim ve <strong><em>OK</em></strong> ’e tıklayarak işlemi tamamlayalım. Daha sonra tanımladığımız veri <strong>Data View</strong> ksımında görünecektir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/3e567e47-ea38-481b-b908-1264ede7bcbc-1-27f8e139-f717-42cf-914a-9da03e833f65.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="yeni-değişken-oluşturma" class="level2">
+<h2 class="anchored" data-anchor-id="yeni-değişken-oluşturma">Yeni Değişken Oluşturma</h2>
+<p>*<strong>Transform &gt; Compute Variable</strong> seçeneğini kullanarak yeni bir değişken oluşturalım.</p>
+<p>Bu değişken <strong><em>reading, writing ve math</em></strong> skorlarının toplamından oluşsun ve ismini <strong><em>total</em></strong> olarak belirleyelim.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/5f882470-6aa7-4e1d-933b-92b7ff54efc9-2-6be238ee-ee6d-4100-896b-c2e590a58799.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/5f882470-6aa7-4e1d-933b-92b7ff54efc9-1-2e2fc24d-5997-4687-b9e8-69cfe9d51d97.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p><strong>Recode Into Different Variables (Range kullanarak)</strong></p>
+<p>Bu uygulamayı daha önce oluşturduğumuz total değişkeni üzerinden işleme sokalım.</p>
+<p><strong>Örnek</strong> Total değişkeni için aşağıdaki aralıkları kullanarak değişken tanımlamalarını yapınız ve değişken kategorilerini atayalım. * (0,80] arası 0 * (80,110] arası 1 * (110,140] arası 2 * (140, 170] arası 3 * (170, 300] arası</p>
+<p><img src="2_SPSS_files/figure-html/eadf9342-64b7-4a97-80df-2b8b104ae841-1-8e5a3326-8843-4189-ad03-48d29a789c58.png" class="img-fluid" alt="image.png">4</p>
+<p>Değişken kategorilerini SPSS anasayfasında <strong>Variable View</strong> kısmında <strong><em>Values</em></strong> sütununda atanması gereklidir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/eadf9342-64b7-4a97-80df-2b8b104ae841-2-de144cb4-f51e-49d0-a323-771530c54ea9.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="çapraz-tablolarin-oluşturulmasi" class="level2">
+<h2 class="anchored" data-anchor-id="çapraz-tablolarin-oluşturulmasi">ÇAPRAZ TABLOLARIN OLUŞTURULMASI</h2>
+<p>Veri setlerinde yer alan değişkenlerin frekans dağılım tablolarının ya da çapraz tablolarının hazırlanması, verilerin özetlenmesi bakımından önem taşımaktadır.</p>
+<p>Çapraz tablolar, iki değişkenin karşılıklı alt seçeneklerini birlikte gösteren tabloladır. <span class="math inline">\(r*c\)</span> biçimindeki (r=sıra sayısı ve c=sütun sayısı) çapraz tabloların veri sayfasına girilmesinde tablonun sıra ve sütun sayısı dikkate alınarak giriş yapılır. İki değişkenin alt sçeneklerine aynı anda sahip olan birim sayıları, çapraz tablonun göze frekanslarını oluşturur. Çapraz tablolar daha çok az sayıda seçenek içeren kategorik değişkenler için ya da sınıflara bölünerek kodlanmış ve k sayıda sınıfa indirgenmiş aralıklı/orantılı ölçekli verilerin gösteriminde yararlanılır.</p>
+<p>Her ikisi de nitel türden ya da nicel türden fakat sınıflama veya sıralama düzeyinde ölçülmüş (yani gruplandırılmış frekans verisi), birisi nitel türden diğeri nicel türden fakat sınıflama veya sıralama düzeyinde ölçülmüş (yani gruplandırılmış frekans verisi) olan değişkenlere ait verileri düzenlemede ve bu tür değişkenlerle ilgili uygun olan istatistiksel analizleri gerçekleştirmede çapraz tablolara ihtiyaç duyulmaktadır.</p>
+<section id="spssde-çapraz-tablo-oluşturulması" class="level3">
+<h3 class="anchored" data-anchor-id="spssde-çapraz-tablo-oluşturulması">SPSS’de Çapraz Tablo Oluşturulması</h3>
+<ul>
+<li><p>SPSS veri sayfasında sütunlara uygun girişler yapılır.</p></li>
+<li><p><strong><em>Analyze &gt; Descriptive statistics &gt; Crosstabs</em></strong> seçenekleri tıklanır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8fd0d969-30cf-45c5-906b-dc748a7db417-1-45bb2532-f9ef-46da-a8ee-a5784bd46d12.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div></li>
+<li><p>Açılan bu ekranda değişkenler listesinde yer alan değişkenlerden birisi satır değişkenine (Row(s)), diğeri sütun değişkenine (Column(s)) aktarma butonu yardımı ile aktarılır. <strong><em>OK</em></strong> butonuna basarak çapraz tablo oluşturulur.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8fd0d969-30cf-45c5-906b-dc748a7db417-5-c73e4c5b-209a-4e01-8804-f70594709a7c.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div></li>
+<li><p>Elde edilen çıktıdaki tablo bilgileri yanında bazı katsayı ve ölçülerin görüntülenmesi isteniyorsa işlem penceresinde <strong><em>Statistics</em></strong> seçeneği tıklanır. Bu pencerede çıktıda yer alması istenilen istatistikler ve katsayılar işaretlenir. <strong><em>Continue</em></strong> tıklanır.</p></li>
+</ul>
+<p><strong>Çapraz Tablo Çıktısı</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8fd0d969-30cf-45c5-906b-dc748a7db417-4-a85fd8a6-df8c-4d9d-b617-954a548bf075.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Yukarıdaki çapraz tablo sonuçlarını incelediğimizde:</p>
+<ul>
+<li>Otomatik vitese ve bir adet karbüratöre sahip 3 otomobil modeli vardır.</li>
+<li>Manuel vitese ve bir adet karbüratöre sahip 4 otomobil modeli vardır.</li>
+<li>4 karbütöre ve otomatik şanzımana sahip 7 otomobil modeli vardır.</li>
+<li>1 karbüratöre sahip toplam 7 adet (3+4) otomobil modeli vardır.</li>
+<li>Mauel vitese sahip toplam 13 adet (4+4+0+3+1+1) otomobil modeli vardır.</li>
+<li>Toplam (total) olarak 32 adet otomobil vardır.</li>
+</ul>
+<p><strong>Çapraz Tablo Çıktısı (satır, sütun ve toplam yüzdeliklerle)</strong></p>
+<p>Menü yoluyla</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8fd0d969-30cf-45c5-906b-dc748a7db417-2-614bb2b3-dd7d-4d8b-8c9e-a25c3bf02238.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2_SPSS_files/figure-html/8fd0d969-30cf-45c5-906b-dc748a7db417-3-9d622051-44a3-4d44-a49f-1e6ee829c483.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Yukarıdaki çapraz tablo sonuçlarını incelediğimizde:</p>
+<ul>
+<li>Otomatik vitese ve bir adet karbüratöre sahip 3 otomobil modeli vardır ve yüzdesi 15.8’ dir.</li>
+<li>Manuel vitese ve bir adet karbüratöre sahip 4 otomobil modeli vardır ve yüzdesi 30.8’ dir.</li>
+<li>Hem bir adet karbüratöre sahip hem de otomatik vites olanların içinde karbüratör yüzdesi 42.9’ dur.</li>
+<li>Hem bir adet karbüratöre sahip hem de manuel vites olanların içinde karbüratör yüzdesi 7.1’ dir.</li>
+<li>1 karbüratöre sahip toplam 7 adet (3+4) otomobil modeli vardır ve toplam karbüratör sınıfları arasındaki yüzdesi 21.9’ dur.</li>
+<li>2 karbüratöre sahip toplam 10 adet (6+4) otomobil modeli vardır ve toplam karbüratör sınıfları arasındaki yüzdesi 31.3’ tür.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
