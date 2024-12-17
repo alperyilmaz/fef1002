@@ -62,4 +62,4 @@
 
 *December 17th, 2024, Tuesday 4-7pm, ONLINE*
 
-**Contents**: SPSS Part2 [link for lecture material](1_SPSS.ipynb), [html_version](2_SPSS_htmlversion.html). Derste kullanılan dosyalar: [mtcars.sav](files/mtcars.sav), [hs0.sav](files/hs0.sav)
+**Contents**: SPSS Part2 [link for lecture material](2_SPSS.ipynb), [html_version](2_SPSS_htmlversion.html). Derste kullanılan dosyalar: [mtcars.sav](files/mtcars.sav), [hs0.sav](files/hs0.sav)
