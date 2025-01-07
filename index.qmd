@@ -69,3 +69,9 @@
 *December 24th, 2024, Tuesday 4-7pm, ONLINE*
 
 **Contents**: R language 1 [link for lecture material](r_week1_en.ipynb), [html_version](r_week1_en_html.html). Derste kullanılan dosyalar: [pima.csv](files/pima.csv), [pima.dat](files/pima.dat), [pima.db](files/pima.db), [pima.xls](files/pima.xls), [pima.xlsx](files/pima.xlsx)
+
+## Lecture12
+
+*January 7th, 2025  Tuesday 4-7pm, ONLINE*
+
+**Contents**: R language part 2 [link for lecture material](r_week2_en.ipynb), [html_version](r_week2_en_html.html).
